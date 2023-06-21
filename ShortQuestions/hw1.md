@@ -1,9 +1,12 @@
 ### 1
+For Markdown there are lot of ways to format your .md file.
+For example, `#` is used for header; wrap text in `*`, `**`, etc will have different effects; use \` for blocks of commands; use `-`,`*`,`+` for a list view of points, etc. 
+
 
 ### 2
 ```
-git commit
-git branch
+git commit 
+git branch 
 git checkout
 git rebase
 git merge
