@@ -90,3 +90,11 @@ Usage of maven:
 generate an output artifact whose type depends on the configuration in pom.xml file (JAR, WAR, ZIP, or so on)
    
 2. the install phase will go a step further than package phase. After creating the artifact, the install phase will copies the generated artifact to local Maven repository.
+
+## Q12: What is plugins in maven, list some plugins.
+plugins are extensions which provide more functionality to the build process. we can customize the build, test, repost and deploy phases of our project.
+
+some types of plugins:
+- maven-jar-plugin: create jar file
+- maven-war-plugin: create war file
+- maven-dependency-plugin: manage dependencies, resolve conflicts, and analyze dependency info
