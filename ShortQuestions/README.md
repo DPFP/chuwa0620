@@ -3,8 +3,8 @@
 ## Question 1: markdown learning
 
 ### Test different text styling
-**Bold** 
-*Italic*
+**Bold**  <br>
+*Italic*  <br>
 ~~Strikethrough~~
 **Bold and _nested_ italic**
 <sub>This is a subscript text</sub>
