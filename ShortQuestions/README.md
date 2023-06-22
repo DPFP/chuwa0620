@@ -1,5 +1,11 @@
 # HW1
 
-## Question 1
+## Question 1: markdown learning
 
-### Use of markdown formatting 
+### Test different text styling
+**Bold** 
+*Italic*
+~~Strikethrough~~
+**Bold and _nested_ italic**
+<sub>This is a subscript text</sub>
+<sup>This is a superscript text</sup>
