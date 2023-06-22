@@ -8,7 +8,7 @@
 ~~Strikethrough~~ <br>
 **Bold and _nested_ italic** <br>
 <sub>This is a subscript text</sub> <br>
->Quoting
+>Quoting <br>
 >I continue Quoting, see see if there is a new line
 `Quoting code`
 
