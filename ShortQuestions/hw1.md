@@ -14,6 +14,10 @@
 - git branch -f
 - git reset
 - git revert
+- git add
+- git push
+- git log
+- git init
 
 ---
 
