@@ -16,4 +16,4 @@
 multiple lines of code
 main.py
 ```
-The background color is `#ffffff` for light mode and `#000000` for dark mode.
+The background color is `rgb(1, 1, 1)` for light mode and `rgb(9, 105, 218)` for dark mode.
