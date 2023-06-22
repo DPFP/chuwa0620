@@ -1,22 +1,33 @@
 ***HW1***
 
-1.
-3. git init
+2. 
+   git add
+   git commit 
+   git status
+   git push
+   git pull
+   git checkout
+   git branch
+   git log
+   git merge
+   git stash
+   git remote
+3. 
+   git init
 4. git clone "url of repository"
 5. 
-```
-git checkout -b branch_name
-```
+```git checkout -b <branch_name>```
 6. 
-git merge branch_test
+First, we use ``` git checkout master ``` to checkout to master branch, then in master branch, we run ```git merge branch_test```
 7.  
 ```
-git stash
+git stash save "my_work"
+git checkout other_branch
 git checkout branch_learn_stash
 git stash pop
 ```
-8. Pull request is combining the content of one branch to another branch
-9. Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.
+8. Pull request is merging the content of one branch to another branch. 
+9. Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation from a central piece of information.
 10. 
 validate - validate the project is correct and all necessary information is available
 compile - compile the source code of the project
@@ -29,4 +40,3 @@ deploy - done in the build environment, copies the final package to the remote r
 package - take the compiled code and package it in its distributable format, such as a JAR.
 install - install the package into the local repository, for use as a dependency in other projects locally
 12.Maven is a plugin execution framework; all work is done by plugins.  eg. changelog, checkstyle
-13.
