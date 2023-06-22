@@ -18,4 +18,28 @@ main.py
 ```
 Testing url links [Miami Heat homepage](https://www.nba.com/heat). <br>
 
-![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](./jimmybutlershot.jpeg)
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](./jimmyButlerShot.jpeg) <br>
+
+### Listing
+- Miami Heat
+* Jimmy Butler
++ Tyler Herro
+
+1. Number testing
+2. Number testing2
+3. Number testing3
+
+1. First list item
+   - First nested list item
+     - Second nested list item
+       - Third nested list item
+
+- [x] Tasks to do
+- [ ] Tasks to do 2
+- [x] Tasks to do 3
+- [ ] #739 :tada:
+
+
+       
+
+
