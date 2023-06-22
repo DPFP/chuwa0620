@@ -5,7 +5,7 @@
 ### Test different text styling
 **Bold**  <br>
 *Italic*  <br>
-~~Strikethrough~~
-**Bold and _nested_ italic**
-<sub>This is a subscript text</sub>
-<sup>This is a superscript text</sup>
+~~Strikethrough~~ <br>
+**Bold and _nested_ italic** <br>
+<sub>This is a subscript text</sub> <br>
+<sup>This is a superscript text</sup> <br>
