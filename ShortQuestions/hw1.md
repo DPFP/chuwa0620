@@ -13,7 +13,7 @@ This answer is in [README.md](./README.md).<br>
 `git fetch`: fetch data from a remote repository <br>
 `git pull`: the workflow of fetching remote changes and then merging them <br>
 
-# Q3: What is the basic steps to init a git repo in you local?
+### Q3: What is the basic steps to init a git repo in you local?
 1. `cd` to target repo <br>
 2. `git init` to create .git directory <br>
 
