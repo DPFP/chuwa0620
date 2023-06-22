@@ -8,4 +8,11 @@
 ~~Strikethrough~~ <br>
 **Bold and _nested_ italic** <br>
 <sub>This is a subscript text</sub> <br>
-<sup>This is a superscript text</sup> <br>
+>Quoting
+>I continue Quoting, see see if there is a new line
+`Quoting code`
+
+```
+multiple lines of code
+main.py
+```
