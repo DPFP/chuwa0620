@@ -32,5 +32,5 @@ git commit
 
 Check lists:
 
--[x] question1
--[ ] make the world a better place
+- [x] question1
+- [ ] make the world a better place
