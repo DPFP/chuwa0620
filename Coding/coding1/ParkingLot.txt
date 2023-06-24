@@ -1,0 +1,72 @@
+enum VehicleType {SEDAN, MOTORCYCLE, SUV}
+
+enum ParkingSpotStatus {EMPTY, OCCUPIED}
+
+abstract class vehicle {
+    protected String licensePlate;
+    protected VehicleType vehicleType;
+    public abstract VehicleType getType();
+}
+
+class Sedan extends Vehicle {
+    public VehicleType getType(){}
+}
+
+class Motorcycle extends Vehicle {
+    public VehicleType getType(){}
+}
+
+class Suv extends Vehicle {
+    public VehicleType getType(){}
+}
+
+
+class ParkingLot {
+    private int parkingSpotsAmount;
+    private List<ParkingSpot> parkingSpots;
+    private String address;
+}
+
+
+class ParkingSpot {
+    private String parkingSpotId;
+    private ParkingSpotStatus parkingSpotStatus;
+    private VehicleType spotType;
+    private Vehicle vehicle;
+
+    // status -> OCCUPIED
+    public void parkVehicle(){
+
+    }
+
+    // status -> EMPTY
+    public void emptySpot(){
+
+    }
+}
+
+
+class Ticket {
+    Vehicle vehicle;
+    Date entryTime;
+    Date exitTime;
+}
+
+
+class managementSystem{
+    private Map<Vehicle, Ticket> map = new HashMap<>();
+
+    public void vehicleEnter(Vehicle vehicle){
+        map.put(vehicle, new Ticket(vehicle, new Date(), null));
+    }
+
+    public void vehicleExit(Vehicle vehicle){
+        Ticket ticket = map.get(vehicle);
+        vehicle.exitTime = new Date();
+    }
+
+    public int getPrice(Vehicle vehicle){
+        Ticket ticket = map.get(vehicle);
+        // get entry time and exit time to calculate price
+    }
+}
