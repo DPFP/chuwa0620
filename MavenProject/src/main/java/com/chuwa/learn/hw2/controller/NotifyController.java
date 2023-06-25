@@ -1,6 +1,7 @@
 package com.chuwa.learn.hw2.controller;
 
 import com.chuwa.learn.hw2.enums.NotificationMsg;
+import com.chuwa.learn.hw2.enums.NotificationType;
 import com.chuwa.learn.hw2.enums.NotificationWay;
 import com.chuwa.learn.hw2.model.User;
 import com.chuwa.learn.hw2.service.NotificationService;
@@ -17,9 +18,9 @@ public class NotifyController {
         notificationService = new NotificationServiceImpl();
 
         User user1 = new User("Bob", "Lin");
-        User user2 = new User("Bo", "Lin");
-        User user3 = new User("B", "Lin");
-        User user4 = new User("Bin", "Li");
+        User user2 = new User("Bo", "Lin", NotificationType.SMS);
+        User user3 = new User("B", "Lin", NotificationType.SMS);
+        User user4 = new User("Bin", "Li", NotificationType.WhatsAPP);
         notificationService.addUser(user1);
         notificationService.addUser(user2);
         notificationService.addUser(user3);

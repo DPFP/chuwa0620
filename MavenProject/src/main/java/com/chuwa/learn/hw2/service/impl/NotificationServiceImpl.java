@@ -42,12 +42,14 @@ public class NotificationServiceImpl implements NotificationService {
         if (notificationMsg.equals(NotificationMsg.RegisterMsg)) {
             for (User user: finalList) {
                 System.out.println("user with id: " + user.getUserId() + " receive: "
-                        + String.format(NotificationMsg.RegisterMsg.getMsg(), user.getFirstName()));
+                        + String.format(NotificationMsg.RegisterMsg.getMsg(), user.getFirstName())
+                        + " sent by " + user.getPreferType().name());
             }
         } else if (notificationMsg.equals(NotificationMsg.BroadcastMsg)) {
             for (User user: userList) {
                 System.out.println("user with id: " + user.getUserId()
-                        + " receive: " + NotificationMsg.BroadcastMsg.getMsg());
+                        + " receive: " + NotificationMsg.BroadcastMsg.getMsg()
+                        + " sent by " + user.getPreferType().name());
             }
         }
         System.out.println();
