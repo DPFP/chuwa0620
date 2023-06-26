@@ -108,6 +108,8 @@ We need encapsulation to protect data from being modified by other classes.
 
 ## 15. design park lot under codingQuestion folder
 
+ref: https://www.javatpoint.com/parking-lot-design-java
+
 ## 16. What are Queue interface implementations and what are the differences and when to use what?
 
 - LinkedList: FIFO
