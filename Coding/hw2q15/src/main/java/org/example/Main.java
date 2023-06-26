@@ -1,4 +1,6 @@
 package org.example;
+
+// Reference from https://www.javatpoint.com/parking-lot-design-java
 public class Main
 {
     // main mehtod
