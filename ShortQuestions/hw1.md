@@ -17,7 +17,7 @@ git remote
 Go to any folder you want to work at and  then run git init to initialize a git repo.
 
 3. How to clone a repo from Github ? 
-git clone + link
+git clone + link 
 
 4. How to create a new branch and checkout to that branch ? 
 git checkout -b new-branch
