@@ -1,19 +1,48 @@
 package org.example;
+public class Main
+{
+    // main mehtod
+    public static void main(String argvs[])
+    {
+// creating an object of the class ParkingLot
+        ParkingLot pl = new ParkingLot(2);
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
-public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+// car1 has license number 1234 and the company name is Microsoft
+        Car car1 = new Car("1234", "Microsoft");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+// m1 has license number 4016 and the company name is Microsoft
+        Motorcycle m1 = new Motorcycle("4016", "Microsoft");
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+// car2 has license number 1609 and the company name is Google
+        Car car2 = new Car("1609", "Google");
+
+// m2 has license number 1389 and the company name is Google
+        Motorcycle m2 = new Motorcycle("1389", "Google");
+
+// car3 has license number 1809 and the company name is Microsoft
+        Car car3 = new Car("1809", "Microsoft");
+
+//  parking the vehicles
+        pl.parkVehicle(car1);
+        pl.parkVehicle(m1);
+        pl.parkVehicle(car2);
+
+// for displaying the list of vehicles that has company name Microsoft
+        pl.ComapnyParked("Microsoft");
+
+// for displaying the list of vehicles that has company name Google
+        pl.ComapnyParked("Google");
+
+        pl.leave(m1,0); // Note that m1 is from Microsoft
+
+
+// for displaying the list of vehicles that has company name Microsoft
+        pl.ComapnyParked("Microsoft");
+
+
+        pl.parkVehicle(m2);
+        pl.parkVehicle(car3);
+
+
     }
 }
