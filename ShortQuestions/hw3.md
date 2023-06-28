@@ -14,5 +14,5 @@
     Single Responsibility Principle (SRP),Open/Closed Principle (OCP), Liskov Substitution Principle, Interface Segregation Principle, Dependency Inversion Principle
 10.  Double-checked Locking
 11. OPC:  Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification. This means that a class should be easily extendable without modifying the class itself.
-12.
+12. 1
 
