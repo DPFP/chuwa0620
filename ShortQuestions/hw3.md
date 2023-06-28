@@ -1,5 +1,8 @@
 ### HW3
 
+pracitce collection
+done
+
 1. What is the checked exception and unchecked exception in Java, could you give one example?
 
    - Checked Exceptions:
