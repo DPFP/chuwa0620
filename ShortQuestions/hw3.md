@@ -25,3 +25,6 @@
     2. Synchronize the getInstance() method.
     3. Use synchronized block inside if loop and volatile variables.
 12. Entities should be open to extension and closed to modification this will mitigate the risk of introducing new feature to the existing program.
+
+13. It means if a method is present in class A, it should also be present in class B so that the object of 
+    type B could substitute object of type A.
