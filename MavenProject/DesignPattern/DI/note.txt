@@ -1,0 +1,4 @@
+1.types of DI
+    -constructor
+    -setter
+    -field
