@@ -21,7 +21,7 @@ the color is `rgb(9, 105, 218)`
 This site was built using [chuwa github](https://github.com/DPFP/chuwa0620)
 
 
-![Alt text](image.png)
+![Alt text](JavaPic.png)
 
 + item1
 + item2
