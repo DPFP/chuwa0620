@@ -1,14 +1,14 @@
 ## Q1 Write up Example code to demonstrate the three foundmental concepts of OOP. 
 #### Encapsulation
-![Alt text](image-1.png)
-![Alt text](image.png)
+![Alt text](encapusulation2.png)
+![Alt text](encapusulation1.png)
 #### Polymorphism
-![Alt text](image-2.png)
-![Alt text](image-3.png)
+![Alt text](polymorphism1.png)
+![Alt text](polymorphism2.png)
 #### Inheritance
-![Alt text](image-4.png)
-![Alt text](image-5.png)
-![Alt text](image-6.png)
+![Alt text](interitance1.png)
+![Alt text](interitance2.png)
+![Alt text](interitance3.png)
 
 ## Q2 What is wrapper class in Java and Why we need wrapper class?
 Wrapper class is a class provides an object-oriented representation of a primitive data type. We can convert the primitive data types into objects and to provide additional methods and functionalities for working with those data types.
