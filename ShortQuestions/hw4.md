@@ -11,6 +11,9 @@ Practice code in MavenProject/generic.
 ### 2. Read those codes and type it one by one by yourself. the push the code to your branch.
 Practice code in MavenProject/java8.
 
+### 3. practice stream API at least 3 times
+Practice code in /stream-api-exercise-main directory.
+
 
 
 
