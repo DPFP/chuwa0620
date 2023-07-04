@@ -1,6 +1,15 @@
 ## Q1 What is generic in Java?  and type the generic code by yourself.
 Generics enable you to create reusable code that can operate on different types while providing compile-time type checking, ensuring type safety and code reusability.
 
+## Q2 Read those codes and type it one by one by yourself. the push the code to your branch.
+In the /chuwa-eij-tutorial.
+
+## Q3 practice stream API at least 3 times.
+In /chuwa-eij-tutorial/03-stream-api-exercises/src/main/java/space/gavinklfong/demo/streamapi/AppCommandRunner.java
+
+## Q4 Practice Optional methods at least 2 times
+In /chuwa-eij-tutorial.
+
 ## Q5 Write the Singleton design pattern include eager load and lazy load.
 ```java
 class EagerSingleton {
