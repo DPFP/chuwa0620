@@ -5,104 +5,10 @@
 See details in folder Coding 
 
 # 3. Practice stream API 
-> Exercise 1 - Obtain a list of products belongs to category "Books" with price > 100
-
-```
-List<Product> list = productRepo
-    .findAll()
-    .stream()
-    .filter(p->p.category.equals("Books"))
-    .filter(p->p.price > 100)
-    .collect(Collectors.toList());
-```
-
-> Exercise 3 - Obtain a list of product with category = "Toys" and then apply 10% discount
-
-```
-List<Product> list = productRepo
-    .stream()
-    .filter(p->p.category.equals("Toys"))
-    .map(p->p.price = p.price * 0.9)
-    .collect(Collectors.toList());
-```
-
-> Exercise 5 - Get the cheapest products of "Books" category
-```
-Optional<Product> result = productRepo
-    .stream()
-    .filter(p->p.getCategory().equals("Books"))
-    .min(Comparator.comparing(Product::getPrice));
-```
-
-> Exercise 7 - Get a list of orders which were ordered on 15-Mar-2021, log the order records to the console and then return its product list
-```
-List<Product> result = orderRepo.findAll()
-    .stream()
-    .filter(o -> o.getOrderDate().isEqual(LocalDate.of(2021, 3, 15)))
-    .peek(o -> System.out.println(o.toString()))
-    .flatMap(o -> o.getProducts().stream())
-    .distinct()
-    .collect(Collectors.toList());
-```
+Done
 
 # 4. Practice Optional methods 
-```
-/**
-     * 编写一个方法，接受一个Customer对象作为参数，返回一个包含购物车中第一个商品名称的Optional<String>对象。
-     * 如果客户或购物车信息缺失，或购物车为空，则返回一个空的Optional对象。
-     */
-    public static Optional<String> getFirstItemName(Customer customer) {
-        return Optional.ofNullable(customer)
-                .map(Customer::getShoppingCart)
-                .map(ShoppingCart::getItems)
-                .filter(items -> items != null && items.length > 0)
-                .map(items -> items[0])
-                .map(Optional::ofNullable)
-                .orElse(Optional.empty());
-    }
-
-    /**
-     * 编写一个方法，接受一个Optional<Customer>对象作为参数。如果Optional对象非空且包含的客户有购物车，计算购物车中所有商品的总价，并返回该值。如果购物车为空或不存在，返回默认值0.0。
-     * @param customer
-     * @return
-     */
-    public static double getTotalPrice(Optional<Customer> customer) {
-        return customer.flatMap(Customer::getShoppingCart)
-                .map(ShoppingCart::getItems)
-                .flatMap(items -> {
-                    if (items.length > 0) {
-                        return Optional.of(items);
-                    } else {
-                        return Optional.empty();
-                    }
-                })
-                .map(items -> {
-                    double totalPrice = 0.0;
-                    for (Item item : items) {
-                        totalPrice += item.getPrice();
-                    }
-                    return totalPrice;
-                })
-                .orElse(0.0);
-    }
-
-    /**
-     * 假设我们想要检查客户购物车中是否有商品，并打印相应的消息。
-     *
-     * 编写一个方法，接受一个Customer对象作为参数，然后使用isPresent()检查购物车中是否有商品，并打印相应的消息：
-     *
-     * 我们使用了isPresent()方法来检查Optional对象是否非空。我们首先从Customer对象中获取购物车商品列表，然后检查其是否为空。
-     * 如果Optional对象非空且商品列表非空，我们打印“购物车中有商品”；否则，我们打印“购物车为空”。
-     */
-    public static void checkItemsInCart(Customer customer) {
-        Optional<ShoppingCart> optionalCart = Optional.ofNullable(customer.getShoppingCart());
-        if (optionalCart.isPresent() && !optionalCart.get().getItems().isEmpty()) {
-            System.out.println("购物车中有商品");
-        } else {
-            System.out.println("购物车为空");
-        }
-    }
-```
+Done
 
 # 5. Write the Singleton design pattern include eager load and lazy load.
 ```
