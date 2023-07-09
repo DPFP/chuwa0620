@@ -132,7 +132,8 @@
 
 
 20. What are Intermediate and Terminal operations?
-
+    - Intermediate: filter, map, flatMap, distinct, sorted, limit, and skip
+    - Terminal: forEach, collect, reduce, count, anyMatch, allMatch, noneMatch, and findFirst
 
 21. What are the most commonly used Intermediate operations?
     - map
