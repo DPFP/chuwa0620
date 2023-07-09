@@ -1,4 +1,4 @@
-package com.chuwa.tutorial.t06_java8.exercise;
+package exercise;
 
 import java.util.Arrays;
 import java.util.List;
