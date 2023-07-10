@@ -286,4 +286,48 @@ ThreadLocal is a class in Java that provides thread-local variables. These varia
 
 The ThreadLocal class in Java enables you to create variables that can only be read and written by the same thread. Thus, even if two threads are executing the same code, and the code has a reference to a ThreadLocal variable, then the two threads cannot see each other's ThreadLocal variables.
 
+### 21. Type the code by your self and try to understand it. (package com.chuwa.tutorial.t08_multithreading)
+Practice code in MavenProject/multithreading
+
+### 22. Read those interview questions and pick some important questions to this home work.
+- What is the difference between t.start() and t.run()?\
+t.start starts a new thread to excute the task(run()) t.run() excute the task in the current thread.
+
+- What is the differecence between Callable and Runnbale?\
+runnable has no return; callable has return
+
+- Can we use new Thread(lambda)? is it equal to implement Runnable? Why?\
+  Yes, if there is only one interface with @FunctionalInterface, we can use lambda;
+  in Runnable, only have one interface run();
+- When the thread terminated?\
+if there is no infinite loop, it will terminated when task is done.
+
+- Which one is popular between Runnable and Callable? Why?\
+Callable should be more popular, because it got return value.
+
+- What is the difference between synchronized(this) and synchronized(Singleton.class)?
+1. synchronized(this):\
+When a thread enters a synchronized instance method or a synchronized block with "this", it acquires the intrinsic lock for that method's object and releases it when the method returns. The lock acquisition/release occurs even if the return was caused by an uncaught exception.\
+Synchronization on this (an instance lock) means that only one thread can access the synchronized instance methods (or synchronized blocks synchronized on the same instance) of the object at a time. Other threads attempting to access these methods/blocks on this instance will be blocked until the lock is released. However, these other threads can still access synchronized static methods of the class, or synchronized instance methods/blocks of other instances of the class.
+2. synchronized(Singleton.class):\
+Synchronized on Singleton.class (a class lock) means only one thread can access the synchronized static methods (or synchronized blocks synchronized on Singleton.class) of the class at a time, regardless of the instance. If another thread tries to access a static synchronized method while a thread holds the lock on the class, it will be blocked until the thread holding the lock releases it.
+
+- What is the main difference between synchronized and ReentrantLock?\
+1. Flexibility: \
+ReentrantLock provides a more flexible locking mechanism compared to synchronized. With ReentrantLock, a lock can be acquired in one method and released in another method. However, with synchronized blocks, the lock is automatically released when the synchronized block or method ends, and it can't be manually controlled.
+2. Condition Variables:\
+ReentrantLock provides a Condition interface, which has await() and signal() methods similar to wait() and notify() methods in synchronized keyword usage. However, Condition provides more control as we can create multiple Condition objects for a single lock, each handling a different kind of event
+3. Interruptible Lock Acquisition: \
+ReentrantLock provides a feature that allows a thread to interrupt another thread that is waiting to acquire a lock, whereas the synchronized keyword doesn't provide this feature.
+4. Fairness: \
+ReentrantLock allows you to specify fairness. If set to true, the longest-waiting thread will get the lock. synchronized blocks don't provide the fairness option, and the lock acquisition order is not predictable.
+5. Lock Polling and Timed Wait: \
+ReentrantLock provides the tryLock method which allows lock polling - a thread can try to acquire the lock and if it's not available, do something else instead of waiting. It also has an overload which allows timed wait for lock acquisition. These features are not available with the synchronized keyword.
+6. Performance: \
+The synchronized keyword is easier to write and has less overhead than a ReentrantLock. This means that a synchronized block generally performs better than a ReentrantLock. However, in practice, the difference in performance is not likely to be noticeable unless there's very high contention.
+
+- How many ways we can create a thread for task?\
+1. new Thread(new Task("name"))
+2. es.submit(new Task("name"))
+
 
