@@ -73,4 +73,13 @@ Concurrent collections (e.g. ConcurrentHashMap), achieve thread-safety by dividi
 ReadWriteLock, ReentrantLock, StampedLock
 
 ### 18 What is the difference between class lock and object lock?
-Object Level Locks − It can be used when you want non-static method or non-static block of the code should be accessed by only one thread. Class Level locks − It can be used when we want to prevent multiple threads to enter the synchronized block in any of all available instances on runtime.
+Object Level Locks − It can be used when you want non-static method or non-static block of the code should be accessed by only one thread.  
+Class Level locks − It can be used when we want to prevent multiple threads to enter the synchronized block in any of all available instances on runtime.
+
+### 19 What is future and completableFuture?
+Future is an interface that belongs to java. util. concurrent package. It is used to represent the result of an asynchronous computation. The interface provides the methods to check if the computation is completed or not, to wait for its completion, and to retrieve the result of the computation.  
+CompletableFuture is used for asynchronous programming in Java. Asynchronous programming is a means of writing non-blocking code by running a task on a separate thread than the main application thread and notifying the main thread about its progress, completion or failure.
+
+### 20 what is ThreadLocal?
+A quick and practical guide to using ThreadLocal for storing thread-specific data in Java.  
+Java ThreadLocal is used to create thread local variables. We know that all threads of an Object share it's variables, so the variable is not thread safe. We can use synchronization for thread safety but if we want to avoid synchronization, we can use ThreadLocal variables.
