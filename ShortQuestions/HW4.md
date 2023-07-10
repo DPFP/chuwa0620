@@ -150,14 +150,15 @@ A functional interface cannot extend another interface with abstract methods.
 Because it will void the rule of one abstract method per functional interface.
 
 ```Java
-public int parentMethod(); 
-} 
+interface Parent { 
+    public int parentMethod(); 
+	} 
 @FunctionalInterface // This cannot be FunctionalInterface 
 interface Child extends Parent { 
-public int childMethod(); 
-// It will also extend the abstract method of the Parent Interface 
-// Hence it will have more than one abstract method 
-// And will give a compiler error 
+    public int childMethod(); 
+    // It will also extend the abstract method of the Parent Interface 
+    // Hence it will have more than one abstract method 
+    // And will give a compiler error 
 }
 ```
 
@@ -165,9 +166,9 @@ However, it can extend other interfaces which do not have any abstract method an
 
 ```Java
 interface Parent { 
-public void parentMethod(){ 
-System.out.println("Hello"); 
-} 
+    public void parentMethod(){ 
+    System.out.println("Hello"); 
+    } 
 } 
 @FunctionalInterface 
 interface Child extends Parent { 
