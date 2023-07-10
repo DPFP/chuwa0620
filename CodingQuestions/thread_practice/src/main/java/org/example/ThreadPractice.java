@@ -47,6 +47,43 @@ public class ThreadPractice {
             //
         }
     }
+
+    @Test
+    public void leetcode_1115() throws InterruptedException {
+        FooBar f = new FooBar(5);
+        Runnable printfoo = () -> System.out.println("Foo");
+        Runnable printbar = () -> System.out.println("Bar");
+        Thread t1 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    f.foo(printfoo);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        });
+
+        Thread t2 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    f.bar(printbar);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        });
+
+        t1.start();
+        t2.start();
+        try {
+            Thread.sleep(10000);
+        }
+        catch(InterruptedException e){
+            //
+        }
+    }
 }
 
 class NumPrinter implements Runnable{
@@ -102,6 +139,44 @@ class OddEvenPrinter_reentrant implements Runnable{
             }
         }finally{
                 lock.unlock();
+        }
+    }
+}
+
+
+class FooBar {
+    private int n;
+    private final Object lock;
+    private volatile boolean flag;
+    public FooBar(int n) {
+        this.n = n;
+        lock = new Object();
+    }
+
+    public void foo(Runnable printFoo) throws InterruptedException {
+        synchronized(lock){
+            for (int i = 0; i < n; i++) {
+                while(flag) lock.wait();
+                // printFoo.run() outputs "foo". Do not change or remove this line.
+                printFoo.run();
+                flag = true;
+                lock.notifyAll();
+                //lock.wait();
+            }
+        }
+    }
+
+    public void bar(Runnable printBar) throws InterruptedException {
+        synchronized(lock){
+
+            for (int i = 0; i < n; i++) {
+                while(!flag) lock.wait();
+                // printBar.run() outputs "bar". Do not change or remove this line.
+                printBar.run();
+                flag = false;
+                lock.notifyAll();
+                //lock.wait();
+            }
         }
     }
 }
