@@ -7,13 +7,14 @@ public class OddEvenPrinter {
     private static final Object monitor = new Object();
     private static final Lock lock = new ReentrantLock();
     private static final Condition condition = lock.newCondition();
-    private static int value = 1;
+    private static int value1 = 1;
+    private static int value2 = 1;
 
     public static void main(String[] args) {
         SychronizedRunnable runnable = new SychronizedRunnable();
         LockRunnable runnable2 = new LockRunnable();
-        // new Thread(runnable).start();
-        // new Thread(runnable).start();
+        new Thread(runnable).start();
+        new Thread(runnable).start();
         new Thread(runnable2).start();
         new Thread(runnable2).start();
     }
@@ -23,11 +24,11 @@ public class OddEvenPrinter {
         @Override
         public void run() {
             synchronized (monitor) {
-                while (value <= 10) {
-                    System.out.println("Sychronized method " + Thread.currentThread().getName() + ": " + value++);
+                while (value1 <= 10) {
+                    System.out.println("Sychronized method " + Thread.currentThread().getName() + ": " + value1++);
                     monitor.notify();
                     try {
-                        if (value < 11) {
+                        if (value1 < 11) {
                             monitor.wait();
                         }
                     } catch (InterruptedException e) {
@@ -42,13 +43,15 @@ public class OddEvenPrinter {
     static class LockRunnable implements Runnable{
         @Override
         public void run(){
-            // Thread.sleep(2000);
-            lock.lock();
             try{
-                while(value <= 10){
-                    System.out.println("Lock method " + Thread.currentThread().getName() + ": " + value++);
+                Thread.sleep(1000);
+                lock.lock();
+                while(value2 <= 10){
+                    System.out.println("Lock method " + Thread.currentThread().getName() + ": " + value2++);
                     condition.signal();
-                    condition.await();
+                    if(value2 <= 10){
+                        condition.await();
+                    }
                 }
             } catch (InterruptedException e){
                 e.printStackTrace();
