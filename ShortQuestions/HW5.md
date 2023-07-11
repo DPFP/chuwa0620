@@ -169,7 +169,62 @@ public class Main {
 
 #### 19. What is future and completableFuture?
 
+**Future:**
 
+A `Future` is typically used with a `ExecutorService` to run a Callable task:
+
+```Java
+ExecutorService executorService = Executors.newSingleThreadExecutor();
+
+Future<Integer> future = executorService.submit(() -> {
+    Thread.sleep(1000);
+    return 5;
+});
+
+// Do something else while waiting...
+
+try {
+    Integer result = future.get();  // this will block until the future completes
+    System.out.println(result);
+} catch (InterruptedException | ExecutionException e) {
+    e.printStackTrace();
+}
+
+executorService.shutdown();
+
+```
+
+In this example, `future.get()` will block and wait until the Callable completes, then it returns the result.
+
+**CompletableFuture:**
+
+`CompletableFuture` is typically used to chain multiple asynchronous operations:
+
+```Java
+CompletableFuture<Integer> future = CompletableFuture.supplyAsync(() -> {
+    try {
+        Thread.sleep(1000);
+    } catch (InterruptedException e) {
+        throw new IllegalStateException(e);
+    }
+    return 5;
+});
+
+// Then apply a Function on the result of the previous stage.
+CompletableFuture<Integer> futurePlus10 = future.thenApply(i -> i + 10);
+
+// Do something else while waiting...
+
+try {
+    Integer result = futurePlus10.get();  // this will block until the future completes
+    System.out.println(result); // will print 15
+} catch (InterruptedException | ExecutionException e) {
+    e.printStackTrace();
+}
+
+```
+
+In this example, `future.thenApply(i -> i + 10)` will not block. It returns immediately with a new `CompletableFuture`, which will complete with the result of the function applied to the result of the previous stage. This allows you to chain multiple operations in a non-blocking way.
 
 #### 20. what is ThreadLocal?
 
