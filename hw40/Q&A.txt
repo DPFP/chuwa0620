@@ -1,0 +1,44 @@
+2.The annotations @Column(columnDefinition = "varchar(255) default 'John Snow'") and @Column(name="STUDENT_NAME", length=50, nullable=false, unique=false) are used to specify the details of the corresponding database columns for the respective entity attributes.
+
+Let's break down the annotations and their usage:
+
+@Column(columnDefinition = "varchar(255) default 'John Snow'"):
+columnDefinition: This attribute allows you to provide a custom SQL fragment that defines the column's data type and other properties.
+"varchar(255) default 'John Snow'": In this example, varchar(255) specifies the column's data type as a variable-length string with a maximum length of 255 characters. default 'John Snow' specifies the default value for the column as "John Snow" if no value is explicitly provided.
+So, this annotation is used to specify the column definition, including the data type and default value, for the name attribute of the entity.
+
+@Column(name="STUDENT_NAME", length=50, nullable=false, unique=false):
+name: This attribute allows you to specify the name of the database column to which the attribute should be mapped. In this case, the column name is explicitly set as "STUDENT_NAME".
+length: This attribute specifies the maximum length of the column value. In this example, the column length is set to 50 characters.
+nullable: This attribute indicates whether the column can accept null values. Setting nullable to false ensures the column cannot be null.
+unique: This attribute specifies whether the column values must be unique. Setting unique to false allows duplicate values in the column
+
+
+
+3.first_name, operating_system
+
+n a typical Spring Boot application, the common layers are:
+Presentation Layer: This layer is responsible for handling the interaction with the external world, such as receiving and processing incoming requests and generating appropriate responses. It typically consists of controllers or endpoints.
+
+Service Layer: The service layer contains the business logic of the application. It encapsulates the application's core functionality and acts as an intermediary between the presentation layer and the data access layer. It performs operations and manipulations on data obtained from the data access layer.
+
+Data Access Layer: The data access layer is responsible for interacting with the underlying data storage, such as a database or external services. It provides mechanisms to perform CRUD (Create, Read, Update, Delete) operations on the data and abstracts away the details of the data storage implementation.
+
+Data Transfer Objects (DTOs): DTOs are objects used to transfer data between different layers of the application. They typically represent the data needed for specific operations and are used to decouple the layers and provide a clear contract for data exchange.
+
+Repository Layer: The repository layer provides an abstraction over the data access layer and offers a set of methods to interact with the database. It defines interfaces and provides implementations to perform data access operations, including querying, persistence, and retrieval.
+
+When an API is called by Postman, the flow through the layers typically follows these steps:
+Postman sends an HTTP request to the server with the specified URL, HTTP method, headers, and request body.
+The request is received by the controller layer, which maps the request to the appropriate controller method based on the URL and HTTP method.
+The controller validates and processes the request parameters, path variables, and request body if required.
+The controller invokes the service layer, passing the necessary data and parameters.
+The service layer performs the required business logic, which may include data manipulation, validation, calling external services, or interacting with the data access layer.
+If necessary, the service layer interacts with the repository or data access layer to perform database operations.
+Once the processing is complete, the service layer returns the result to the controller.
+The controller prepares the response, including setting the appropriate HTTP status code, headers, and the response body.
+The response is sent back to Postman, which receives and displays the response data.
+application.properties is a configuration file used in Spring Boot applications to provide various settings and configurations. It is typically located in the src/main/resources directory. It allows you to configure properties related to the application, database connections, server configurations, logging settings, and other application-specific settings.
+On the other hand, application.yml is an alternative format to application.properties that allows you to provide the same configuration properties but in YAML (YAML Ain't Markup Language) format. YAML offers a more human-readable and structured approach to configuration compared to the property key-value pairs used in application.properties.
+
+Both application.properties and application.yml serve the same purpose of providing configuration options, but they differ in syntax and structure. You can choose either one based on your preference and requirements.
