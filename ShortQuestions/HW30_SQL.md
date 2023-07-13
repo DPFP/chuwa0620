@@ -114,5 +114,5 @@ db.oms_company_address.updateOne({'id':1},{$set:{'phone':"00000000"}});
 
 **7.  Remove one entry from  oms_company_address collection (method: remove() )**
 ```
-db.oms_company_address.deleteOne({ id: 2});
+db.oms_company_address.deleteOne({'id':2});
 ```
