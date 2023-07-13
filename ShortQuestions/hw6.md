@@ -88,3 +88,40 @@ db.oms_company_address.update({id:1},{$set:{phone:'666-666-6666'}});
 db.oms_company_address.remove({name:"Mike"});
 ```
 
+
+## API design
+### 1 Find 2 collection of APIs example. ie. Twitter, Paypal, Youtube etc.
+1. Youtube
+- PUT https://www.googleapis.com/youtube/v3/channels
+- POST https://www.googleapis.com/youtube/v3/comments
+- GET https://www.googleapis.com/youtube/v3/comments
+- POST https://www.googleapis.com/youtube/v3/comments/markAsSpam
+- GET https://www.googleapis.com/youtube/v3/subscriptions
+- POST https://www.googleapis.com/youtube/v3/subscriptions
+
+2. Twitter
+GET https://api.twitter.com/2/tweets
+POST https://api.twitter.com/2/tweets
+DELETE https://api.twitter.com/2/tweets/{id}
+GET https://api.twitter.com/2/users/{id}
+GET https://api.twitter.com/2/users/{id}/tweets
+
+### 2 Design a collection of APIs for a Blog Website,please specify GET POST PUT DELETE
+- Get user page summary: GET baseURL/v1/users/{userid}/summary
+- Get user settings: GET baseURL/v1/users/{userid}/settings/address
+- Update user settings: PUT baseURL/v1/users/{userid}/settings/address
+- Delete user payment card: DELETE baseURL/v1/users/{userid}/payments/card/{card_id}
+
+## Design APIs for the following features
+### 1 find the customer's payments, like credit card1, credit card2,paypal,ApplePay.
+GET baseUrl/v1/users/{userid}/payments/card/{card_id}
+
+### 2 Find the customer's history orders from 10/10/2022to10/24/2022
+GET baseUrl/v1/users/{userid}/orders/?start_date=10-10-2022 & end_date=10-24-2022
+
+### 3 find the customer's delivery addresses
+GET baseUrl/v1/users/{userid}/addresses/default
+
+### 4 If I also want to get customer's default payment and default delivery address,what kind of the API(URL) should be?
+GET baseUrl/v1/users/{userid}/payments/default  
+GET baseUrl/v1/users/{userid}/addresses/default
