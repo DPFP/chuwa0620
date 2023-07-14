@@ -1,5 +1,6 @@
 package com.chuwa.com.redbook.controller;
 
+import com.chuwa.com.redbook.entity.Post;
 import com.chuwa.com.redbook.payload.PostDto;
 import com.chuwa.com.redbook.service.PostService;
 import org.springframework.graphql.data.method.annotation.Argument;
@@ -19,8 +20,8 @@ public class PostGraphQLController {
     }
 
     @QueryMapping
-    public ResponseEntity<PostDto> postById(@Argument long id){
-        return new ResponseEntity<>(postService.getPostById(id), HttpStatus.OK);
+    public PostDto postById(@Argument long id){
+        return postService.getPostById(id);
     }
 
     @MutationMapping

@@ -5,10 +5,18 @@ type Post {
     content: String,
 }
 
+type Author {
+    id: ID
+    name: String,
+    introduction: String,
+}
+
 type Query {
     postById(id: ID): Post
+    authorById(id: ID): Author
 }
 
 type Mutation {
     createPost(title: String!, description:String!, content:String!): Post!
+    createAuthor(name: String!, introduction: String!): Author!
 }
