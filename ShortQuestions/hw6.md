@@ -89,4 +89,58 @@ db.oms_company_address.updateOne({id: 2},{$set:{name: "hainanjifan"}})
 db.oms_company_address.deleteOne({id: 1})
 ```
 
+API design
+```
+1. Find 2 collection of APIs example. ie. Twitter, Paypal, Youtube etc. -- 命名规范
+- Twitter API
+Tweets:
+	GET statuses/lookup 
+    GET statuses/show/:id	
+    POST statuses/update
+    POST statuses/destroy/:id	
+    GET favorites/list
+
+- YouTube API
+  GET {base_URL}/channels?part=contentDetails &mine=true   Retrieve channel information
+  GET {base_URL}/subscriptions?part=snippet&mySubscribers=true Retrieve Subscriptions
+
+
+2. Design a collection of APIs for a Blog Website, please specify GET POST PUT DELETE\
+The blog would have Users, Posts, and Comments.
+- Users
+     GET /api/users/
+     GET /api/users/{id}
+     POST /api/users/
+     PUT /api/users/{id}
+     DELETE /api/users/{id}
+- Posts
+     GET /api/posts/
+     GET /api/posts/{id}
+     POST /api/posts/
+     PUT /api/posts/{id}
+     DELETE /api/posts/{id}
+- Comments
+     GET /api/comments/
+     GET /api/comments/{id}
+     POST /api/comments/
+     PUT /api/comments/{id}
+     DELETE /api/comments{id}
+
+- Combined
+    GET /api/users/{id}/posts
+    GET /api/posts/{id}/comments
+
+
+**Design APIs for the following features (思考:path variable 怎么用?有sub resources, 哪些地方该用复数)**
+1. find the customer's payments,like credit card 1, credit card 2, paypal,ApplePay.
+   GET /api/v1/customers/{customerId}/payments
+2. Find the customer's history orders from 10/10/2022 to 10/24/2022
+   GET /api/v1/customers/{customerId}/history_orders?startDate=2022-10-10&endDate=2022-10-24
+3. find the customer's delievery addresses
+   GET /api/v1/customers/{customerId}/delievery_address
+4. If I also want to get customer's default payment and default delievery address,what kind of the API(URL)
+   should be?
+   GET /api/v1/customers/{customerId}/payment/default_payment
+   GET /api/v1/cusomters/{customerId}/address/default_address
+```
  
