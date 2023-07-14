@@ -1,12 +1,14 @@
 package com.example.mongoblog.model;
 
+import java.util.UUID;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document("blog_posts")
 public class BlogPost {
     @Id
-    private long id;
+    private String id;
     private String title;
     private String description;
     private String content;
@@ -14,18 +16,18 @@ public class BlogPost {
     public BlogPost() {
 
     }
-    public BlogPost(long id, String title, String description, String content) {
-        this.id = id;
+    public BlogPost(String title, String description, String content) {
+        this.id = UUID.randomUUID().toString().replace("-", "").toLowerCase();
         this.title = title;
         this.description = description;
         this.content = content;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

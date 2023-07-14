@@ -1,7 +1,7 @@
 package com.example.mongoblog.payload;
 
 public class PostDto {
-    private long id;
+    private String id;
     private String title;
     private String description;
     private String content;
@@ -9,18 +9,18 @@ public class PostDto {
     public PostDto() {
     }
 
-    public PostDto(long id, String title, String description, String content) {
+    public PostDto(String id, String title, String description, String content) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.content = content;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
