@@ -1,0 +1,32 @@
+package com.chuwa.mongoblog.controller;
+
+import com.chuwa.mongoblog.payload.PostDto;
+import com.chuwa.mongoblog.service.PostService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+
+@RestController
+@RequestMapping("/api/v1/posts")
+@RequiredArgsConstructor
+public class PostController {
+
+    private PostService postService;
+
+    @PostMapping
+    public ResponseEntity<PostDto> createPost(@RequestBody PostDto pto) {
+        PostDto response = this.postService.createPost(pto);
+
+        return new ResponseEntity<>(response, HttpStatus.CREATED);
+    }
+
+    @GetMapping
+    public List<PostDto> getAllPosts(){
+        return this.postService.getAllPosts();
+    }
+}
