@@ -1,0 +1,61 @@
+# create
+db.createCollection("oms_company_address")
+
+# insert
+db.oms_company_address.insert({
+  id: 1,
+  address_name: "home",
+  send_status: 1,
+  receive_status: 1, 
+  name: "Xilin",
+  phone: "7349688779",
+  province: "CA",
+  city: "LA",
+  region: "None",
+  detail_address: "test address"
+})
+
+db.oms_company_address.insert({
+  id: 2,
+  address_name: "work",
+  send_status: 1,
+  receive_status: 1, 
+  name: "Xilin",
+  phone: "7349688779",
+  province: "CA",
+  city: "Santa Barbara",
+  region: "None",
+  detail_address: "test address"
+})
+
+
+db.oms_company_address.insert({
+  id: 3,
+  address_name: "school",
+  send_status: 1,
+  receive_status: 1, 
+  name: "Xilin",
+  phone: "7349688779",
+  province: "MI",
+  city: "Ann Arbor",
+  region: "None",
+  detail_address: "test address"
+})
+
+# read one 
+db.oms_company_address.findOne()
+
+# read all
+db.oms_company_address.find()
+
+# update (specific fields)
+db.oms_company_address.update({ id: 1},
+{
+    $set: {
+    name: "not xilin",
+    send_status: 0
+    }
+})
+
+# remove
+db.oms_company_address.remove({ id: 1})
