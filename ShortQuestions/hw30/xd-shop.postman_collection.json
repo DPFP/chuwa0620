@@ -1,0 +1,922 @@
+{
+	"info": {
+		"_postman_id": "9bc72306-576f-4de0-83d3-687db5cd383f",
+		"name": "xd-shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20249582"
+	},
+	"item": [
+		{
+			"name": "user-service",
+			"item": [
+				{
+					"name": "address",
+					"item": [
+						{
+							"name": "findbyid",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{user-server}}/api/address/v1/find/42",
+									"host": [
+										"{{user-server}}"
+									],
+									"path": [
+										"api",
+										"address",
+										"v1",
+										"find",
+										"42"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add address",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"city\": \"Santa Clara\",\n  \"default_status\": 1,\n  \"detail_address\": \"1050 Benton Street\",\n  \"phone\": \"2065913460\",\n  \"province\": \"California\",\n  \"receive_name\": \"Bob\",\n  \"region\": \"Santa Clara\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{user-server}}/api/address/v1/add",
+									"host": [
+										"{{user-server}}"
+									],
+									"path": [
+										"api",
+										"address",
+										"v1",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list all user address",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{user-server}}/api/address/v1/list",
+									"host": [
+										"{{user-server}}"
+									],
+									"path": [
+										"api",
+										"address",
+										"v1",
+										"list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete by id",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{user-server}}/api/address/v1/del/40",
+									"host": [
+										"{{user-server}}"
+									],
+									"path": [
+										"api",
+										"address",
+										"v1",
+										"del",
+										"40"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "get captcha",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{user-server}}/api/user/v1/captcha",
+									"host": [
+										"{{user-server}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"v1",
+										"captcha"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "send code to email",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{user-server}}/api/user/v1/send_code?to=clin8@scu.edu&captcha=9994",
+									"host": [
+										"{{user-server}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"v1",
+										"send_code"
+									],
+									"query": [
+										{
+											"key": "to",
+											"value": "clin8@scu.edu"
+										},
+										{
+											"key": "captcha",
+											"value": "9994"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "upload avatar",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/Users/linbob/Desktop/img/apple.jpeg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{user-server}}/api/user/v1/upload",
+									"host": [
+										"{{user-server}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"v1",
+										"upload"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"code\": \"317015\",\n  \"head_img\": \"https://bob-xdshop-img.oss-us-west-1.aliyuncs.com/user/2022/12/14/8514ecbbdee7428caf86a63c9e4421b6.jpeg\",\n  \"mail\": \"clin8@scu.edu\",\n  \"name\": \"Bob distribute\",\n  \"pwd\": \"123456\",\n  \"sex\": 1,\n  \"slogan\": \"Hello, I am Bob\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{user-server}}/api/user/v1/register",
+									"host": [
+										"{{user-server}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"v1",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"mail\": \"ljb199992@gmail.com\",\n  \"pwd\": \"123456\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{user-server}}/api/user/v1/login",
+									"host": [
+										"{{user-server}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find user detail",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{user-server}}/api/user/v1/detail",
+									"host": [
+										"{{user-server}}"
+									],
+									"path": [
+										"api",
+										"user",
+										"v1",
+										"detail"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "test",
+					"item": [
+						{
+							"name": "test get all user",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{user-server}}/api/test/v1/user",
+									"host": [
+										"{{user-server}}"
+									],
+									"path": [
+										"api",
+										"test",
+										"v1",
+										"user"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "coupon-service",
+			"item": [
+				{
+					"name": "coupon",
+					"item": [
+						{
+							"name": "list coupon",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{coupon-server}}/api/coupon/v1/page_coupon?page=1&size=3",
+									"host": [
+										"{{coupon-server}}"
+									],
+									"path": [
+										"api",
+										"coupon",
+										"v1",
+										"page_coupon"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add coupon",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{coupon-server}}/api/coupon/v1/add/promotion/19",
+									"host": [
+										"{{coupon-server}}"
+									],
+									"path": [
+										"api",
+										"coupon",
+										"v1",
+										"add",
+										"promotion",
+										"19"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "RPC-add new user coupon",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\":2,\n    \"name\":\"Bob\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{coupon-server}}/api/coupon/v1/new_user_coupon",
+									"host": [
+										"{{coupon-server}}"
+									],
+									"path": [
+										"api",
+										"coupon",
+										"v1",
+										"new_user_coupon"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "coupon_record",
+					"item": [
+						{
+							"name": "list record",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{coupon-server}}/api/coupon_record/v1/page?page=1&size=3",
+									"host": [
+										"{{coupon-server}}"
+									],
+									"path": [
+										"api",
+										"coupon_record",
+										"v1",
+										"page"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "detail",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{coupon-server}}/api/coupon_record/v1/detail/174",
+									"host": [
+										"{{coupon-server}}"
+									],
+									"path": [
+										"api",
+										"coupon_record",
+										"v1",
+										"detail",
+										"174"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "product-service",
+			"item": [
+				{
+					"name": "banner",
+					"item": [
+						{
+							"name": "list banner",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{product-server}}/api/banner/v1/list",
+									"host": [
+										"{{product-server}}"
+									],
+									"path": [
+										"api",
+										"banner",
+										"v1",
+										"list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "product",
+					"item": [
+						{
+							"name": "page product",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{product-server}}/api/product/v1/page?page=1&size=3",
+									"host": [
+										"{{product-server}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"v1",
+										"page"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find detail by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{product-server}}/api/product/v1/detail/1",
+									"host": [
+										"{{product-server}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"v1",
+										"detail",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "page product flow control",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{product-server}}/api/product/v1/page_flow_control?page=1&size=3",
+									"host": [
+										"{{product-server}}"
+									],
+									"path": [
+										"api",
+										"product",
+										"v1",
+										"page_flow_control"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "cart",
+					"item": [
+						{
+							"name": "add to cart",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"product_id\":2,\n    \"buy_num\":1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{product-server}}/api/cart/v1/add",
+									"host": [
+										"{{product-server}}"
+									],
+									"path": [
+										"api",
+										"cart",
+										"v1",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "clear cart",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"product_id\":2,\n    \"buy_num\":2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{product-server}}/api/cart/v1/clear",
+									"host": [
+										"{{product-server}}"
+									],
+									"path": [
+										"api",
+										"cart",
+										"v1",
+										"clear"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get my cart",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{product-server}}/api/cart/v1/mycart",
+									"host": [
+										"{{product-server}}"
+									],
+									"path": [
+										"api",
+										"cart",
+										"v1",
+										"mycart"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "clear item in cart",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"product_id\":2,\n    \"buy_num\":2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{product-server}}/api/cart/v1/delete/2",
+									"host": [
+										"{{product-server}}"
+									],
+									"path": [
+										"api",
+										"cart",
+										"v1",
+										"delete",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change the cart",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "token",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"product_id\":1,\n    \"buy_num\":3\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{product-server}}/api/cart/v1/change",
+									"host": [
+										"{{product-server}}"
+									],
+									"path": [
+										"api",
+										"cart",
+										"v1",
+										"change"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "order-service",
+			"item": [
+				{
+					"name": "order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"coupon_record_id\":-1,\n    \"product_id_list\":[2],\n    \"pay_type\":\"ALIPAY\",\n    \"client_type\":\"H5\",\n    \"address_id\": 43,\n    \"total_amount\": 43,\n    \"real_pay_amount\": 43,\n    \"token\": \"foN3fafhTG5r7VqyCCn8PpZfyu81pZDG\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{order-server}}/api/order/v1/confirm",
+							"host": [
+								"{{order-server}}"
+							],
+							"path": [
+								"api",
+								"order",
+								"v1",
+								"confirm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get token",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{order-server}}/api/order/v1/get_token?token={{token}}",
+							"host": [
+								"{{order-server}}"
+							],
+							"path": [
+								"api",
+								"order",
+								"v1",
+								"get_token"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "page",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{order-server}}/api/order/v1/page",
+							"host": [
+								"{{order-server}}"
+							],
+							"path": [
+								"api",
+								"order",
+								"v1",
+								"page"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
