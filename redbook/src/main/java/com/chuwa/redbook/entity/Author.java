@@ -7,41 +7,34 @@ import org.hibernate.annotations.UpdateTimestamp;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "posts",
+@Table(name = "author",
         uniqueConstraints = {
-            //不能有两行有相同的"title"值
-            @UniqueConstraint(columnNames = {"title"})
-    }
+        @UniqueConstraint(columnNames = {"username"})
+        }
 )
-public class Post {
-
+public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "title", nullable = false)
-    private String title;
-    @Column(name = "description", nullable = false)
-    private String description;
-    @Column(name = "content", nullable = false)
-    private String content;
+    @Column(name = "username", nullable = false)
+    private String username;
+    @Column(name = "age", nullable = false)
+    private Integer age;
     @CreationTimestamp
     private LocalDateTime createDateTime;
     @UpdateTimestamp
     private LocalDateTime updateDateTime;
 
+    public Author() {
 
-
-    public Post(Long id, String title, String description, String contrnt, LocalDateTime createDateTime, LocalDateTime updateDateTime) {
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.content = contrnt;
-        this.createDateTime = createDateTime;
-        this.updateDateTime = updateDateTime;
     }
 
-    public Post() {
-
+    public Author(Long id, String username, Integer age, LocalDateTime createDateTime, LocalDateTime updateDateTime) {
+        this.id = id;
+        this.username = username;
+        this.age = age;
+        this.createDateTime = createDateTime;
+        this.updateDateTime = updateDateTime;
     }
 
     public Long getId() {
@@ -52,28 +45,20 @@ public class Post {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getUsername() {
+        return username;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getDescription() {
-        return description;
+    public Integer getAge() {
+        return age;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
+    public void setAge(Integer age) {
+        this.age = age;
     }
 
     public LocalDateTime getCreateDateTime() {
