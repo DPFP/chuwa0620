@@ -67,6 +67,14 @@ class level, it can make this class a bean, define global exception handlers to 
 @Valid
 Used for validation, ie: column length cannot be greater than 10.
 
+@Document and @Entity
+@Document Used for nosql database to identify a model, whereas @Entity is used in sql to map to a table in database.
+
+@QueryMapping
+Used in graphql to annotate a query operation.
+
+@MutationMapping
+Used in graphql to annotate a create or update or delete operation.
 
 ## 2
 The table will have two columns.
