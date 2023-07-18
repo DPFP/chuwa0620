@@ -36,7 +36,14 @@ These type of annotations are used to REST apis.
 @Service
 By marking a class with @Service, you are indicating that it serves the role of a service or business logic component. This helps in semantic clarity and provides a standardized way of defining and autodetecting service classes within the application context.
 
+@Document and @Entity
+@Document Used for nosql database to identify a model, whereas @Entity is used in sql to map to a table in database.
 
+@QueryMapping
+Used in graphql to annotate a query operation.
+
+@MutationMapping
+Used in graphql to annotate a create or update or delete operation.
 
 ## 2
 The table will have two columns.
