@@ -3,6 +3,7 @@ package com.chuwa.redbook.controller;
 import com.chuwa.redbook.payload.AuthorDto;
 import com.chuwa.redbook.payload.PostDto;
 import com.chuwa.redbook.service.AuthorService;
+import com.chuwa.redbook.util.AppConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +22,14 @@ public class AuthorController {
     public ResponseEntity<AuthorDto> createAuthor(@RequestBody AuthorDto ato) {
         AuthorDto response = this.authorService.createAuthor(ato);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
+    }
+
+    @GetMapping("/ids")
+    public List<AuthorDto> getUsersBetweenID(
+            @RequestParam(value = "id1", defaultValue = "0", required = false) long id1,
+            @RequestParam(value = "id2", defaultValue = "0", required = false) long id2
+    ) {
+        return this.authorService.getAuthorsBetweenID(id1,id2);
     }
 
     @GetMapping
