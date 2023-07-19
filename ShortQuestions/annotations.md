@@ -76,6 +76,16 @@ Used in graphql to annotate a query operation.
 @MutationMapping
 Used in graphql to annotate a create or update or delete operation.
 
+
+@OneToOne, @OneToMany, @ManyToMany, @ManyToOne, @JoinColumn
+These annotation are used in JPA to join tables and show their relationships.
+
+@NamedQuery, @NamedQueries
+Named JPQL
+
+@Query
+JPQL, using these annotation allows us to ignore the naming convention of JPA.
+
 ## 2
 The table will have two columns.
 One is called name and its varchar(255) type and have a default value of John Snow.
