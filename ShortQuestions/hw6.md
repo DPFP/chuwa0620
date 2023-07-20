@@ -167,7 +167,7 @@ GET API - Retrieve Blog Posts:
 * Description: This API will retrieve all blog posts available on the website.
 * Response: A JSON array containing all the blog posts in the database.
 
-POST API - Create a New Blog Post:
+POST API - Create a New Blog Entity:
 
 * Endpoint: /api/posts
 * Description: This API will allow users to create a new blog post.
@@ -176,13 +176,13 @@ POST API - Create a New Blog Post:
 * Response: A JSON object representing the newly created blog post with a unique identifier (e.g., post ID) assigned by
   the server.
 
-GET API - Retrieve a Single Blog Post:
+GET API - Retrieve a Single Blog Entity:
 
 * Endpoint: /api/posts/{postId}
 * Description: This API will retrieve a specific blog post by its unique identifier (postId).
 * Response: A JSON object containing the details of the requested blog post.
 
-PUT API - Update an Existing Blog Post:
+PUT API - Update an Existing Blog Entity:
 
 * Endpoint: /api/posts/{postId}
 * Description: This API will allow users to update an existing blog post by its unique identifier (postId).
@@ -190,7 +190,7 @@ PUT API - Update an Existing Blog Post:
   fields that need to be modified.
 * Response: A JSON object representing the updated blog post with its new details.
 
-DELETE API - Delete a Blog Post:
+DELETE API - Delete a Blog Entity:
 
 * Endpoint: /api/posts/{postId}
 * Description: This API will allow users to delete a specific blog post by its unique identifier (postId).
