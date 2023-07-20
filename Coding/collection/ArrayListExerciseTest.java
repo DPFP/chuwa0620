@@ -1,0 +1,112 @@
+package com.chuwa.exercise.collection;
+
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+
+/**
+ * @author b1go
+ * @date 6/12/22 4:43 PM
+ */
+public class ArrayListExerciseTest {
+    /**
+     * new ArrayList()
+     * add elements
+     * get element
+     * get Size
+     * list.addAll(anotherList)
+     */
+    @Test
+    public void learn_Inserting_And_Retrieving() {
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        System.out.println(list.get(0));
+        System.out.println(list.size());
+        ArrayList<Integer> list1 = new ArrayList<>();
+        list1.add(3);
+        list.addAll(list1);
+    }
+
+    /**
+     * remove(int index)
+     * remove(Object o)
+     * removeRange(int fromIndex, int toIndex)
+     * removeAll(Collection<?> c)
+     * clear()
+     *
+     * Update:
+     * set(int index, E e)
+     * replaceAll(UnaryOperator<E> operator)
+     *
+     * check:
+     * contains(Object o)
+     * indexOf(Object o)
+     * lastIndexOf(Object o)
+     */
+    @Test
+    public void learn_Remove_Replacing_Updating() {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("1");
+        list.add("2");
+        list.add("3");
+        list.remove(0);
+        list.remove("2");
+        System.out.println(list);
+        ArrayList<String> list1 = new ArrayList<>();
+        list1.add("1");
+        list1.add("2");
+        list1.add("3");
+        list1.removeAll(list);
+        System.out.println(list1);
+        list1.clear();
+        list1.add("3");
+        list1.set(0, "1");
+        boolean result = list1.contains("1");
+        System.out.println(result);
+    }
+
+    /**
+     * iterator()
+     * hasNext()
+     * next()
+     * remove()
+     * forEachRemaining(Consumer<? super E> action) -- from Java8
+     */
+
+    @Test
+    public void learn_Iterator() {
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        Iterator<Integer> it = list.iterator();
+        System.out.println(it.hasNext());
+//        list.remove(0);
+        System.out.println(it.next());
+        it.forEachRemaining(ele -> System.out.println(ele));
+        it.remove();
+    }
+
+    /**
+     * sort(List<T> list)
+     * Collections.sort(List<T> t)
+     * Comparator.reverseOrder()
+     */
+
+    @Test
+    public void learn_Sorting() {
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(4);
+        list.add(2);
+        list.add(3);
+        list.add(1);
+        Collections.sort(list);
+        System.out.println(list);
+        list.sort(Comparator.reverseOrder());
+        System.out.println(list);
+    }
+}

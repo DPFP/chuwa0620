@@ -9,6 +9,7 @@ import com.chuwa.redbook.service.PostService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -45,6 +46,7 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
+
     public PostResponse getAllPost(int pageNo, int pageSize, String sortBy, String sortDir) {
 
 
@@ -85,6 +87,7 @@ public class PostServiceImpl implements PostService {
 ////        return postDtos;
 //        return posts.stream().map(post -> postToDto(post)).collect(Collectors.toList());
 //    }
+
 
     @Override
     public PostDto getPostById(long id) {
