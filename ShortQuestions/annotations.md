@@ -85,4 +85,101 @@ public class ExampleController{
     }
 }
 ```
+@Entity: Define a class to be the entity in the database
+```java
+@Entity
+public class Post{
+    //define the entity
+}
+```
 
+@UniqueConstraint: specify that one or more columns in a table should have unique values. It helps enforce data integrity rules by ensuring that duplicate values are not allowed in the specified columns.
+```java
+@Entity
+@Table(name = "users",
+       uniqueConstraints = @UniqueConstraint(columnNames = {"username", "email"}))
+public class User {
+    // ...
+}
+```
+
+@Table: define the table
+```java
+@Entity
+@Table(name = "users",
+       uniqueConstraints = @UniqueConstraint(columnNames = {"username", "email"}))
+public class User {
+    // ...
+}
+```
+
+@ID: define the variable to be the primary key
+```java
+@Entity
+@Table(name = "users",
+       uniqueConstraints = @UniqueConstraint(columnNames = {"username", "email"}))
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;    
+}
+```
+
+@GeneratedValue: provides different strategies to automatically generate primary key values.
+```java
+@Entity
+@Table(name = "users",
+       uniqueConstraints = @UniqueConstraint(columnNames = {"username", "email"}))
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;    
+}
+```
+
+@Column: define a column in the database with name and proporities
+```java
+@Entity
+@Table(name = "users",
+       uniqueConstraints = @UniqueConstraint(columnNames = {"username", "email"}))
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;    
+
+    @Column(name = "title", nullable = false)
+    private String title;
+}
+```
+
+@CreationTimeStamp: automatically populate a timestamp or date field with the current date and time when an entity is created and persisted in the database.
+```java
+@Entity
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "created_at")
+    @CreationTimestamp
+    private LocalDateTime createdAt;
+
+    // Other entity attributes and methods
+}
+```
+
+@UpdateTimestamp: automatically update a timestamp or date field with the current date and time whenever an entity is updated and persisted in the database.
+```java
+@Entity
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "updated_at")
+    @UpdateTimestamp
+    private LocalDateTime updatedAt;
+
+    // Other entity attributes and methods
+}
+```
