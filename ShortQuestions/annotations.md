@@ -71,3 +71,30 @@ public class PostGraphQLController {
     }
 }
 ```
+
+
+## @OneToMany
+```
+Current class object could contain multiple objects
+@OneToMany(mappedBy = "posts", cascade = CascadeType.ALL, orphanRemoval = true)
+private Set<Comment> comments = new HashSet<>();
+```
+
+## @ManyToOne
+```
+Current class object could be contained in multiple other objects
+@ManyToOne(fetch = FetchType.LAZY)
+@JoinColumn(name = "post_id", nullable = false)
+private Post post;
+```
+
+
+## @ManyToMany
+```
+Current class object could contain multiple objects AND it could be contained in multiple other objects
+@ManyToMany(fetch = FetchType.LAZY)
+@JoinTable(name = "sku_inventory",
+      joinColumns = @JoinColumn(name = "sku_id"),
+      inverseJoinColumns = @JoinColumn(name = "inventory_id"))
+private Set<PmsInventory> pmsInventories = new HashSet<>();
+ ```
