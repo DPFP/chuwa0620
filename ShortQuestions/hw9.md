@@ -1,3 +1,6 @@
+### 1 List all of the new annotations to your annotaitons.md and explain its role.
+see annotations.md
+
 ### 2 how do you do the debug?
 Right click on the triangle icon on main function and start the project in debug mode
 
@@ -38,6 +41,9 @@ A ResultSet object maintains a cursor that points to the current row in the resu
 ### 10 What is the ORM framework?
 Object Relational Mapping (ORM) is a technique used in creating a "bridge" between object-oriented programs and, in most cases, relational databases.
 
+### 11 Learn how to use ObjectMapper by this example.
+Done
+
 ### 12 What is the serialization and desrialization?
 Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the reverse process where the byte stream is used to recreate the actual Java object in memory. 
 
@@ -46,3 +52,6 @@ Serialization is a mechanism of converting the state of an object into a byte st
 int[] arr = {20, 3, 78, 9, 6, 53, 73, 99, 24, 32};
 Double res = Arrays.stream(arr).average().getAsDouble();
 ```
+
+### 14 15 抄写
+see redbook in the MavenPorject folder
