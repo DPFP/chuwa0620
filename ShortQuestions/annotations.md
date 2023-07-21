@@ -1,6 +1,6 @@
 # Annotations
 
-## REST Api
+## -----------------------------------Controller-----------------------------------
 
 @RestController: Mark this class as a REST controller
 ```java
@@ -84,6 +84,32 @@ public class ExampleController{
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 }
+
+@QueryMapping: graphql controller annotation that act as a shortcut for @SchemaMapping with typename of "Query", which is used to express the mapping of a handler method to a Graphql type and field pair
+```java
+@QueryMapping
+public PostDto postById(@Argument Long id){
+    return postService.getPostById(id);
+}
+```
+
+@MutationMapping: 
+graphql controller annotation that act as a shortcut for @SchemaMapping with typename of "Mutation", which is used to express the mapping of a handler method to a Graphql type and field pair
+```java
+@MutationMapping
+public PostDto createPost(@Argument String title, @Argument String description, @Argument String content){
+    PostDto postDto = new PostDto();
+    postDto.setContent(content);
+    postDto.setTitle(title);
+    postDto.setDescription(description);
+    return postService.createPost(postDto);
+}
+```
+
+
+## -----------------------------------Entity-----------------------------------
+
+
 ```
 @Entity: Define a class to be the entity in the database
 ```java
