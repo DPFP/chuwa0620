@@ -61,7 +61,45 @@ private String fieldName;
  }
 ```
 
+- @Component
+  - It tells Spring's component-scan feature to detect it automatically and add it into the application context as a managed bean.
+```aidl
+@Component
+public class MyComponent {
+    //...
+}
+```
 
+- @ExceptionHandler
+  - To define a method that handles exceptions thrown by request handling (@RequestMapping) methods.
+```aidl
+@Controller
+public class MyController {
 
+    //...
 
+    @ExceptionHandler(value = Exception.class)
+    public ResponseEntity<String> handleException(Exception e) {
+        return new ResponseEntity<>("An error occurred: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+}
+```
+
+- @ControllerAdvice
+  - Handle exceptions across the whole application, not just an individual controller. You can think of it as an interceptor of exceptions thrown by methods annotated with @RequestMapping.
+```aidl
+@ControllerAdvice
+public class GlobalExceptionHandler {
+
+    @ExceptionHandler(value = Exception.class)
+    public ResponseEntity<String> defaultErrorHandler(Exception e) {
+        return new ResponseEntity<>("General error: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @ExceptionHandler(value = NullPointerException.class)
+    public ResponseEntity<String> handleNullPointerException(NullPointerException e) {
+        return new ResponseEntity<>("Null pointer exception: " + e.getMessage(), HttpStatus.BAD_REQUEST);
+    }
+}
+```
 
