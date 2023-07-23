@@ -1,5 +1,6 @@
 package com.chuwa.com.redbook.controller;
 
+import com.chuwa.com.redbook.entity.Post;
 import com.chuwa.com.redbook.payload.PostDto;
 import com.chuwa.com.redbook.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +45,17 @@ public class PostController {
         postService.deletePostById(id);
         // return new ResponseEntity.ok(null);
     }
+
+    @GetMapping("/title/{title}")
+    public ResponseEntity<List<PostDto>> getPostByTitle(@PathVariable(name="title") String title) {
+        return new ResponseEntity<>(postService.getPostByTitle(title), HttpStatus.OK);
+    }
+
+    @GetMapping("/title/contains/{title}")
+    public ResponseEntity<List<PostDto>> getPostByTitleContains(@PathVariable(name="title") String title) {
+        return new ResponseEntity<>(postService.getPostsByTitleContains(title), HttpStatus.OK);
+    }
+
 }
 
 
