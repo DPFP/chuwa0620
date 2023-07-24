@@ -13,27 +13,30 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
+import org.modelmapper.ModelMapper;
 @Service
 public class PostServiceImpl implements PostService {
 
     private PostRepository postRepository;
-
-    public PostServiceImpl(PostRepository postRepository) {
+    private ModelMapper modelMapper;
+    public PostServiceImpl(PostRepository postRepository, ModelMapper modelMapper) {
         this.postRepository = postRepository;
+        this.modelMapper = modelMapper;
     }
 
     @Override
     public PostDto createPost(PostDto postDto) {
         //PostDTO -> Post(entity)
-        Post newPost = new Post();
-        newPost.setTitle(postDto.getTitle());
-        newPost.setDescription(postDto.getDescription());
-        newPost.setContent(postDto.getContent());
+        //Post newPost = new Post();
+        //newPost.setTitle(postDto.getTitle());
+        //newPost.setDescription(postDto.getDescription());
+        //newPost.setContent(postDto.getContent());
+        Post newPost = modelMapper.map(postDto, Post.class);
         Post savedPost = this.postRepository.save(newPost);
 
         //Post(entity) -> PostDTO
-        return PostToDto(savedPost);
+        //return PostToDto(savedPost);
+        return modelMapper.map(savedPost, PostDto.class);
 
     }
 
@@ -51,12 +54,14 @@ public class PostServiceImpl implements PostService {
     @Override
     public List<PostDto> getAllPost() {
         List<Post> posts = postRepository.findAll();
-        return posts.stream().map(post -> PostToDto(post)).collect(Collectors.toList());
+        List<PostDto> postDtos = posts.stream().map(post -> modelMapper.map(post, PostDto.class)).collect(Collectors.toList());
+        return postDtos;
     }
 
     @Override
     public PostDto getPostById(long id) {
-        return PostToDto(postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post","id",id)));
+        Post post = postRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Post","id",id));
+        return modelMapper.map(post, PostDto.class);
     }
 
     @Override
