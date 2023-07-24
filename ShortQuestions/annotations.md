@@ -98,3 +98,25 @@ Current class object could contain multiple objects AND it could be contained in
       inverseJoinColumns = @JoinColumn(name = "inventory_id"))
 private Set<PmsInventory> pmsInventories = new HashSet<>();
  ```
+
+
+
+## @RestController: Marks a class as a REST controller.
+
+## @RequestMapping: Maps requests to  methods. It can be used at both class and method levels.
+
+## @GetMapping: Maps a `GET` request to a method
+
+## @PostMapping: Maps a `POST` request to a  method.
+
+## @PutMapping: Maps a `PUT` request to a handling method.
+
+## @DeleteMapping: Maps a `DELETE` request to a handling method.
+
+## @PatchMapping: Maps a `PATCH` request to a handling method.
+
+## @RequestParam: Get values from request parameters and use them as method parameters.
+
+## @PathVariable: Get values from the URL path and use them as method parameters.
+
+## @RequestBody: Make data from the request body to method parameters.
