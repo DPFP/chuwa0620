@@ -1,5 +1,6 @@
 package com.example.redbook.service.impl;
 
+import com.example.redbook.dao.PostJPQLRepository;
 import com.example.redbook.dao.PostRepository;
 import com.example.redbook.entity.Post;
 import com.example.redbook.exception.ResourceNotFoundException;
@@ -18,9 +19,11 @@ import org.modelmapper.ModelMapper;
 public class PostServiceImpl implements PostService {
 
     private PostRepository postRepository;
+    private PostJPQLRepository postJPQLRepository;
     private ModelMapper modelMapper;
-    public PostServiceImpl(PostRepository postRepository, ModelMapper modelMapper) {
+    public PostServiceImpl(PostRepository postRepository, PostJPQLRepository postJPQLRepository, ModelMapper modelMapper) {
         this.postRepository = postRepository;
+        this.postJPQLRepository = postJPQLRepository;
         this.modelMapper = modelMapper;
     }
 
@@ -105,5 +108,34 @@ public class PostServiceImpl implements PostService {
         postResponse.setTotalPages(pagePosts.getTotalPages());
         postResponse.setLast(pagePosts.isLast());
         return postResponse;
+    }
+
+    @Override
+    public List<PostDto> getAllPostWithJPQL() {
+        return postJPQLRepository.getAllPostWithJPQL().stream().map(post -> modelMapper.map(post,PostDto.class)).collect(Collectors.toList());
+    }
+
+    @Override
+    public PostDto getPostByIdJPQLIndexParameter(Long id, String title) {
+        Post post = postRepository.getPostByIDOrTitleWithJPQLIndexParameters(id, title);
+        return modelMapper.map(post,PostDto.class);
+    }
+
+    @Override
+    public PostDto getPostByIdJPQLNamedParameter(Long id, String title) {
+        Post post = postRepository.getPostByIDOrTitleWithJPQLNamedParameters(id, title);
+        return modelMapper.map(post,PostDto.class);
+    }
+
+    @Override
+    public PostDto getPostByIdSQLIndexParameter(Long id, String title) {
+        Post post = postRepository.getPostByIDOrTitleWithSQLIndexParameters(id, title);
+        return modelMapper.map(post,PostDto.class);
+    }
+
+    @Override
+    public PostDto getPostByIdSQLNamedParameter(Long id, String title) {
+        Post post = postRepository.getPostByIDOrTitleWithSQLNamedParameters(id, title);
+        return modelMapper.map(post,PostDto.class);
     }
 }
