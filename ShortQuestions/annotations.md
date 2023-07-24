@@ -38,6 +38,18 @@ By marking a class with @Service, you are indicating that it serves the role of 
 
 
 
+@ExceptionHandler
+method level, used to handle the specific exceptions and sending the custom responses to the client.
+
+@ControllerAdvice
+class level, it can make this class a bean, define global exception handlers to all controller.
+
+@NotEmpty
+@Size
+@Valid
+Used for validation, ie: column length cannot be greater than 10.
+
+
 ## 2
 The table will have two columns.
 One is called name and its varchar(255) type and have a default value of John Snow.
