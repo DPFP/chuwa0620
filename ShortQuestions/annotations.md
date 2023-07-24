@@ -120,3 +120,8 @@ private Set<PmsInventory> pmsInventories = new HashSet<>();
 ## @PathVariable: Get values from the URL path and use them as method parameters.
 
 ## @RequestBody: Make data from the request body to method parameters.
+
+
+## @Configuration: Make a class configuration by itself and will have methods to instantiate and configure the dependencies.
+
+## @Bean: When Spring finds an @Bean annotation, it executes that method and registers the return value as a bean within the ApplicationContext.
