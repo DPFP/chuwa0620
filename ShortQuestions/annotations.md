@@ -38,6 +38,21 @@ public class Product {
 
 ```
 
+## @Component
+
+* usage: Marks a class as a component eligible for Spring's automatic scanning and instantiation. Though it's not
+  exclusively used for entities, it's often used to annotate classes representing entities in Spring Data projects.
+
+```java
+
+@Component
+public class MyComponent {
+    public void doSomething() {
+        System.out.println("This is a Spring component.");
+    }
+}
+```
+
 # Used by Controller
 
 ## @RestController
@@ -202,27 +217,48 @@ public class ProductService {
 
 ```
 
-## @Qualifier
+## @RequestMapping
 
-* Usage: The @Qualifier annotation is used along with @Autowired when multiple beans of the same type exist, and you
-  want to specify which one to inject.
-* Understanding: When multiple beans of the same type are available in the application context, the @Qualifier
-  annotation allows you to specify the exact bean to be autowired by providing its bean name.
+*Usage: Maps HTTP requests to handler methods or controller classes. It can be used at the class level to define a base
+URL or at the method level to specify individual endpoint mappings. @GetMapping: Maps HTTP GET requests to handler
+methods or controller classes. It is a shortcut for @RequestMapping(method = RequestMethod.GET). @PostMapping:
+Maps HTTP POST requests to handler methods or controller classes. It is a shortcut for @RequestMapping(method =
+RequestMethod.POST).
+
+## @PutMapping
+
+*Usage: Maps HTTP PUT requests to handler methods or controller classes.
 
 ```java
 
-@Service
-public class ProductService {
-
-    private final ProductRepository productRepository;
-
-    @Autowired
-    public ProductService(@Qualifier("jdbcProductRepository") ProductRepository productRepository) {
-        this.productRepository = productRepository;
+@Controller
+@RequestMapping("/books")
+public class BookController {
+    @PutMapping("/{id}")
+    @ResponseBody
+    public String updateBook(@PathVariable Long id, @RequestBody Book updatedBook) {
+        // Logic to update book details by ID with the data in updatedBook
+        return "Book updated successfully";
     }
+}
+```
 
-    // Service methods using the productRepository
-    // ...
+## @DeleteMapping:
+
+*Usage: Maps HTTP DELETE requests to handler methods or controller classes. It is a shortcut for @RequestMapping(method
+= RequestMethod.DELETE).
+
+```java
+
+@Controller
+@RequestMapping("/books")
+public class BookController {
+    @DeleteMapping("/{id}")
+    @ResponseBody
+    public String deleteBook(@PathVariable Long id) {
+        // Logic to delete book by ID
+        return "Book deleted successfully";
+    }
 }
 
 ```
