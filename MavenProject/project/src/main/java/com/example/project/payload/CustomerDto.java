@@ -7,7 +7,7 @@ import java.util.Set;
 public class CustomerDto {
     private Long id;
     private String name;
-    private Set<Transaction> transactions = new HashSet<>();
+    private Set<TransactionDto> transactions = new HashSet<>();
 
     public CustomerDto() {}
 
@@ -32,11 +32,11 @@ public class CustomerDto {
         this.name = name;
     }
 
-    public Set<Transaction> getTransactions() {
+    public Set<TransactionDto> getTransactions() {
         return transactions;
     }
 
-    public void setTransactions(Set<Transaction> transactions) {
+    public void setTransactions(Set<TransactionDto> transactions) {
         this.transactions = transactions;
     }
 }

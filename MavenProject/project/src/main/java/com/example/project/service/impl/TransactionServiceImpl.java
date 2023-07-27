@@ -57,6 +57,7 @@ public class TransactionServiceImpl implements TransactionService {
 
     @Override
     public List<TransactionDto> getAllTransactionsByCustomerId(Long customerId) {
+        customerRepository.findById(customerId).orElseThrow(() -> new ResourceNotFoundException("Customer","id",customerId));
         List<Transaction> transactions = transactionRepository.findByCustomerId(customerId);
         List<TransactionDto> transactionDtos = transactions.stream().map(transaction -> modelMapper.map(transaction, TransactionDto.class)).collect(Collectors.toList());
         return transactionDtos;

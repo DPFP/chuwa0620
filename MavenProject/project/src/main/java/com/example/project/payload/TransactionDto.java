@@ -12,7 +12,7 @@ public class TransactionDto {
 
     private Long id;
     private LocalDate date;
-    private Set<Product> products = new HashSet<>();
+    private Set<ProductDto> products = new HashSet<>();
     public TransactionDto() {}
 
     public TransactionDto(Long id, LocalDate date) {
@@ -36,11 +36,11 @@ public class TransactionDto {
         this.date = date;
     }
 
-    public Set<Product> getProducts() {
+    public Set<ProductDto> getProducts() {
         return products;
     }
 
-    public void setProducts(Set<Product> products) {
+    public void setProducts(Set<ProductDto> products) {
         this.products = products;
     }
 
