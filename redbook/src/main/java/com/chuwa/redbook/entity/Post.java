@@ -40,7 +40,7 @@ public class Post {
         this.updateDateTime = updateDateTime;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 

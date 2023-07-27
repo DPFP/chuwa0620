@@ -209,3 +209,68 @@ public class User {
     // Other entity attributes and methods
 }
 ```
+
+@Bean: it is the annotation that used to define a method that produces a bean managed by the Spring container.
+```java
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class AppConfig {
+
+    @Bean
+    public Car carBean() {
+        Car car = new Car();
+        car.setMake("Toyota");
+        car.setModel("Camry");
+        return car;
+    }
+}
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class CarService {
+
+    private Car car;
+
+    @Autowired
+    public CarService(Car car) {
+        this.car = car;
+    }
+
+    public void printCarDetails() {
+        System.out.println("Car make: " + car.getMake());
+        System.out.println("Car model: " + car.getModel());
+    }
+}
+```
+
+@JsonProperty
+JsonProperty is an annotation provided by the Jackson library, which is used for mapping Java class properties (fields or methods) to JSON object properties during serialization and deserialization. 
+```java
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class Person {
+    @JsonProperty("fullName")
+    private String name;
+
+    // Other fields, constructors, and methods (getters/setters) omitted for brevity
+}
+
+Person person = new Person();
+person.setName("John Doe");
+
+ObjectMapper objectMapper = new ObjectMapper();
+String jsonString = objectMapper.writeValueAsString(person);
+// The jsonString will be: {"fullName":"John Doe"}
+
+
+String json = "{\"fullName\":\"Jane Smith\"}";
+
+ObjectMapper objectMapper = new ObjectMapper();
+Person person = objectMapper.readValue(json, Person.class);
+// The 'person' object will have the name set as "Jane Smith"
+
+```
