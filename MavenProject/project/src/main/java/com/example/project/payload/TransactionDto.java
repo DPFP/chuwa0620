@@ -1,8 +1,6 @@
 package com.example.project.payload;
 
-import com.example.project.entity.Customer;
-import com.example.project.entity.Product;
-import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
 
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -11,6 +9,7 @@ import java.util.Set;
 public class TransactionDto {
 
     private Long id;
+    @NotEmpty
     private LocalDate date;
     private Set<ProductDto> products = new HashSet<>();
     public TransactionDto() {}

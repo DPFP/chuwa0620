@@ -1,11 +1,13 @@
 package com.example.project.payload;
 
-import com.example.project.entity.Transaction;
+import jakarta.validation.constraints.NotEmpty;
+
 import java.util.HashSet;
 import java.util.Set;
 
 public class CustomerDto {
     private Long id;
+    @NotEmpty
     private String name;
     private Set<TransactionDto> transactions = new HashSet<>();
 

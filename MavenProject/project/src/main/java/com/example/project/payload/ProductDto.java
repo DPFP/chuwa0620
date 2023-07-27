@@ -1,8 +1,13 @@
 package com.example.project.payload;
 
+
+import jakarta.validation.constraints.NotEmpty;
+
 public class ProductDto {
     private Long id;
+    @NotEmpty
     private String name;
+    @NotEmpty
     private double price;
 
     public ProductDto() {}

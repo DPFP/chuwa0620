@@ -2,6 +2,7 @@ package com.example.project.controller;
 
 import com.example.project.payload.TransactionDto;
 import com.example.project.service.TransactionService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +19,7 @@ public class TransactionController {
     }
 
     @PostMapping("/customers/{customerId}/transactions")
-    public ResponseEntity<TransactionDto> createTransaction(@PathVariable(name = "customerId") Long customerId, @RequestBody TransactionDto transactionDto){
+    public ResponseEntity<TransactionDto> createTransaction(@PathVariable(name = "customerId") Long customerId, @Valid @RequestBody TransactionDto transactionDto){
         TransactionDto response = this.transactionService.createTransaction(customerId, transactionDto);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
