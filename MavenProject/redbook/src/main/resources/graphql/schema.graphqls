@@ -1,0 +1,26 @@
+type Post{
+    id: ID
+    title: String
+    description: String
+    content: String
+}
+
+type Author{
+    id:ID
+    name:String
+}
+
+type Query{
+    postById(id:ID): Post
+    getAuthorById(id:ID): Author
+}
+
+type Mutation{
+    createPost(title: String!, description:String!, content:String!):Post
+    deletePost(id: ID): Post,
+    updatePost(id: ID, title: String!, description:String!, content:String!): Post
+
+    createAuthor(name: String!):Author
+    deleteAuthor(id: ID): Author,
+    updateAuthor(id: ID, name: String): Author
+}
