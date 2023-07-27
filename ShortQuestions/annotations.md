@@ -1,4 +1,16 @@
 # annotations
+We can use four annotations to inject beans into a class:
+@Autowired: This annotation can be used to auto-wire a bean into a class member, constructor, or method. It allows Spring to automatically detect the appropriate bean and inject it where needed.
+@Inject: This is another annotation used for dependency injection, similar to @Autowired. It is part of the Java Dependency Injection (JSR-330) standard and is also supported by Spring.
+@Resource: This annotation can be used for dependency injection by name. It allows you to specify the name of the bean to be injected explicitly.
+@Qualifier: This annotation is used in conjunction with @Autowired or @Inject when there are multiple beans of the same type, and you need to specify which bean should be injected by providing the bean name as a qualifier.
+
+@SpringBootApplication is a convenience annotation provided by Spring Boot. It is a combination of three annotations: @Configuration, @EnableAutoConfiguration, and @ComponentScan.
+@Configuration: Indicates that the class contains Spring configuration and bean definitions.
+@EnableAutoConfiguration: Enables Spring Boot’s auto-configuration feature, which automatically configures various dependencies and settings based on the classpath and the dependencies present.
+@ComponentScan: Enables component scanning to automatically detect and register Spring beans.
+Using @SpringBootApplication on the main application class simplifies the configuration process by automatically configuring Spring Boot and scanning components in the same package as the main class and its sub-packages.
+
 Mapping Java Object with Database Table:
 @Entity - it is a enity, will be used to map with database
 @Table - will be used to locate the database table name
