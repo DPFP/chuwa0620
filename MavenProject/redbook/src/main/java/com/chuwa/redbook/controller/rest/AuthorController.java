@@ -3,6 +3,7 @@ package com.chuwa.redbook.controller.rest;
 import com.chuwa.redbook.payload.AuthorDto;
 import com.chuwa.redbook.payload.PostDto;
 import com.chuwa.redbook.service.AuthorService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/authors")
+@RequiredArgsConstructor
 public class AuthorController {
 
     private AuthorService authorService;
@@ -42,6 +44,7 @@ public class AuthorController {
         authorService.deleteAuthorById(id);
         return new ResponseEntity<>("Deleted id: " + id, HttpStatus.OK);
     }
+
 
 
 
