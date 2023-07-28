@@ -32,7 +32,7 @@ public class RewardsController {
         return new ResponseEntity<>(rewardsService.getAllRewards(),HttpStatus.OK);
     }
 
-    @GetMapping("/{userId}/threeMonths")
+    @GetMapping("/{userId}/three-month")
     public ResponseEntity<RewardsDto> userRewardsByRange(
             @PathVariable long userId){
 //            @RequestParam @DateTimeFormat(pattern = "yyyy-MM") YearMonth startMonth,
