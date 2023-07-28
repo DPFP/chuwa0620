@@ -1,5 +1,6 @@
 package com.chuwa.redbook.controller;
 
+
 import com.chuwa.redbook.payload.PostDto;
 import com.chuwa.redbook.payload.PostResponse;
 import com.chuwa.redbook.service.PostService;
