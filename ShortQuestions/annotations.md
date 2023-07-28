@@ -118,3 +118,50 @@
       }
   }
   ```
+  
+### Exception Handling
+
+- `@ControllerAdvice`: Marks a class as a exception handling class for all controllers.  
+
+- `@ExceptionHandler`: Marks a function as a exception handler for a certain type of exception.  
+
+```java
+@ControllerAdvice // this annotation means it will handle all controller exceptions
+public class GlobalExceptionHandler {
+
+    @ExceptionHandler(MyCustomException.class)
+    public ResponseEntity<String> handleMyCustomException(MyCustomException ex) {
+        // create a customized exception
+        String errorMessage = "exception：" + ex.getMessage();
+        return new ResponseEntity<>(errorMessage, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    // other exceptions
+}
+```
+
+### Lombok
+
+- `@Data`: Automatically generates getter, setter, equals, hashCode, and toString methods.
+
+- `@Getter`: Automatically generates getter methods.
+
+- `@Setter`: Automatically generates setter methods.
+
+- `@EqualsAndHashCode`: Automatically generates equals and hashCode methods.
+
+- `@ToString`: Automatically generates toString method.
+
+- `@NoArgsConstructor`: Automatically generates a no-argument constructor.
+
+- `@AllArgsConstructor`: Automatically generates a constructor with all arguments.
+
+- `@RequiredArgsConstructor`: Automatically generates a constructor with the fields marked as @NonNull.
+
+- `@Builder`: Automatically generates a builder pattern constructor.
+
+- `@Slf4j`: Automatically generates a Logger instance named log.
+
+- `@Cleanup`: Simplifies resource cleanup by automatically calling the close method on resources.
+
+- `@NonNull`: Marks a field as non-null, used for generating constructors and null-checking.
