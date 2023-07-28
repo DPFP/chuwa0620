@@ -4,7 +4,7 @@ This is a Spring Boot backend application for a rewards program. The application
 ## Build Dependencies
 - Java 17
 - Spring boot 3.1.2
-- Maven
+- Maven 3.9.3
 
 ## Getting Started
 Go to the project directory, and build the project using Maven:
