@@ -58,6 +58,18 @@ public class PostServiceImpl implements PostService {
         postRepository.delete(post);
     }
 
+    @Override
+    public List<PostDto> getPostByTitle(String title) {
+        List<Post> posts = postRepository.findByTitle(title);
+        return posts.stream().map(this::mapToDTO).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<PostDto> getPostsByTitleContains(String title) {
+        List<Post> posts = postRepository.findByTitleContains(title);
+        return posts.stream().map(this::mapToDTO).collect(Collectors.toList());
+    }
+
     private PostDto mapToDTO(Post post) {
         PostDto postDto = new PostDto();
         postDto.setId(post.getId());
