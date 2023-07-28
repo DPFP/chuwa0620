@@ -73,7 +73,7 @@ Method: GET
 Description: retrieve all transactions rewards for a specific user
 
 3. get transactions rewards by user id for latest 3 months
-URL: http://localhost:8080/api/v1/rewards/{userId}  
+URL: http://localhost:8080/api/v1/rewards/{userId}/three-month  
 Method: GET  
 Description: retrieve latest 3-month transactions rewards for a specific user
 
