@@ -1,4 +1,89 @@
 # annotations
+Mapping Java Object with Database Table:
+@Entity - it is a enity, will be used to map with database
+@Table - will be used to locate the database table name
+@Id - this column is a primary key
+@GeneratedValue(strategy = GenerationType.IDENTITY) - 主键⾃增的策略
+@Column(name = "description", nullable = false) - specify the informaiton for this column, like name in database, can be null or not in database.
+
+@Repository:
+When you annotate a class with @Repository, Spring Boot will automatically detect and register it as a Spring bean during component scanning. This allows you to take advantage of Spring's features, such as dependency injection and transaction management, for your data access operations.
+
+@OneToMany: The @OneToMany annotation is used to represent a one-to-many relationship between two entities. It implies that one instance of the source entity is associated with multiple instances of the target entity. In terms of the database, this is usually implemented using a foreign key in the target entity's table pointing back to the primary key of the source entity's table.
+
+@ManyToOne: The @ManyToOne annotation is used to specify a many-to-one relationship between two entities. It means multiple instances of the source entity can be associated with a single instance of the target entity.
+```
+@Entity
+public class Author {
+    @Id
+    @GeneratedValue
+    private Long id;
+    
+    private String name;
+    
+    @OneToMany(mappedBy = "author")
+    private List<Book> books;
+    
+}
+
+@Entity
+public class Book {
+    @Id
+    @GeneratedValue
+    private Long id;
+    
+    private String title;
+    
+    @ManyToOne
+    private Author author;
+    
+}
+```
+
+@ManyToMany: The @ManyToMany annotation is used to represent a many-to-many relationship between two entities. This implies that multiple instances of the source entity can be associated with multiple instances of the target entity. In the database, a separate join table is typically created to manage this relationship.
+```
+@Entity
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String username;
+
+    // Other user properties and relationships
+
+    @ManyToMany
+    @JoinTable(name = "user_group",
+               joinColumns = @JoinColumn(name = "user_id"),
+               inverseJoinColumns = @JoinColumn(name = "group_id"))
+    private Set<Group> groups = new HashSet<>();
+
+    // Constructors, getters, and setters
+}
+
+@Entity
+public class Group {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+
+    // Other group properties and relationships
+
+    @ManyToMany(mappedBy = "groups")
+    private Set<User> members = new HashSet<>();
+
+    // Constructors, getters, and setters
+}
+
+```
+
+@Transactional annotation provides a way to manage database transactions, ensuring that a group of database operations either all succeed (commit) or all fail (rollback) as a single atomic unit. This helps maintain data integrity and consistency within the database.
+
+@ControllerAdvice: The @ControllerAdvice annotation allows you to create a global exception handling component that can be shared across multiple controllers. It can contain multiple @ExceptionHandler methods for different exception types.
+@ExceptionHandler: Spring allows you to define exception handling methods in your controller classes using the @ExceptionHandler annotation. When an exception is thrown within the controller's method or any method invoked from it, Spring will look for the corresponding @ExceptionHandler method to handle that exception. You can then perform the necessary error handling or return a custom response to the client.
+
 @SpringBootApplication: This annotation is used to mark the main class of a Spring Boot application.
 ```
 @SpringBootApplication

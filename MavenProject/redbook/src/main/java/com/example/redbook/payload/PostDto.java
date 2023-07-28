@@ -1,11 +1,13 @@
 package com.example.redbook.payload;
 
+import java.util.Set;
+
 public class PostDto {
     private long id;
     private String title;
     private String description;
     private String content;
-
+    private Set<CommentDto> comments;
     public PostDto() {
     }
 
@@ -16,6 +18,13 @@ public class PostDto {
         this.content = content;
     }
 
+    public Set<CommentDto> getComments() {
+        return comments;
+    }
+
+    public void setComments(Set<CommentDto> comments) {
+        this.comments = comments;
+    }
     public long getId() {
         return id;
     }
