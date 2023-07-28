@@ -36,6 +36,24 @@ These type of annotations are used to REST apis.
 @Service
 By marking a class with @Service, you are indicating that it serves the role of a service or business logic component. This helps in semantic clarity and provides a standardized way of defining and autodetecting service classes within the application context.
 
+@Configuration
+Declares a class as the source for bean definitions.
+
+@ComponentScan
+Directs Spring to search for components in the path specified.
+
+@Qualifier, @Primary
+When there are mulitple beans, decide which bean to use
+
+@Resource, @Inject
+Other way of bean injection
+
+@Controller
+@RestController = @Controller + @ResponseBody
+
+@ResponseBody need to be before the returned object.
+
+
 
 
 ## 2
