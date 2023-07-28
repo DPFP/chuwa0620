@@ -41,6 +41,8 @@ public class AuthorServiceImpl implements AuthorService {
         return authorToAto(author);
     }
 
+
+
     @Override
     public void deteleById(long id) {
         if (!authorRepository.existsById(id)) {
@@ -57,6 +59,12 @@ public class AuthorServiceImpl implements AuthorService {
         author.setBirthDate(ato.getBirthDate());
         Author updatedAuthor = authorRepository.save(author);
         return authorToAto(updatedAuthor);
+    }
+
+    @Override
+    public List<AuthorDto> getAuthorsBetweenID(long id1, long id2) {
+        List<Author> authors = this.authorRepository.findAuthorByIdBetween(id1,id2);
+        return authors.stream().map(author -> authorToAto(author)).collect(Collectors.toList());
     }
 
     private static Author atoToAuthor(AuthorDto ato) {

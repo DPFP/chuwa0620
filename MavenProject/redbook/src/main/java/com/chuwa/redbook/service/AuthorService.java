@@ -15,4 +15,6 @@ public interface AuthorService {
 
     AuthorDto updateAuthor(long id, AuthorDto author);
 
+    List<AuthorDto> getAuthorsBetweenID(long id1, long id2);
+
 }
