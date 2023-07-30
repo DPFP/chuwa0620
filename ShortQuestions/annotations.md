@@ -274,3 +274,133 @@ Person person = objectMapper.readValue(json, Person.class);
 // The 'person' object will have the name set as "Jane Smith"
 
 ```
+
+@ComponentScan
+@ComponentScan is an annotation provided by the Spring Framework that is used to enable component scanning in a Spring application. Component scanning is a process where Spring automatically detects and registers Spring-managed beans (components) in the application context without the need for explicit bean definitions.
+```java
+package com.example.myapp;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan(basePackages = "com.example.myapp.components")
+public class MyAppConfig {
+    // Configuration class content
+}
+```
+
+@Configuration:
+In Spring Framework, @Configuration is an annotation used to indicate that a Java class is a configuration class. Configuration classes are an important part of the Spring configuration model and are used to define Spring beans and their dependencies.
+```java
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class MyAppConfig {
+
+    @Bean
+    public MyBean myBean() {
+        return new MyBean();
+    }
+
+    // Other bean definitions using @Bean
+}
+
+```
+
+@SpringbootApplication
+@SpringBootApplication is a meta-annotation provided by Spring Boot, and it is used to annotate the main class of a Spring Boot application. It combines three commonly used annotations: @SpringBootConfiguration, @EnableAutoConfiguration, and @ComponentScan.
+```java
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class MyApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(MyApplication.class, args);
+    }
+}
+```
+
+
+@SpringBootConfiguration
+The @SpringBootConfiguration annotation in the Spring Framework is a specialization of @Configuration that indicates the class is a source of bean definitions. It's usually applied on the main application class to indicate that this class serves as a configuration class for the Spring Boot application.
+```java
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.SpringBootConfiguration;
+
+@SpringBootConfiguration
+@SpringBootApplication
+public class Application {
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+}
+```
+
+
+@EnableAutoConfiguration
+The @EnableAutoConfiguration annotation in Spring Boot is used to enable the auto-configuration of the Spring application context, which attempts to automatically configure your Spring application based on the dependencies that you have added.
+```java
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.ComponentScan;
+
+@EnableAutoConfiguration
+@ComponentScan(basePackages = {"com.mycompany.myapp"})
+public class Application {
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+
+}
+```
+
+@Primary
+@Primary is to give higher preference to a particular bean. When Spring finds more than one bean of the same type and needs to inject one, it will inject the @Primary bean.
+```java
+@Bean
+@Primary
+public MyBean primaryBean() {
+    return new MyBean();
+}
+
+@Bean
+public MyBean secondaryBean() {
+    return new MyBean();
+}
+
+
+
+@Autowired
+private MyBean myBean; // this will be primaryBean
+```
+
+@Qualifier
+@Qualifier is an annotation in Spring that you can use to help disambiguate bean references when you have multiple beans of the same type.
+```java
+@Bean
+public Foo foo1() {
+    return new Foo("foo1");
+}
+
+@Bean
+public Foo foo2() {
+    return new Foo("foo2");
+}
+
+
+@Service
+public class Bar {
+    private final Foo foo;
+
+    @Autowired
+    public Bar(@Qualifier("foo1") Foo foo) {
+        this.foo = foo;
+    }
+}
+```
