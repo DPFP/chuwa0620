@@ -10,6 +10,7 @@ public class CustomerInfoDto {
     private int firstMonth;
     @JsonProperty("points_in_the_second_past_month")
     private int secondMonth;
+
     @JsonProperty("points_in_the_third_past_month")
     private int thirdMonth;
 
@@ -72,5 +73,17 @@ public class CustomerInfoDto {
 
     public CustomerInfoDto() {
 
+    }
+
+    @Override
+    public String toString() {
+        return "CustomerInfoDto {\n" +
+                "id=" + id +
+                ", \nuserName='" + userName + '\'' +
+                ", \ntotalPoints=" + totalPoints +
+                ", \nfirstMonth=" + firstMonth +
+                ", \nsecondMonth=" + secondMonth +
+                ", \nthirdMonth=" + thirdMonth +
+                "  \n}";
     }
 }
