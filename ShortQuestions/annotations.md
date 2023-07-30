@@ -67,6 +67,9 @@ class level, it can make this class a bean, define global exception handlers to 
 @Valid
 Used for validation, ie: column length cannot be greater than 10.
 
+@Value
+Used to get value from application.properties
+
 
 ## 2
 The table will have two columns.
