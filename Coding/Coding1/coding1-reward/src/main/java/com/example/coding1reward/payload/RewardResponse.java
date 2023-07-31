@@ -1,13 +1,18 @@
 package com.example.coding1reward.payload;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.Map;
 
 public class RewardResponse {
 
+    @JsonProperty("customer id")
     private Long customerId;
 
+    @JsonProperty("total reward")
     private Double rewardTotal;
 
+    @JsonProperty("month reward")
     private Map<String, Double> monthToReward;
 
     public RewardResponse(Long customerId, Double rewardTotal, Map<String, Double> monthToReward) {
@@ -43,4 +48,12 @@ public class RewardResponse {
         this.monthToReward = monthToReward;
     }
 
+    @Override
+    public String toString() {
+        return "RewardResponse{\n" +
+                "customerId=" + customerId + "\n" +
+                ", rewardTotal=" + rewardTotal + "\n" +
+                ", monthToReward=" + monthToReward.toString() + "\n" +
+                '}';
+    }
 }
