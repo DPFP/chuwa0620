@@ -125,6 +125,20 @@ public class RewardsServiceImpl implements RewardsService {
 
 
 
+//    public boolean validMonth(String start, String end){
+//        try{
+//            YearMonth startMonth = YearMonth.parse(start);
+//            YearMonth endMonth = YearMonth.parse(end);
+//            if(startMonth.isAfter(endMonth)){
+//                throw new MonthInvalidException(HttpStatus.BAD_REQUEST, "The start month should not be later than the end month");
+//            }
+//
+//        }catch (DateTimeException e){
+//            throw new MonthInvalidException(HttpStatus.BAD_REQUEST,e.getMessage());
+//        }
+//
+//    }
+
     public RewardsDto transactionsToRewards(User user, List<Transaction> transactions){
         Map<YearMonth, List<Transaction>> transactionsByMonth = transactions.stream()
                 .collect(Collectors.groupingBy(transaction -> YearMonth.from(transaction.getDate())));
