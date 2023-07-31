@@ -8,9 +8,7 @@ import com.example.project.entity.Product;
 import com.example.project.entity.Transaction;
 import com.example.project.exception.ResourceNotFoundException;
 import com.example.project.exception.StoreAPIException;
-import com.example.project.payload.CustomerDto;
-import com.example.project.payload.ProductDto;
-import com.example.project.payload.TransactionDto;
+import com.example.project.payload.*;
 import com.example.project.payload.TransactionDto;
 import com.example.project.service.TransactionService;
 import jakarta.transaction.Transactional;
@@ -89,7 +87,10 @@ public class TransactionServiceImpl implements TransactionService {
 
     @Override
     @Transactional
-    public TransactionDto deleteProductsInTransactionByProductIds(List<Long> productIds, Long customerId, Long transactionId) {
+    public TransactionDto updateProductsInTransactionByProductIds(ProductUpdateDto productUpdateDto, Long customerId, Long transactionId) {
+        List<Long> productIds = productUpdateDto.getProductIdsToBeAddedOrDeleted();
+        boolean add = productUpdateDto.isAdd();
+
         Customer customer = customerRepository.findById(customerId).orElseThrow(() -> new ResourceNotFoundException("Customer","id",customerId));
         Transaction transaction = transactionRepository.findById(transactionId).orElseThrow(() -> new ResourceNotFoundException("Transaction","id",transactionId));
 
@@ -98,40 +99,27 @@ public class TransactionServiceImpl implements TransactionService {
         }
 
         // get all products
-        List<Product> productsToBeDeleted = productIds.stream()
+        List<Product> productsToBeUpdated = productIds.stream()
                 .map(productId -> productRepository.findById(productId).orElseThrow(() -> new ResourceNotFoundException("Product","id",productId)))
                 .collect(Collectors.toList());
 
-        // delete according products belong to the transaction
-        Set<Product> products = transaction.getProducts();
-        for(Product productToBeDeleted: productsToBeDeleted){
-            if(!products.contains(productToBeDeleted)) throw new ResourceNotFoundException("Product","id",productToBeDeleted.getId());
-            products.remove(productToBeDeleted);
+        if(add){
+            // add all products to the transaction
+            transaction.getProducts().addAll(productsToBeUpdated);
+
+        }else{
+            // delete according products belong to the transaction
+            Set<Product> products = transaction.getProducts();
+            for(Product productToBeDeleted: productsToBeUpdated){
+                if(!products.contains(productToBeDeleted)) throw new ResourceNotFoundException("Product","id",productToBeDeleted.getId());
+                products.remove(productToBeDeleted);
+            }
+
+            transaction.setProducts(products);
         }
-
-        transaction.setProducts(products);
-        Transaction updateTransaction = transactionRepository.save(transaction);
-        return modelMapper.map(updateTransaction, TransactionDto.class);
-    }
-
-    @Override
-    public TransactionDto addProductsToTransactionByProductIds(List<Long> productIds, Long customerId, Long transactionId) {
-        Customer customer = customerRepository.findById(customerId).orElseThrow(() -> new ResourceNotFoundException("Customer","id",customerId));
-        Transaction transaction = transactionRepository.findById(transactionId).orElseThrow(() -> new ResourceNotFoundException("Transaction","id",transactionId));
-
-        if (!transaction.getCustomer().getId().equals(customer.getId())) {
-            throw new StoreAPIException(HttpStatus.BAD_REQUEST, "Transaction does not belong to customer");
-        }
-
-        // get all products
-        List<Product> products = productIds.stream()
-                .map(productId -> productRepository.findById(productId).orElseThrow(() -> new ResourceNotFoundException("Product","id",productId)))
-                .collect(Collectors.toList());
-
-        // add all products to the transaction
-        transaction.getProducts().addAll(products);
 
         Transaction updateTransaction = transactionRepository.save(transaction);
         return modelMapper.map(updateTransaction, TransactionDto.class);
+
     }
 }
