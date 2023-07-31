@@ -1,4 +1,22 @@
 # annotations
+@Value annotation: For getting value from application.properties
+```
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class MyConfig {
+
+    @Value("${your.property.key}") // Replace "your.property.key" with the actual key in application.properties
+    private String yourPropertyValue;
+
+    // Getter method to access the property value from other parts of the application
+    public String getYourPropertyValue() {
+        return yourPropertyValue;
+    }
+}
+```
+
 We can use four annotations to inject beans into a class:
 @Autowired: This annotation can be used to auto-wire a bean into a class member, constructor, or method. It allows Spring to automatically detect the appropriate bean and inject it where needed.
 @Inject: This is another annotation used for dependency injection, similar to @Autowired. It is part of the Java Dependency Injection (JSR-330) standard and is also supported by Spring.
