@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Table(
         name = "customers",
         uniqueConstraints = {
-                @UniqueConstraint(columnNames = {"email", "username"})
+                @UniqueConstraint(columnNames = {"email"})
         }
 )
 @Data
@@ -23,17 +23,14 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column(name = "firstname")
+    @Column(name = "firstname",nullable = false)
     private String firstName;
 
-    @Column(name = "lastname")
+    @Column(name = "lastname",nullable = false)
     private String lastName;
 
-    @Column(name = "email")
+    @Column(name = "email",nullable = false)
     private String email;
-
-    @Column(name = "username")
-    private String userName;
 
     @CreationTimestamp
     private LocalDateTime createDateTime;

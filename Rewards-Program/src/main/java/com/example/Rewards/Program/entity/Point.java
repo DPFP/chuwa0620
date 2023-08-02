@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -27,8 +28,8 @@ public class Point{
     private Customer customer;
 
     @CreationTimestamp
-    private LocalDateTime createDateTime;
+    private LocalDate createDateTime;
 
     @UpdateTimestamp
-    private LocalDateTime updateDateTime;
+    private LocalDate updateDateTime;
 }

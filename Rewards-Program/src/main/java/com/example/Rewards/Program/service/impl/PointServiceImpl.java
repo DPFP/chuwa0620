@@ -10,6 +10,8 @@ import com.example.Rewards.Program.payload.TransactionDto;
 import com.example.Rewards.Program.service.PointService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -44,7 +46,7 @@ public class PointServiceImpl implements PointService {
     }
 
     @Override
-    public double findAveragePoint(long customerId, LocalDateTime startMonth, LocalDateTime endMonth) {
+    public double findAveragePoint(long customerId, LocalDate startMonth, LocalDate endMonth) {
         List<Point> points = pointRepository.findAllByCustomer_IdAndCreateDateTimeAfter(customerId,startMonth);
         List<Double> pointValues = points.stream().filter(point -> (point.getCreateDateTime().isBefore(endMonth))).map(Point::getAmount).toList();
         double totalPoints = pointValues.stream().mapToDouble(Double::doubleValue).sum();

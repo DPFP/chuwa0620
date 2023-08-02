@@ -210,6 +210,8 @@ public class User {
 }
 ```
 
+## -----------------------------------Config-----------------------------------
+
 @Bean: it is the annotation that used to define a method that produces a bean managed by the Spring container.
 ```java
 import org.springframework.context.annotation.Bean;
@@ -401,6 +403,151 @@ public class Bar {
     @Autowired
     public Bar(@Qualifier("foo1") Foo foo) {
         this.foo = foo;
+    }
+}
+```
+
+
+## -----------------------------------AOP-----------------------------------
+@EnableAspectJAutoProxy
+@EnableAspectJAutoProxy is an annotation provided by the Spring Framework that is used to enable support for handling components marked with AspectJ's @Aspect annotation.
+```java
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+
+@Configuration
+@EnableAspectJAutoProxy
+public class AppConfig {
+    // other configuration...
+}
+```
+
+@Aspect
+declaring that class to be an aspect.
+```java
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+
+@Aspect
+public class LoggingAspect {
+
+    @Before("execution(* com.example.myapp.service.*.*(..))")
+    public void logBefore() {
+        System.out.println("Method is being executed");
+    }
+}
+```
+
+@Pointcut
+@Pointcut is an annotation in Aspect-Oriented Programming (AOP) provided by the AspectJ framework. It is used to define a method as a pointcut.
+```java
+@Aspect
+public class LoggingAspect {
+
+    // Define pointcut
+    @Pointcut("execution(* com.example.myapp.service.*.*(..))")
+    public void serviceMethods() {
+        // Method body is generally empty.
+    }
+
+    // Use the defined pointcut
+    @Before("serviceMethods()")
+    public void logBefore() {
+        System.out.println("A method in the service package is about to be executed.");
+    }
+}
+```
+
+@Before
+@Before is an annotation provided by the AspectJ library in the context of Aspect-Oriented Programming (AOP). It is used to mark a method as an advice that should be executed before a specified join point (a point in the program execution, such as a method execution or exception handling).
+```java
+@Aspect
+public class LoggingAspect {
+
+    // Pointcut defined to match all methods in the service package
+    @Pointcut("execution(* com.example.myapp.service.*.*(..))")
+    public void serviceMethods() {}
+
+    // Before advice that uses the defined pointcut
+    @Before("serviceMethods()")
+    public void logBefore(JoinPoint joinPoint) {
+        System.out.println("About to execute method: " + joinPoint.getSignature().getName());
+    }
+}
+```
+
+@After
+@After is an annotation provided by the AspectJ framework in the context of Aspect-Oriented Programming (AOP). It is used to mark a method as an advice that should be executed after a specified join point, regardless of the method outcome (whether it completed successfully or an exception was thrown).
+```java
+@Aspect
+public class LoggingAspect {
+
+    // Pointcut defined to match all methods in the service package
+    @Pointcut("execution(* com.example.myapp.service.*.*(..))")
+    public void serviceMethods() {}
+
+    // After advice that uses the defined pointcut
+    @After("serviceMethods()")
+    public void logAfter(JoinPoint joinPoint) {
+        System.out.println("Finished executing method: " + joinPoint.getSignature().getName());
+    }
+}
+```
+
+@AfterThrowing
+@AfterThrowing is an annotation provided by the AspectJ framework in the context of Aspect-Oriented Programming (AOP). It is used to mark a method as advice that should be executed only when a matched method execution exits by throwing an exception.
+```java
+@Aspect
+public class ExceptionLoggingAspect {
+
+    @Pointcut("execution(* com.example.myapp.service.*.*(..))")
+    public void serviceMethods() {}
+
+    @AfterThrowing(pointcut = "serviceMethods()", throwing = "ex")
+    public void logException(JoinPoint joinPoint, Exception ex) {
+        System.out.println("An exception has been thrown in " + joinPoint.getSignature().getName() + " : " + ex.getMessage());
+    }
+}
+```
+
+
+@AfterReturning
+@AfterReturning is an annotation provided by the AspectJ framework in the context of Aspect-Oriented Programming (AOP). It is used to mark a method as an advice that should be executed after a matched method execution completes successfully (i.e., does not throw an exception).
+```java
+@Aspect
+public class ReturnLoggingAspect {
+
+    @Pointcut("execution(* com.example.myapp.service.*.*(..))")
+    public void serviceMethods() {}
+
+    @AfterReturning(pointcut = "serviceMethods()", returning = "result")
+    public void logReturn(JoinPoint joinPoint, Object result) {
+        System.out.println(joinPoint.getSignature().getName() + " returned with " + result);
+    }
+}
+```
+
+@Around
+@Around is an annotation provided by the AspectJ framework used in the context of Aspect-Oriented Programming (AOP). It is used to mark a method as advice that should be executed before and after a matched method execution. This provides the opportunity to modify the original method execution as needed.
+```java
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+
+@Aspect
+public class TimeLoggingAspect {
+
+    @Around("execution(* com.example.myapp.service.*.*(..))")
+    public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
+        long start = System.currentTimeMillis();
+
+        Object proceed = joinPoint.proceed();
+
+        long executionTime = System.currentTimeMillis() - start;
+
+        System.out.println(joinPoint.getSignature() + " executed in " + executionTime + "ms");
+        
+        return proceed;
     }
 }
 ```

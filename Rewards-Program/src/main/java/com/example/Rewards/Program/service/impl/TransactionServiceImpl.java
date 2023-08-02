@@ -4,8 +4,10 @@ import com.example.Rewards.Program.dao.CustomerRepository;
 import com.example.Rewards.Program.dao.PointRepository;
 import com.example.Rewards.Program.dao.TransactionRepository;
 import com.example.Rewards.Program.entity.Customer;
+import com.example.Rewards.Program.entity.Point;
 import com.example.Rewards.Program.entity.Transaction;
 import com.example.Rewards.Program.exception.ResourceNotFoundException;
+import com.example.Rewards.Program.payload.PointDto;
 import com.example.Rewards.Program.payload.TransactionDto;
 import com.example.Rewards.Program.service.PointService;
 import com.example.Rewards.Program.service.TransactionService;
@@ -29,8 +31,10 @@ public class TransactionServiceImpl implements TransactionService {
         transaction.setAmount(transactionDto.getAmount());
         Customer customer = customerRepository.findById(customerId).orElseThrow(()-> new ResourceNotFoundException("customer", "id", customerId));
         transaction.setCustomer(customer);
+        PointDto newPoint = pointService.createPoint(customerId,transactionDto);
+        Point point = pointRepository.findById(newPoint.getId()).orElseThrow(()-> new ResourceNotFoundException("point", "id", newPoint.getId()));
+        transaction.setPoint(point);
         Transaction savedTransaction = transactionRepository.save(transaction);
-        pointService.createPoint(customerId,transactionDto);
         return mapToDto(savedTransaction);
     }
 
