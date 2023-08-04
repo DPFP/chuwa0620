@@ -68,6 +68,33 @@ class level, it can make this class a bean, define global exception handlers to 
 Used for validation, ie: column length cannot be greater than 10.
 
 
+@Aspect
+Annotation used to denote class that defines all aop self methods.
+
+@PointCut
+Define a collection with a given name, function body is null.
+
+@Before, @After, @AfterThrowing, @AfterReturning, @Around
+Time to trigger aop method.
+
+
+@Mock
+Mock an object or certain behavior.
+
+@InjectMocks
+We can use @InjectMocks to automatically inject the mock object into the some thing that uses the mocked object.
+
+
+@Test
+From Junit, indicate this method is a test
+
+@Spy
+If the behavior is given, use the given behavior, if not, use the original behavior of this object.
+
+@BeforeAll, @AfterAll
+Run some common setting or methods before all tests.
+Also can only added to static method as it is in class level.
+
 ## 2
 The table will have two columns.
 One is called name and its varchar(255) type and have a default value of John Snow.
