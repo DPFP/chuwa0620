@@ -29,29 +29,11 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public PostDto createPost(PostDto postDto) {
-        //PostDTO -> Post(entity)
-        //Post newPost = new Post();
-        //newPost.setTitle(postDto.getTitle());
-        //newPost.setDescription(postDto.getDescription());
-        //newPost.setContent(postDto.getContent());
         Post newPost = modelMapper.map(postDto, Post.class);
         Post savedPost = this.postRepository.save(newPost);
 
-        //Post(entity) -> PostDTO
-        //return PostToDto(savedPost);
         return modelMapper.map(savedPost, PostDto.class);
 
-    }
-
-    private static PostDto PostToDto(Post savedPost){
-        //Post(entity) -> PostDTO
-        PostDto response = new PostDto();
-        response.setId(savedPost.getId());
-        response.setTitle(savedPost.getTitle());
-        response.setDescription(savedPost.getDescription());
-        response.setContent(savedPost.getContent());
-
-        return response;
     }
 
     @Override
@@ -76,7 +58,7 @@ public class PostServiceImpl implements PostService {
         post.setContent(postDto.getContent());
 
         Post updatedPost = postRepository.save(post);
-        return PostToDto(updatedPost);
+        return modelMapper.map(updatedPost, PostDto.class);
     }
 
     @Override
@@ -98,7 +80,7 @@ public class PostServiceImpl implements PostService {
 
         // get content for page abject
         List<Post> posts = pagePosts.getContent();
-        List<PostDto> postDtos = posts.stream().map(post -> PostToDto(post)).collect(Collectors.toList());
+        List<PostDto> postDtos = posts.stream().map(post -> modelMapper.map(post, PostDto.class)).collect(Collectors.toList());
 
         PostResponse postResponse = new PostResponse();
         postResponse.setContent(postDtos);
