@@ -36,11 +36,11 @@ public class Post {
 
 
 
-    public Post(Long id, String title, String description, String contrnt, LocalDateTime createDateTime, LocalDateTime updateDateTime) {
+    public Post(Long id, String title, String description, String content, LocalDateTime createDateTime, LocalDateTime updateDateTime) {
         this.id = id;
         this.title = title;
         this.description = description;
-        this.content = contrnt;
+        this.content = content;
         this.createDateTime = createDateTime;
         this.updateDateTime = updateDateTime;
     }
