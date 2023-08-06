@@ -163,4 +163,30 @@ public class GlobalExceptionHandler {
 
 - `@Cleanup`: Simplifies resource cleanup by automatically calling the close method on resources.
 
-- `@NonNull`: Marks a field as non-null, used for generating constructors and null-checking.
+- `@NonNull`: Marks a field as non-null, used for generating constructors and null-checking.  
+
+### Test
+- `@ExtendWith`: Used to specify extensions (JUnit 5 Jupiter) to be used when running test classes.
+
+- `@Mock`: Creates a mock object that simulates a real object's behavior for testing.
+
+- `@Spy`: Creates a partial mock, allowing real methods to be called unless stubbed.
+
+- `@InjectMocks`: Injects mock or spy objects into the tested object.
+
+- `@BeforeAll`: Method executed once before any test methods in the class (class-level setup).
+
+- `@BeforeEach`: Method executed before each test method (method-level setup).  
+
+### AOP  
+- `@Aspect`: Indicates that a class is an aspect, containing advice and pointcut declarations.
+
+- `@Before`: Specifies a method to be executed before a join point.
+
+- `@After`: Specifies a method to be executed after a join point, regardless of its outcome.
+
+- `@AfterReturning`: Specifies a method to be executed after a join point successfully completes.
+
+- `@AfterThrowing`: Specifies a method to be executed after a join point throws an exception.
+
+- `@Around`: Specifies a method to be executed around a join point, allowing full control over the method invocation.
