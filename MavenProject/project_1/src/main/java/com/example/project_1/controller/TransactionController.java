@@ -1,6 +1,6 @@
 package com.example.project_1.controller;
 
-import com.example.project_1.dto.TransactionDTO;
+import com.example.project_1.payload.TransactionDTO;
 import com.example.project_1.service.TransactionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -30,4 +30,8 @@ Get http://localhost:8080/api/v1/transactions/reward-points/total-month/{custome
 
 ### Display a customer's total amount of reward points during previous {months} months
 
-Get Get http://localhost:8080/api/v1/transactions/reward-points/previous-month/{customerId}/{months}
+Get http://localhost:8080/api/v1/transactions/reward-points/previous-month/{customerId}/{months}
+
+### Text to pdf
+
+Post http://localhost:8080/api/v1/utils/text-to-pdf

@@ -1,6 +1,6 @@
 package com.example.project_1.service.impl;
 
-import com.example.project_1.dto.TransactionDTO;
+import com.example.project_1.payload.TransactionDTO;
 import com.example.project_1.entity.Transaction;
 import com.example.project_1.repo.TransactionRepository;
 import com.example.project_1.service.TransactionService;
