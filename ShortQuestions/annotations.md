@@ -551,3 +551,93 @@ public class TimeLoggingAspect {
     }
 }
 ```
+
+## -----------------------------------AOP-----------------------------------
+@BeforeClass: This annotation marks a method that will be run once before any of the test methods in the class. It is often used for one-time setup that applies to all test methods, such as opening a database connection.
+
+@Before: This annotation marks a method that will be run before each test method. It's a place to set up common test fixture data that each test might change or use.
+
+Test Method (@Test): This is where the actual test is conducted. You can have multiple test methods in a test class, and each one is marked with the @Test annotation.
+
+@After: This annotation marks a method that will be run after each test method. It's used for teardown actions that must occur after each test, such as closing resources or rolling back a database transaction.
+
+@AfterClass: This annotation marks a method that will be run once after all the test methods in the class have been run. It's often used for one-time teardown, such as closing a database connection.
+
+```java
+import org.junit.*;
+
+public class ExampleTest {
+
+    @BeforeClass
+    public static void setUpClass() {
+        System.out.println("Once before all tests");
+    }
+
+    @Before
+    public void setUp() {
+        System.out.println("Before each test");
+    }
+
+    @Test
+    public void test1() {
+        System.out.println("Test 1");
+    }
+
+    @Test
+    public void test2() {
+        System.out.println("Test 2");
+    }
+
+    @After
+    public void tearDown() {
+        System.out.println("After each test");
+    }
+
+    @AfterClass
+    public static void tearDownClass() {
+        System.out.println("Once after all tests");
+    }
+}
+```
+
+@Mock
+```java
+import static org.mockito.Mockito.*;
+import org.mockito.Mock;
+import org.junit.jupiter.api.Test;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+@ExtendWith(MockitoExtension.class)
+public class MyTest {
+
+    @Mock
+    MyService myService;  // A mock of MyService is automatically created
+
+    @Test
+    public void testMethod() {
+        when(myService.performAction()).thenReturn("Mock Response");
+        // rest of the test
+    }
+}
+```
+
+@InjectMocks
+The @InjectMocks annotation is used to automatically inject mock objects into the object under test. Mockito will try to inject mocks either by constructor injection, setter injection, or property injection (in that order), depending on what's available.
+```java
+import org.mockito.InjectMocks;
+
+public class MyTest {
+
+    @Mock
+    MyService myService;  // A mock of MyService is created
+
+    @InjectMocks
+    MyClass myClass; // The mock MyService is injected into MyClass
+
+    // rest of the test
+}
+```
+
+
+
