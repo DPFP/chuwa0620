@@ -68,6 +68,16 @@ class level, it can make this class a bean, define global exception handlers to 
 Used for validation, ie: column length cannot be greater than 10.
 
 
+@EnableCircuitBreaker
+Add at application level to indicate circuitbreaker.
+@HystrixCommand
+Fallback method annotation
+
+@EnableEurekaServer
+Eureka server set up.
+
+
+
 ## 2
 The table will have two columns.
 One is called name and its varchar(255) type and have a default value of John Snow.
