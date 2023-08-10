@@ -118,6 +118,7 @@
       }
   }
   ```
+  
 ### Exception Handling
 
 - `@ControllerAdvice`: Marks a class as a exception handling class for all controllers.  
@@ -163,6 +164,7 @@ public class GlobalExceptionHandler {
 
 - `@Cleanup`: Simplifies resource cleanup by automatically calling the close method on resources.
 
+
 - `@NonNull`: Marks a field as non-null, used for generating constructors and null-checking.  
 
 ### Test
@@ -190,3 +192,6 @@ public class GlobalExceptionHandler {
 - `@AfterThrowing`: Specifies a method to be executed after a join point throws an exception.
 
 - `@Around`: Specifies a method to be executed around a join point, allowing full control over the method invocation.
+
+- `@NonNull`: Marks a field as non-null, used for generating constructors and null-checking.
+
