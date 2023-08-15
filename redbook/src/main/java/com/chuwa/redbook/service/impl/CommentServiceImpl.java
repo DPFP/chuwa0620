@@ -39,7 +39,7 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public List<CommentDto> getCommentsByPostId(long postId) {
-        List<Comment> comments = commentRepository.findAll();
+        List<Comment> comments = commentRepository.findByPostId(postId);
         return comments.stream().map((this::mapToDto)).collect(Collectors.toList());
     }
 
