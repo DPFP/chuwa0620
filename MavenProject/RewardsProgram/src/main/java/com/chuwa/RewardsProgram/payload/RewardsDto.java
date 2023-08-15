@@ -1,12 +1,22 @@
 package com.chuwa.RewardsProgram.payload;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+
 import java.time.YearMonth;
 import java.util.List;
 
 public class RewardsDto {
     public static class MonthlyDto{
 //        private String month;
+
+//        private YearMonth yearMonth;
+//        private Double monthlyPoints;
+
+        @JsonProperty("year_month")
         private YearMonth yearMonth;
+
+        @JsonProperty("monthly_points")
         private Double monthlyPoints;
 
         public MonthlyDto(YearMonth yearMonth, Double monthlyPoints) {
