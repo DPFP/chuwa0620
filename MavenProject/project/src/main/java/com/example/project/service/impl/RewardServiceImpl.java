@@ -8,6 +8,7 @@ import com.example.project.entity.Transaction;
 import com.example.project.exception.ResourceNotFoundException;
 import com.example.project.payload.RewardDto;
 import com.example.project.service.RewardService;
+import com.example.project.util.TransactionUtil;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -37,7 +38,7 @@ public class RewardServiceImpl implements RewardService {
             LocalDate tmpDate = startDate.plusMonths(1);
             List<Transaction> transactions = transactionRepository.findByIdWithinMonth(customerId, startDate, tmpDate);
             int sumMonthlyReward = transactions.stream()
-                    .mapToInt(Transaction::rewardOfEachTransaction)
+                    .mapToInt(TransactionUtil::rewardOfEachTransaction)
                     .sum();
 
             rewardDto.getMonthlyReport().put(startDate.toString()+" - "+tmpDate.toString(), (long) sumMonthlyReward);

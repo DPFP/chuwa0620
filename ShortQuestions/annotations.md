@@ -1,4 +1,38 @@
 # annotations
+In Mockito, @Mock is used to create a mock instance of a class or interface, and it initializes all the methods with default values (usually null or 0). On the other hand, @Spy is used to create a spy instance, which is a partial mock. The spy retains the real behavior of the methods unless you explicitly stub them. In other words, when you use @Spy, real methods are invoked unless they are stubbed.
+
+In Mockito, @Mock and @InjectMocks are annotations used to create mock objects and inject them into the class under test.
+@Mock: This annotation is used to create a mock object of a class or interface. When a test class is initialized, Mockito creates a mock instance for every field annotated with @Mock.
+
+@InjectMocks: This annotation is used to inject the mock objects created with @Mock into the class under test. It automatically injects the mocked dependencies into the corresponding fields of the class under test.
+
+
+The lifecycle of JUnit refers to the sequence of events that occur when running JUnit tests within a test class. The typical lifecycle events are as follows:
+- @BeforeClass: This method is executed once before any of the test methods in the class. It is usually used for setting up common resources or data required for all test methods.
+- @Before: This method is executed before each individual test method. It is used to set up the test environment specific to each test case.
+- @Test: This annotation marks a method as a test case. Each method annotated with @Test is executed independently.
+- @After: This method is executed after each individual test method. It is used to clean up the test environment and release any resources used during the test.
+- @AfterClass: This method is executed once after all the test methods in the class have been executed. It is used for releasing resources or performing cleanup tasks that apply to the entire test class.
+
+
+@Value annotation: For getting value from application.properties
+```
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class MyConfig {
+
+    @Value("${your.property.key}") // Replace "your.property.key" with the actual key in application.properties
+    private String yourPropertyValue;
+
+    // Getter method to access the property value from other parts of the application
+    public String getYourPropertyValue() {
+        return yourPropertyValue;
+    }
+}
+```
+
 We can use four annotations to inject beans into a class:
 @Autowired: This annotation can be used to auto-wire a bean into a class member, constructor, or method. It allows Spring to automatically detect the appropriate bean and inject it where needed.
 @Inject: This is another annotation used for dependency injection, similar to @Autowired. It is part of the Java Dependency Injection (JSR-330) standard and is also supported by Spring.

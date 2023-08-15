@@ -1,5 +1,7 @@
 package com.example.project.controller;
 
+import com.example.project.payload.CustomerDto;
+import com.example.project.payload.ProductUpdateDto;
 import com.example.project.payload.TransactionDto;
 import com.example.project.service.TransactionService;
 import jakarta.validation.Valid;
@@ -35,14 +37,9 @@ public class TransactionController {
     }
 
     @PutMapping("/customers/{customerId}/transactions/{transactionId}")
-    ResponseEntity<TransactionDto> updateTransaction(@RequestBody List<Long> productIdsToBeAddedOrDeleted,
-                                                     @PathVariable(name = "customerId") Long customerId, @PathVariable(name = "transactionId") Long transactionId,
-                                                     @RequestParam(name = "add", required = true) boolean add){
-        if(add){
-            return ResponseEntity.ok(transactionService.addProductsToTransactionByProductIds(productIdsToBeAddedOrDeleted, customerId, transactionId));
-        }else{
-            return ResponseEntity.ok(transactionService.deleteProductsInTransactionByProductIds(productIdsToBeAddedOrDeleted, customerId, transactionId));
-        }
+    ResponseEntity<TransactionDto> updateTransaction(@Valid @RequestBody ProductUpdateDto productUpdateDto,
+                                                     @PathVariable(name = "customerId") Long customerId, @PathVariable(name = "transactionId") Long transactionId){
+            return ResponseEntity.ok(transactionService.updateProductsInTransactionByProductIds(productUpdateDto, customerId, transactionId));
     }
 
     @DeleteMapping("/customers/{customerId}/transactions/{transactionId}")
