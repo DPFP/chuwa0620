@@ -15,4 +15,6 @@ public interface TransactionRepository extends JpaRepository<Transaction, Long> 
     List<Transaction> findTransactionByCustomer(Customer customer);
     List<Transaction> findTransactionByCustomerAndCreateDateTimeBetween(Customer customer, LocalDateTime start, LocalDateTime end);
     Optional<Transaction> findFirstTransactionByCustomerOrderByCreateDateTimeAsc(Customer customer);
+    List<Transaction> findByCustomerId(long customerId);
+
 }

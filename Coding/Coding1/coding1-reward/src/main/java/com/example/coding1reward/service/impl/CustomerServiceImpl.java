@@ -5,8 +5,10 @@ import com.example.coding1reward.dao.TransactionRepository;
 import com.example.coding1reward.entity.Customer;
 import com.example.coding1reward.entity.Transaction;
 import com.example.coding1reward.exception.ResourceNotFoundException;
+import com.example.coding1reward.payload.CustomerDto;
 import com.example.coding1reward.payload.RewardResponse;
 import com.example.coding1reward.service.CustomerService;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.stream.Collectors;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
@@ -26,6 +29,9 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Autowired
     private CustomerRepository customerRepository;
+
+    @Autowired
+    private ModelMapper modelMapper;
 
     @Override
     public RewardResponse getTotalRewardByCustomerId(long id) {
@@ -108,6 +114,42 @@ public class CustomerServiceImpl implements CustomerService {
         response.setMonthToReward(monthToRewardMap);
 
         return response;
+    }
+
+    @Override
+    public CustomerDto createCustomer(CustomerDto customerDto) {
+        Customer customer = modelMapper.map(customerDto, Customer.class);
+        Customer saveCustomer = customerRepository.save(customer);
+        return modelMapper.map(saveCustomer, CustomerDto.class);
+    }
+
+    @Override
+    public List<CustomerDto> getAllCustomers() {
+        List<Customer> customers = customerRepository.findAll();
+        return customers.stream().map(customer -> modelMapper.map(customers, CustomerDto.class)).collect(Collectors.toList());
+    }
+
+    @Override
+    public CustomerDto getCustomerById(long id) {
+        Customer customer = customerRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Customer", "id", id));
+        return modelMapper.map(customer, CustomerDto.class);
+    }
+
+    @Override
+    public CustomerDto updateCustomerInfo(CustomerDto customerDto, long id) {
+        Customer customer = customerRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Customer", "id", id));
+        customer.setEmail(customerDto.getEmail());
+        Customer savedCustomer = customerRepository.save(customer);
+        return modelMapper.map(savedCustomer, CustomerDto.class);
+    }
+
+    @Override
+    public void deleteCustomerById(long id) {
+        Customer customer = customerRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Customer", "id", id));
+        customerRepository.delete(customer);
     }
 
 
