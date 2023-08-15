@@ -1,0 +1,754 @@
+2023-07-31 22:25:23.973 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-07-31 22:25:24.005 [main] INFO  c.e.c.MoyiProjectApplication - Starting MoyiProjectApplication using Java 19.0.1 with PID 6988 (D:\dev\ChuwaProject\target\classes started by jacky in D:\dev\ChuwaProject)
+2023-07-31 22:25:24.006 [main] INFO  c.e.c.MoyiProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2023-07-31 22:25:24.661 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-31 22:25:24.714 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 3 JPA repository interfaces.
+2023-07-31 22:25:24.928 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-31 22:25:24.963 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-07-31 22:25:25.291 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-31 22:25:25.302 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-31 22:25:25.304 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-31 22:25:25.306 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-31 22:25:25.428 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-31 22:25:25.429 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1385 ms
+2023-07-31 22:25:25.608 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-31 22:25:26.255 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2ce524d2
+2023-07-31 22:25:26.256 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-31 22:25:26.306 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-31 22:25:26.385 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-31 22:25:26.387 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-31 22:25:26.544 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-31 22:25:26.704 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-31 22:25:26.806 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-31 22:25:27.039 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-31 22:25:27.772 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-31 22:25:27.775 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-31 22:25:28.231 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-31 22:25:28.664 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-07-31 22:25:28.691 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-31 22:25:28.698 [main] INFO  c.e.c.MoyiProjectApplication - Started MoyiProjectApplication in 4.995 seconds (process running for 6.333)
+2023-07-31 22:26:00.437 [http-nio-8080-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-31 22:26:00.438 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-31 22:26:00.440 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-07-31 22:26:00.469 [http-nio-8080-exec-3] WARN  o.s.web.servlet.PageNotFound - Request method 'POST' is not supported
+2023-07-31 22:26:14.201 [http-nio-8080-exec-2] WARN  o.a.p.p.font.FileSystemFontProvider - New fonts found, font cache will be re-built
+2023-07-31 22:26:14.202 [http-nio-8080-exec-2] WARN  o.a.p.p.font.FileSystemFontProvider - Building on-disk font cache, this may take a while
+2023-07-31 22:26:14.650 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table ',Æ' which goes past the file size; offset: 2035219558, size: 4015559266, font size: 4096
+2023-07-31 22:26:14.650 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'c14#' which goes past the file size; offset: 1345915990, size: 2215838552, font size: 4096
+2023-07-31 22:26:14.650 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ÿ+C' which goes past the file size; offset: 475209507, size: 1644403983, font size: 4096
+2023-07-31 22:26:14.650 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'J¸
+' which goes past the file size; offset: 543092505, size: 3775781759, font size: 4096
+2023-07-31 22:26:14.650 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '®4^Y' which goes past the file size; offset: 3794495336, size: 3141601587, font size: 4096
+2023-07-31 22:26:14.650 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'o)½`' which goes past the file size; offset: 2924160531, size: 2440677471, font size: 4096
+2023-07-31 22:26:14.651 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ð0' which goes past the file size; offset: 306774586, size: 1712229713, font size: 4096
+2023-07-31 22:26:14.651 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ReÅw' which goes past the file size; offset: 1618641708, size: 572138017, font size: 4096
+2023-07-31 22:26:14.651 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '¹HW' which goes past the file size; offset: 811557966, size: 273294397, font size: 4096
+2023-07-31 22:26:14.651 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Í+Y' which goes past the file size; offset: 3675133260, size: 1614906434, font size: 4096
+2023-07-31 22:26:14.651 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '=$w' which goes past the file size; offset: 20397087, size: 2785740325, font size: 4096
+2023-07-31 22:26:14.652 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '8"W' which goes past the file size; offset: 69873507, size: 1512031527, font size: 4096
+2023-07-31 22:26:14.652 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ò;
+' which goes past the file size; offset: 2323479417, size: 1450224677, font size: 4096
+2023-07-31 22:26:14.652 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '%j¸' which goes past the file size; offset: 4281885054, size: 1527971369, font size: 4096
+2023-07-31 22:26:14.652 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '(æ[' which goes past the file size; offset: 286544653, size: 2355875928, font size: 4096
+2023-07-31 22:26:14.652 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'kÖ-' which goes past the file size; offset: 843414613, size: 4051077671, font size: 4096
+2023-07-31 22:26:14.652 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 's;d' which goes past the file size; offset: 425735550, size: 4111886949, font size: 4096
+2023-07-31 22:26:14.652 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table ';' which goes past the file size; offset: 1095012443, size: 3916890132, font size: 4096
+2023-07-31 22:26:14.652 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'dð[' which goes past the file size; offset: 1763430770, size: 2130883087, font size: 4096
+2023-07-31 22:26:14.652 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'yét' which goes past the file size; offset: 308867150, size: 1331575304, font size: 4096
+2023-07-31 22:26:14.652 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'V§J' which goes past the file size; offset: 86251813, size: 1426334537, font size: 4096
+2023-07-31 22:26:14.652 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'au!Z' which goes past the file size; offset: 3396217929, size: 1902202962, font size: 4096
+2023-07-31 22:26:14.653 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Ù@' which goes past the file size; offset: 843857522, size: 3859314240, font size: 4096
+2023-07-31 22:26:14.653 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '[%d' which goes past the file size; offset: 3463583055, size: 3698760965, font size: 4096
+2023-07-31 22:26:14.653 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'LSÝ' which goes past the file size; offset: 1965731946, size: 3747783281, font size: 4096
+2023-07-31 22:26:14.653 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '9r6' which goes past the file size; offset: 3258629472, size: 1562556170, font size: 4096
+2023-07-31 22:26:14.653 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '$2Þ!' which goes past the file size; offset: 2473140322, size: 723247669, font size: 4096
+2023-07-31 22:26:14.653 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'gJN|' which goes past the file size; offset: 2332652297, size: 21396015, font size: 4096
+2023-07-31 22:26:14.653 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ÔYä' which goes past the file size; offset: 2434302079, size: 4181765715, font size: 4096
+2023-07-31 22:26:14.654 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'd(7' which goes past the file size; offset: 1349437807, size: 343080246, font size: 4096
+2023-07-31 22:26:14.654 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '%Ð' which goes past the file size; offset: 3044671821, size: 3040460558, font size: 4096
+2023-07-31 22:26:14.654 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'a,¯r' which goes past the file size; offset: 1947504741, size: 607492713, font size: 4096
+2023-07-31 22:26:14.654 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Ó^Ä' which goes past the file size; offset: 2203521864, size: 202444344, font size: 4096
+2023-07-31 22:26:14.654 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'sw-' which goes past the file size; offset: 2618546807, size: 4268485156, font size: 4096
+2023-07-31 22:26:14.654 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'L 9' which goes past the file size; offset: 3209324657, size: 3964195901, font size: 4096
+2023-07-31 22:26:14.654 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ðE' which goes past the file size; offset: 2923427454, size: 2937177707, font size: 4096
+2023-07-31 22:26:14.654 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'òZ8' which goes past the file size; offset: 1880420700, size: 2166983483, font size: 4096
+2023-07-31 22:26:14.654 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'l :Z' which goes past the file size; offset: 3480778542, size: 2198816374, font size: 4096
+2023-07-31 22:26:14.654 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'z4Ö1' which goes past the file size; offset: 3664305729, size: 940698377, font size: 4096
+2023-07-31 22:26:14.654 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '½I÷1' which goes past the file size; offset: 1685794085, size: 135119937, font size: 4096
+2023-07-31 22:26:14.654 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ÙJ15' which goes past the file size; offset: 2202050570, size: 3192188238, font size: 4096
+2023-07-31 22:26:14.654 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '÷@J' which goes past the file size; offset: 288369021, size: 188799008, font size: 4096
+2023-07-31 22:26:14.654 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'DJøQ' which goes past the file size; offset: 774433380, size: 20957709, font size: 4096
+2023-07-31 22:26:14.654 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'o îh' which goes past the file size; offset: 3162225499, size: 2570869835, font size: 4096
+2023-07-31 22:26:14.654 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '//Í&' which goes past the file size; offset: 3775965777, size: 755104822, font size: 4096
+2023-07-31 22:26:14.654 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '»:j)' which goes past the file size; offset: 2299491841, size: 4265896302, font size: 4096
+2023-07-31 22:26:14.654 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Pq' which goes past the file size; offset: 3793687605, size: 2942450232, font size: 4096
+2023-07-31 22:26:14.655 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '¯j}' which goes past the file size; offset: 3728222810, size: 3357104188, font size: 4096
+2023-07-31 22:26:14.655 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'c' which goes past the file size; offset: 3044972390, size: 895581964, font size: 4096
+2023-07-31 22:26:14.655 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'acç' which goes past the file size; offset: 1613883660, size: 3293167996, font size: 4096
+2023-07-31 22:26:14.655 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'I_¥\' which goes past the file size; offset: 522970176, size: 2859467596, font size: 4096
+2023-07-31 22:26:14.655 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '% «>' which goes past the file size; offset: 4084072972, size: 4278288156, font size: 4096
+2023-07-31 22:26:14.655 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Êkù$' which goes past the file size; offset: 625470769, size: 1028341820, font size: 4096
+2023-07-31 22:26:14.655 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '#' which goes past the file size; offset: 3178432293, size: 3311249469, font size: 4096
+2023-07-31 22:26:14.655 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Õo@S' which goes past the file size; offset: 208266058, size: 1531047263, font size: 4096
+2023-07-31 22:26:14.655 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'x<' which goes past the file size; offset: 589220112, size: 2771818567, font size: 4096
+2023-07-31 22:26:14.655 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '_Y1' which goes past the file size; offset: 1500198480, size: 2936603911, font size: 4096
+2023-07-31 22:26:14.655 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ñ+ÔW' which goes past the file size; offset: 3380107779, size: 1786046070, font size: 4096
+2023-07-31 22:26:14.655 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'h	' which goes past the file size; offset: 3527186505, size: 672251998, font size: 4096
+2023-07-31 22:26:14.655 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Q_' which goes past the file size; offset: 2500462908, size: 559770733, font size: 4096
+2023-07-31 22:26:14.657 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'fK3' which goes past the file size; offset: 2050029841, size: 4064974593, font size: 4096
+2023-07-31 22:26:14.657 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table ',S/' which goes past the file size; offset: 2888198421, size: 426066498, font size: 4096
+2023-07-31 22:26:14.657 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'G&%'' which goes past the file size; offset: 2555218791, size: 2046837511, font size: 4096
+2023-07-31 22:26:14.657 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'W,@F' which goes past the file size; offset: 1916553493, size: 3716072209, font size: 4096
+2023-07-31 22:26:14.657 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '_&' which goes past the file size; offset: 2954870651, size: 1847705108, font size: 4096
+2023-07-31 22:26:14.657 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'è' which goes past the file size; offset: 2368191612, size: 996902413, font size: 4096
+2023-07-31 22:26:14.657 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '~uH' which goes past the file size; offset: 2265335043, size: 3121823596, font size: 4096
+2023-07-31 22:26:14.658 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '3+;"' which goes past the file size; offset: 3783201368, size: 1074357260, font size: 4096
+2023-07-31 22:26:14.658 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '3' which goes past the file size; offset: 570822470, size: 2332246397, font size: 4096
+2023-07-31 22:26:14.658 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Í;v' which goes past the file size; offset: 2489965582, size: 958822426, font size: 4096
+2023-07-31 22:26:14.658 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'è^}' which goes past the file size; offset: 3340127535, size: 1311997300, font size: 4096
+2023-07-31 22:26:14.658 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'gýO' which goes past the file size; offset: 191228787, size: 2991397129, font size: 4096
+2023-07-31 22:26:14.658 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Ý(' which goes past the file size; offset: 4185157981, size: 2974542411, font size: 4096
+2023-07-31 22:26:14.658 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'dT ' which goes past the file size; offset: 3944632405, size: 2031739262, font size: 4096
+2023-07-31 22:26:14.658 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '.A,J' which goes past the file size; offset: 2138123058, size: 2687222362, font size: 4096
+2023-07-31 22:26:14.658 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Q ' which goes past the file size; offset: 406871052, size: 2600577031, font size: 4096
+2023-07-31 22:26:14.658 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'P(^A' which goes past the file size; offset: 1547791714, size: 1211662181, font size: 4096
+2023-07-31 22:26:14.658 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'µð`' which goes past the file size; offset: 3074269197, size: 1697417252, font size: 4096
+2023-07-31 22:26:14.659 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ø~&' which goes past the file size; offset: 3612174342, size: 372103469, font size: 4096
+2023-07-31 22:26:14.659 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'X[øX' which goes past the file size; offset: 791276920, size: 1681840731, font size: 4096
+2023-07-31 22:26:14.659 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'VÞZ' which goes past the file size; offset: 1946455081, size: 3094071554, font size: 4096
+2023-07-31 22:26:14.659 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'hw' which goes past the file size; offset: 587224361, size: 1680488265, font size: 4096
+2023-07-31 22:26:14.659 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'í~®~' which goes past the file size; offset: 4163275610, size: 441223504, font size: 4096
+2023-07-31 22:26:14.659 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '~@2' which goes past the file size; offset: 2021402437, size: 1929475885, font size: 4096
+2023-07-31 22:26:14.659 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'äZ ' which goes past the file size; offset: 1763398971, size: 1768722480, font size: 4096
+2023-07-31 22:26:14.659 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '# Ã' which goes past the file size; offset: 1415902797, size: 3712136318, font size: 4096
+2023-07-31 22:26:14.659 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'µ+2' which goes past the file size; offset: 171711505, size: 318871929, font size: 4096
+2023-07-31 22:26:14.661 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ù4pY' which goes past the file size; offset: 475697456, size: 824985464, font size: 4096
+2023-07-31 22:26:14.661 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'UcªO' which goes past the file size; offset: 1646743892, size: 3290733647, font size: 4096
+2023-07-31 22:26:14.661 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '±T	f' which goes past the file size; offset: 1965820757, size: 973719594, font size: 4096
+2023-07-31 22:26:14.661 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ùsF' which goes past the file size; offset: 873505856, size: 1764282931, font size: 4096
+2023-07-31 22:26:14.661 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'o' which goes past the file size; offset: 1126609966, size: 100929804, font size: 4096
+2023-07-31 22:26:14.661 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table ' S' which goes past the file size; offset: 2265777765, size: 795063316, font size: 4096
+2023-07-31 22:26:14.661 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'XB ' which goes past the file size; offset: 2891848780, size: 3799268103, font size: 4096
+2023-07-31 22:26:14.661 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'aJÍq' which goes past the file size; offset: 2674567731, size: 2198010973, font size: 4096
+2023-07-31 22:26:14.661 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '±a¥	' which goes past the file size; offset: 336139879, size: 1530044172, font size: 4096
+2023-07-31 22:26:14.662 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ÎE¼' which goes past the file size; offset: 24641041, size: 324706824, font size: 4096
+2023-07-31 22:26:14.662 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'À2wt' which goes past the file size; offset: 558215796, size: 1029821729, font size: 4096
+2023-07-31 22:26:14.662 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '%2' which goes past the file size; offset: 1935062632, size: 3409174314, font size: 4096
+2023-07-31 22:26:14.662 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Úb»0' which goes past the file size; offset: 3094233397, size: 2521085809, font size: 4096
+2023-07-31 22:26:14.662 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '&Òu' which goes past the file size; offset: 4166041907, size: 3642698760, font size: 4096
+2023-07-31 22:26:14.662 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'K°E' which goes past the file size; offset: 4268577860, size: 3003997788, font size: 4096
+2023-07-31 22:26:14.663 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '; }t' which goes past the file size; offset: 3609350162, size: 2823045665, font size: 4096
+2023-07-31 22:26:14.663 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'À×a' which goes past the file size; offset: 1460124968, size: 556540423, font size: 4096
+2023-07-31 22:26:14.663 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Æ2Ru' which goes past the file size; offset: 2471286102, size: 3878558532, font size: 4096
+2023-07-31 22:26:14.663 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'vfój' which goes past the file size; offset: 1747684196, size: 2887621996, font size: 4096
+2023-07-31 22:26:14.663 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ýX´o' which goes past the file size; offset: 4083286295, size: 2183261723, font size: 4096
+2023-07-31 22:26:14.663 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'u' which goes past the file size; offset: 390533125, size: 1648273516, font size: 4096
+2023-07-31 22:26:14.663 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'UwCj' which goes past the file size; offset: 4217291835, size: 2808428097, font size: 4096
+2023-07-31 22:26:14.663 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'JO' which goes past the file size; offset: 2299780658, size: 2417515356, font size: 4096
+2023-07-31 22:26:14.663 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '2á
+' which goes past the file size; offset: 4033695761, size: 3256527945, font size: 4096
+2023-07-31 22:26:14.663 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'd)G' which goes past the file size; offset: 593937473, size: 3274969110, font size: 4096
+2023-07-31 22:26:14.663 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '|®&' which goes past the file size; offset: 1480660567, size: 2131117912, font size: 4096
+2023-07-31 22:26:14.663 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'm¼Q' which goes past the file size; offset: 2298533184, size: 3345571849, font size: 4096
+2023-07-31 22:26:14.663 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'tR' which goes past the file size; offset: 4133406287, size: 3462677037, font size: 4096
+2023-07-31 22:26:14.663 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'sCª_' which goes past the file size; offset: 2707448074, size: 2855019595, font size: 4096
+2023-07-31 22:26:14.663 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'âsp' which goes past the file size; offset: 3513798993, size: 3644265526, font size: 4096
+2023-07-31 22:26:14.664 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'QE' which goes past the file size; offset: 2417031251, size: 3110106149, font size: 4096
+2023-07-31 22:26:14.664 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'y;E' which goes past the file size; offset: 739633492, size: 253261853, font size: 4096
+2023-07-31 22:26:14.664 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ß^4+' which goes past the file size; offset: 3128323390, size: 2166860327, font size: 4096
+2023-07-31 22:26:14.664 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '0A' which goes past the file size; offset: 2385444614, size: 470050651, font size: 4096
+2023-07-31 22:26:14.664 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Ôq' which goes past the file size; offset: 3307589733, size: 3476053814, font size: 4096
+2023-07-31 22:26:14.664 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table ':xX' which goes past the file size; offset: 3140699223, size: 3979352133, font size: 4096
+2023-07-31 22:26:14.664 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Pí=' which goes past the file size; offset: 2502718065, size: 2936695579, font size: 4096
+2023-07-31 22:26:14.664 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'X	' which goes past the file size; offset: 3095373576, size: 2958624285, font size: 4096
+2023-07-31 22:26:14.664 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'è' which goes past the file size; offset: 1348920355, size: 1869735957, font size: 4096
+2023-07-31 22:26:14.664 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '^aÊs' which goes past the file size; offset: 3407961153, size: 3507480610, font size: 4096
+2023-07-31 22:26:14.664 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'pÞL' which goes past the file size; offset: 3985612100, size: 2332829019, font size: 4096
+2023-07-31 22:26:14.666 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Y©;' which goes past the file size; offset: 1999491610, size: 4245338403, font size: 4096
+2023-07-31 22:26:14.666 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ý'6Q' which goes past the file size; offset: 1513929839, size: 35576177, font size: 4096
+2023-07-31 22:26:14.666 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'r9s' which goes past the file size; offset: 2198518577, size: 561623561, font size: 4096
+2023-07-31 22:26:14.666 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ä	' which goes past the file size; offset: 861701414, size: 2954083883, font size: 4096
+2023-07-31 22:26:14.666 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '9ös' which goes past the file size; offset: 4064544566, size: 1800292972, font size: 4096
+2023-07-31 22:26:14.666 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '»¨W' which goes past the file size; offset: 190243166, size: 4044748875, font size: 4096
+2023-07-31 22:26:14.666 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'qhÎ&' which goes past the file size; offset: 190703738, size: 1192573984, font size: 4096
+2023-07-31 22:26:14.666 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Ww' which goes past the file size; offset: 1177723731, size: 1400430411, font size: 4096
+2023-07-31 22:26:14.666 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '8áw' which goes past the file size; offset: 1377291782, size: 1648262983, font size: 4096
+2023-07-31 22:26:14.666 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Ìf:' which goes past the file size; offset: 2317736506, size: 2736524922, font size: 4096
+2023-07-31 22:26:14.666 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '°aR' which goes past the file size; offset: 2353818403, size: 2842709857, font size: 4096
+2023-07-31 22:26:14.666 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'o\LA' which goes past the file size; offset: 3143686485, size: 3980549130, font size: 4096
+2023-07-31 22:26:14.666 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '>l}1' which goes past the file size; offset: 3191451501, size: 1247355482, font size: 4096
+2023-07-31 22:26:14.666 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Õ>x' which goes past the file size; offset: 6369025, size: 2136597029, font size: 4096
+2023-07-31 22:26:14.667 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ò .' which goes past the file size; offset: 777047397, size: 2977673755, font size: 4096
+2023-07-31 22:26:14.667 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Ô$jc' which goes past the file size; offset: 3141513028, size: 3863804794, font size: 4096
+2023-07-31 22:26:14.667 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Á8Ò' which goes past the file size; offset: 1594176383, size: 2332162332, font size: 4096
+2023-07-31 22:26:14.667 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Mä4' which goes past the file size; offset: 2483186019, size: 4015472205, font size: 4096
+2023-07-31 22:26:14.667 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'àl¼f' which goes past the file size; offset: 404985136, size: 3305779058, font size: 4096
+2023-07-31 22:26:14.667 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '/ çV' which goes past the file size; offset: 1852550763, size: 2790491397, font size: 4096
+2023-07-31 22:26:14.667 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Äè' which goes past the file size; offset: 1561846019, size: 2373832028, font size: 4096
+2023-07-31 22:26:14.667 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'u|´>' which goes past the file size; offset: 1866993479, size: 1493690433, font size: 4096
+2023-07-31 22:26:14.667 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '!P6' which goes past the file size; offset: 1933855526, size: 1331072091, font size: 4096
+2023-07-31 22:26:14.667 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '(
+Ì' which goes past the file size; offset: 4215496010, size: 2507719013, font size: 4096
+2023-07-31 22:26:14.668 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'îBÈX' which goes past the file size; offset: 3746579064, size: 3094832442, font size: 4096
+2023-07-31 22:26:14.668 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '\	ð' which goes past the file size; offset: 3090458949, size: 658221353, font size: 4096
+2023-07-31 22:26:14.668 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '^Yþ_' which goes past the file size; offset: 1719105309, size: 3061486114, font size: 4096
+2023-07-31 22:26:14.668 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'f" Z' which goes past the file size; offset: 2339193876, size: 474052907, font size: 4096
+2023-07-31 22:26:14.668 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'è]ye' which goes past the file size; offset: 223861772, size: 1971227434, font size: 4096
+2023-07-31 22:26:14.668 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Ü5n' which goes past the file size; offset: 2551037996, size: 3223996798, font size: 4096
+2023-07-31 22:26:14.668 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '?;=' which goes past the file size; offset: 440640032, size: 1652033894, font size: 4096
+2023-07-31 22:26:14.668 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table ',ë' which goes past the file size; offset: 1162931248, size: 2702603066, font size: 4096
+2023-07-31 22:26:14.668 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'YLj' which goes past the file size; offset: 269695526, size: 704906614, font size: 4096
+2023-07-31 22:26:14.668 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'GÈ>' which goes past the file size; offset: 928897917, size: 2356252685, font size: 4096
+2023-07-31 22:26:14.668 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'k,.' which goes past the file size; offset: 3060945774, size: 3140729112, font size: 4096
+2023-07-31 22:26:14.668 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Sp6#' which goes past the file size; offset: 1377360955, size: 2386982986, font size: 4096
+2023-07-31 22:26:14.669 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'êo' which goes past the file size; offset: 271769948, size: 1096784953, font size: 4096
+2023-07-31 22:26:14.669 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Hu<' which goes past the file size; offset: 3161555566, size: 4077799033, font size: 4096
+2023-07-31 22:26:14.669 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'gt$' which goes past the file size; offset: 1662325625, size: 695560449, font size: 4096
+2023-07-31 22:26:14.669 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'R9!' which goes past the file size; offset: 3644169220, size: 1224888423, font size: 4096
+2023-07-31 22:26:14.669 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'C
+Ä&' which goes past the file size; offset: 874863485, size: 541726822, font size: 4096
+2023-07-31 22:26:14.669 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'E®' which goes past the file size; offset: 1331510632, size: 1566978615, font size: 4096
+2023-07-31 22:26:14.669 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'F+À' which goes past the file size; offset: 1233021287, size: 342483770, font size: 4096
+2023-07-31 22:26:14.669 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '7WiJ' which goes past the file size; offset: 56472846, size: 1012908912, font size: 4096
+2023-07-31 22:26:14.670 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'W
+'' which goes past the file size; offset: 2770415112, size: 828588352, font size: 4096
+2023-07-31 22:26:14.670 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ûPz' which goes past the file size; offset: 443979016, size: 842997009, font size: 4096
+2023-07-31 22:26:14.670 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'E:!' which goes past the file size; offset: 2403654931, size: 3827297587, font size: 4096
+2023-07-31 22:26:14.670 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '©aD' which goes past the file size; offset: 4161121809, size: 3445004570, font size: 4096
+2023-07-31 22:26:14.670 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'êqI/' which goes past the file size; offset: 2334188849, size: 3660373856, font size: 4096
+2023-07-31 22:26:14.670 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'S á0' which goes past the file size; offset: 1112936737, size: 3661942564, font size: 4096
+2023-07-31 22:26:14.670 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '0[ÁL' which goes past the file size; offset: 1581512460, size: 17715247, font size: 4096
+2023-07-31 22:26:14.670 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Pdù'' which goes past the file size; offset: 3748401017, size: 1715902828, font size: 4096
+2023-07-31 22:26:14.670 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'cE' which goes past the file size; offset: 224331107, size: 2232269108, font size: 4096
+2023-07-31 22:26:14.670 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '5-ë' which goes past the file size; offset: 4066064951, size: 3188068452, font size: 4096
+2023-07-31 22:26:14.670 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '®XD' which goes past the file size; offset: 3709419541, size: 3540767811, font size: 4096
+2023-07-31 22:26:14.671 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Õ8' which goes past the file size; offset: 3759235428, size: 1852804418, font size: 4096
+2023-07-31 22:26:14.671 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '8Ôc' which goes past the file size; offset: 1398675512, size: 2572130428, font size: 4096
+2023-07-31 22:26:14.671 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'G5¡=' which goes past the file size; offset: 1344902660, size: 1148758036, font size: 4096
+2023-07-31 22:26:14.671 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'gØ<' which goes past the file size; offset: 892026659, size: 3277144156, font size: 4096
+2023-07-31 22:26:14.671 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'àd'T' which goes past the file size; offset: 624503591, size: 1299659596, font size: 4096
+2023-07-31 22:26:14.672 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '§0x' which goes past the file size; offset: 2254677505, size: 2116109389, font size: 4096
+2023-07-31 22:26:14.672 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '4z
+,' which goes past the file size; offset: 2216996726, size: 3580911184, font size: 4096
+2023-07-31 22:26:14.672 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '(¿]' which goes past the file size; offset: 2367585377, size: 923557431, font size: 4096
+2023-07-31 22:26:14.672 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'bÌ' which goes past the file size; offset: 3547002184, size: 1785162509, font size: 4096
+2023-07-31 22:26:14.672 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'uS¥d' which goes past the file size; offset: 3463918916, size: 2601878799, font size: 4096
+2023-07-31 22:26:14.672 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '¢a.M' which goes past the file size; offset: 3078032687, size: 3660315396, font size: 4096
+2023-07-31 22:26:14.672 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '-#CC' which goes past the file size; offset: 241139758, size: 2553541735, font size: 4096
+2023-07-31 22:26:14.672 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '&f1'' which goes past the file size; offset: 359876613, size: 791537501, font size: 4096
+2023-07-31 22:26:14.672 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '¢F;' which goes past the file size; offset: 1382567736, size: 1512186624, font size: 4096
+2023-07-31 22:26:14.672 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table ':U' which goes past the file size; offset: 286340611, size: 3108522100, font size: 4096
+2023-07-31 22:26:14.673 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Mm}' which goes past the file size; offset: 3743142428, size: 1328859988, font size: 4096
+2023-07-31 22:26:14.673 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '±\^n' which goes past the file size; offset: 291678795, size: 52065897, font size: 4096
+2023-07-31 22:26:14.673 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '×wú' which goes past the file size; offset: 994474826, size: 572712239, font size: 4096
+2023-07-31 22:26:14.673 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '£BÉ'' which goes past the file size; offset: 3106059388, size: 3695839796, font size: 4096
+2023-07-31 22:26:14.673 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ÁD' which goes past the file size; offset: 709426034, size: 3260721976, font size: 4096
+2023-07-31 22:26:14.673 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'b5Y9' which goes past the file size; offset: 4010518079, size: 1315168047, font size: 4096
+2023-07-31 22:26:14.673 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '¼ëZ' which goes past the file size; offset: 2959491611, size: 1548981251, font size: 4096
+2023-07-31 22:26:14.673 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'O' which goes past the file size; offset: 3626110809, size: 2836991022, font size: 4096
+2023-07-31 22:26:14.673 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '|.Ðs' which goes past the file size; offset: 337346859, size: 1532451618, font size: 4096
+2023-07-31 22:26:14.673 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ác,M' which goes past the file size; offset: 3624452408, size: 2032331524, font size: 4096
+2023-07-31 22:26:14.674 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ø' which goes past the file size; offset: 3663866495, size: 1851324467, font size: 4096
+2023-07-31 22:26:14.674 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'U±U' which goes past the file size; offset: 2504772873, size: 2315261216, font size: 4096
+2023-07-31 22:26:14.674 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'c.' which goes past the file size; offset: 3339710068, size: 2168366452, font size: 4096
+2023-07-31 22:26:14.674 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Õ_ßb' which goes past the file size; offset: 4097082690, size: 3931398672, font size: 4096
+2023-07-31 22:26:14.674 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '4ZK' which goes past the file size; offset: 3776429438, size: 3241662797, font size: 4096
+2023-07-31 22:26:14.675 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'XjöQ' which goes past the file size; offset: 421230644, size: 3861834779, font size: 4096
+2023-07-31 22:26:14.675 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'p)Q' which goes past the file size; offset: 1801832753, size: 2601013094, font size: 4096
+2023-07-31 22:26:14.675 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ç$x'' which goes past the file size; offset: 1781561628, size: 173804622, font size: 4096
+2023-07-31 22:26:14.675 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'r53' which goes past the file size; offset: 3961946966, size: 3176922929, font size: 4096
+2023-07-31 22:26:14.675 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'W&' which goes past the file size; offset: 2337511218, size: 607672839, font size: 4096
+2023-07-31 22:26:14.675 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Tb' which goes past the file size; offset: 656382840, size: 319955458, font size: 4096
+2023-07-31 22:26:14.675 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '¾2<' which goes past the file size; offset: 1667179834, size: 1098756109, font size: 4096
+2023-07-31 22:26:14.675 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'J;Q' which goes past the file size; offset: 594871159, size: 3390190101, font size: 4096
+2023-07-31 22:26:14.675 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ðJX' which goes past the file size; offset: 343651089, size: 2920490780, font size: 4096
+2023-07-31 22:26:14.675 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '­w·e' which goes past the file size; offset: 604302099, size: 1344005670, font size: 4096
+2023-07-31 22:26:14.675 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '5' which goes past the file size; offset: 107614787, size: 4167112819, font size: 4096
+2023-07-31 22:26:14.675 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'tr'' which goes past the file size; offset: 2938881284, size: 1359952128, font size: 4096
+2023-07-31 22:26:14.675 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '
+Fi' which goes past the file size; offset: 3696972563, size: 3944487784, font size: 4096
+2023-07-31 22:26:14.676 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Ó&FA' which goes past the file size; offset: 2317304066, size: 3125306119, font size: 4096
+2023-07-31 22:26:14.676 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '];' which goes past the file size; offset: 2084357906, size: 2501315190, font size: 4096
+2023-07-31 22:26:14.676 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '>H[,' which goes past the file size; offset: 3090633048, size: 3093814607, font size: 4096
+2023-07-31 22:26:14.676 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'V>' which goes past the file size; offset: 168099628, size: 1125383500, font size: 4096
+2023-07-31 22:26:14.676 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'kjºA' which goes past the file size; offset: 2151687542, size: 3106037802, font size: 4096
+2023-07-31 22:26:14.676 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'uIo' which goes past the file size; offset: 3959868472, size: 2182041442, font size: 4096
+2023-07-31 22:26:14.676 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'OQI' which goes past the file size; offset: 1699360894, size: 1763108404, font size: 4096
+2023-07-31 22:26:14.676 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '$^¸e' which goes past the file size; offset: 3343204360, size: 505059072, font size: 4096
+2023-07-31 22:26:14.676 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table ' A' which goes past the file size; offset: 779755606, size: 3038095210, font size: 4096
+2023-07-31 22:26:14.676 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'òF' which goes past the file size; offset: 2134747768, size: 622833495, font size: 4096
+2023-07-31 22:26:14.676 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'QN ]' which goes past the file size; offset: 3747146038, size: 3396934708, font size: 4096
+2023-07-31 22:26:14.678 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'snùl' which goes past the file size; offset: 976722946, size: 3828920076, font size: 4096
+2023-07-31 22:26:14.678 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '-s5' which goes past the file size; offset: 3173235004, size: 376634998, font size: 4096
+2023-07-31 22:26:14.678 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '}GË' which goes past the file size; offset: 1545136201, size: 3900698953, font size: 4096
+2023-07-31 22:26:14.678 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'é59' which goes past the file size; offset: 1310458999, size: 1163150886, font size: 4096
+2023-07-31 22:26:14.678 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '$U3' which goes past the file size; offset: 2352127277, size: 4250537551, font size: 4096
+2023-07-31 22:26:14.678 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '{6ÇL' which goes past the file size; offset: 1431861624, size: 1147940434, font size: 4096
+2023-07-31 22:26:14.678 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '¾b' which goes past the file size; offset: 2903707224, size: 844095232, font size: 4096
+2023-07-31 22:26:14.678 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Á:Ë#' which goes past the file size; offset: 3641772391, size: 1095511608, font size: 4096
+2023-07-31 22:26:14.678 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ßÕ' which goes past the file size; offset: 3830827854, size: 3528424569, font size: 4096
+2023-07-31 22:26:14.678 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'rf!Q' which goes past the file size; offset: 494397195, size: 2820472658, font size: 4096
+2023-07-31 22:26:14.678 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '\4' which goes past the file size; offset: 2540676354, size: 1779318552, font size: 4096
+2023-07-31 22:26:14.678 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '?êV' which goes past the file size; offset: 2826600803, size: 644651626, font size: 4096
+2023-07-31 22:26:14.678 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'K@=' which goes past the file size; offset: 1795403103, size: 3377119505, font size: 4096
+2023-07-31 22:26:14.678 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '$L6' which goes past the file size; offset: 1042516781, size: 2826909732, font size: 4096
+2023-07-31 22:26:14.678 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table ' \°!' which goes past the file size; offset: 1144009821, size: 4196588159, font size: 4096
+2023-07-31 22:26:14.678 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Ñb ' which goes past the file size; offset: 3831231612, size: 1528976146, font size: 4096
+2023-07-31 22:26:14.679 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 't^' which goes past the file size; offset: 1214368525, size: 1264821361, font size: 4096
+2023-07-31 22:26:14.679 [http-nio-8080-exec-2] WARN  org.apache.fontbox.ttf.TTFParser - Skip table ';ze' which goes past the file size; offset: 3762548039, size: 2910167876, font size: 4096
+2023-07-31 22:26:14.679 [http-nio-8080-exec-2] WARN  o.a.p.p.font.FileSystemFontProvider - Could not load font file: C:\WINDOWS\FONTS\mstmc.ttf
+java.io.EOFException: null
+	at org.apache.fontbox.ttf.TTFDataStream.readUnsignedInt(TTFDataStream.java:150)
+	at org.apache.fontbox.ttf.TTFParser.readTableDirectory(TTFParser.java:333)
+	at org.apache.fontbox.ttf.TTFParser.parse(TTFParser.java:143)
+	at org.apache.fontbox.ttf.TTFParser.parse(TTFParser.java:91)
+	at org.apache.pdfbox.pdmodel.font.FileSystemFontProvider.addTrueTypeFont(FileSystemFontProvider.java:666)
+	at org.apache.pdfbox.pdmodel.font.FileSystemFontProvider.scanFonts(FileSystemFontProvider.java:383)
+	at org.apache.pdfbox.pdmodel.font.FileSystemFontProvider.<init>(FileSystemFontProvider.java:361)
+	at org.apache.pdfbox.pdmodel.font.FontMapperImpl$DefaultFontProvider.<clinit>(FontMapperImpl.java:141)
+	at org.apache.pdfbox.pdmodel.font.FontMapperImpl.getProvider(FontMapperImpl.java:160)
+	at org.apache.pdfbox.pdmodel.font.FontMapperImpl.findFont(FontMapperImpl.java:430)
+	at org.apache.pdfbox.pdmodel.font.FontMapperImpl.findFontBoxFont(FontMapperImpl.java:393)
+	at org.apache.pdfbox.pdmodel.font.FontMapperImpl.getFontBoxFont(FontMapperImpl.java:367)
+	at org.apache.pdfbox.pdmodel.font.PDType1Font.<init>(PDType1Font.java:146)
+	at org.apache.pdfbox.pdmodel.font.PDType1Font.<clinit>(PDType1Font.java:79)
+	at com.example.chuwaproject.utils.PDFUtil.generatePdf(PDFUtil.java:24)
+	at com.example.chuwaproject.controller.OrderController.generatePDF(OrderController.java:69)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:756)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:141)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:756)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.example.chuwaproject.controller.OrderController$$SpringCGLIB$$0.generatePDF(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-07-31 22:26:14.933 [http-nio-8080-exec-2] WARN  o.a.p.p.font.FileSystemFontProvider - Finished building on-disk font cache, found 359 fonts
+2023-07-31 22:32:56.034 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-31 22:32:56.091 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-07-31 22:32:56.275 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-07-31 22:33:03.581 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-07-31 22:33:03.651 [main] INFO  c.e.c.MoyiProjectApplication - Starting MoyiProjectApplication using Java 19.0.1 with PID 24196 (D:\dev\ChuwaProject\target\classes started by jacky in D:\dev\ChuwaProject)
+2023-07-31 22:33:03.652 [main] INFO  c.e.c.MoyiProjectApplication - No active profile set, falling back to 1 default profile: "default"
+2023-07-31 22:33:04.425 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-31 22:33:04.493 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55 ms. Found 3 JPA repository interfaces.
+2023-07-31 22:33:04.728 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$SpringCGLIB$$0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-07-31 22:33:04.764 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-07-31 22:33:05.022 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-07-31 22:33:05.029 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-07-31 22:33:05.031 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-31 22:33:05.031 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-31 22:33:05.149 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-31 22:33:05.150 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1447 ms
+2023-07-31 22:33:05.388 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-07-31 22:33:06.337 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@13192275
+2023-07-31 22:33:06.338 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-07-31 22:33:06.379 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-31 22:33:06.463 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-31 22:33:06.465 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-07-31 22:33:06.635 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-31 22:33:06.798 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-31 22:33:06.871 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-07-31 22:33:07.147 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-07-31 22:33:07.929 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-31 22:33:07.931 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-31 22:33:08.327 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-31 22:33:08.675 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-07-31 22:33:08.695 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-31 22:33:08.704 [main] INFO  c.e.c.MoyiProjectApplication - Started MoyiProjectApplication in 5.512 seconds (process running for 6.752)
+2023-07-31 22:33:30.747 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-31 22:33:30.747 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-07-31 22:33:30.750 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-07-31 22:34:02.632 [http-nio-8080-exec-4] WARN  o.a.p.p.font.FileSystemFontProvider - New fonts found, font cache will be re-built
+2023-07-31 22:34:02.633 [http-nio-8080-exec-4] WARN  o.a.p.p.font.FileSystemFontProvider - Building on-disk font cache, this may take a while
+2023-07-31 22:34:03.083 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table ',Æ' which goes past the file size; offset: 2035219558, size: 4015559266, font size: 4096
+2023-07-31 22:34:03.083 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'c14#' which goes past the file size; offset: 1345915990, size: 2215838552, font size: 4096
+2023-07-31 22:34:03.083 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ÿ+C' which goes past the file size; offset: 475209507, size: 1644403983, font size: 4096
+2023-07-31 22:34:03.083 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'J¸
+' which goes past the file size; offset: 543092505, size: 3775781759, font size: 4096
+2023-07-31 22:34:03.085 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '®4^Y' which goes past the file size; offset: 3794495336, size: 3141601587, font size: 4096
+2023-07-31 22:34:03.085 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'o)½`' which goes past the file size; offset: 2924160531, size: 2440677471, font size: 4096
+2023-07-31 22:34:03.085 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ð0' which goes past the file size; offset: 306774586, size: 1712229713, font size: 4096
+2023-07-31 22:34:03.085 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ReÅw' which goes past the file size; offset: 1618641708, size: 572138017, font size: 4096
+2023-07-31 22:34:03.085 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '¹HW' which goes past the file size; offset: 811557966, size: 273294397, font size: 4096
+2023-07-31 22:34:03.085 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Í+Y' which goes past the file size; offset: 3675133260, size: 1614906434, font size: 4096
+2023-07-31 22:34:03.085 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '=$w' which goes past the file size; offset: 20397087, size: 2785740325, font size: 4096
+2023-07-31 22:34:03.085 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '8"W' which goes past the file size; offset: 69873507, size: 1512031527, font size: 4096
+2023-07-31 22:34:03.085 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ò;
+' which goes past the file size; offset: 2323479417, size: 1450224677, font size: 4096
+2023-07-31 22:34:03.085 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '%j¸' which goes past the file size; offset: 4281885054, size: 1527971369, font size: 4096
+2023-07-31 22:34:03.086 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '(æ[' which goes past the file size; offset: 286544653, size: 2355875928, font size: 4096
+2023-07-31 22:34:03.086 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'kÖ-' which goes past the file size; offset: 843414613, size: 4051077671, font size: 4096
+2023-07-31 22:34:03.086 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 's;d' which goes past the file size; offset: 425735550, size: 4111886949, font size: 4096
+2023-07-31 22:34:03.086 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table ';' which goes past the file size; offset: 1095012443, size: 3916890132, font size: 4096
+2023-07-31 22:34:03.087 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'dð[' which goes past the file size; offset: 1763430770, size: 2130883087, font size: 4096
+2023-07-31 22:34:03.087 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'yét' which goes past the file size; offset: 308867150, size: 1331575304, font size: 4096
+2023-07-31 22:34:03.087 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'V§J' which goes past the file size; offset: 86251813, size: 1426334537, font size: 4096
+2023-07-31 22:34:03.087 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'au!Z' which goes past the file size; offset: 3396217929, size: 1902202962, font size: 4096
+2023-07-31 22:34:03.087 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Ù@' which goes past the file size; offset: 843857522, size: 3859314240, font size: 4096
+2023-07-31 22:34:03.087 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '[%d' which goes past the file size; offset: 3463583055, size: 3698760965, font size: 4096
+2023-07-31 22:34:03.087 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'LSÝ' which goes past the file size; offset: 1965731946, size: 3747783281, font size: 4096
+2023-07-31 22:34:03.087 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '9r6' which goes past the file size; offset: 3258629472, size: 1562556170, font size: 4096
+2023-07-31 22:34:03.087 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '$2Þ!' which goes past the file size; offset: 2473140322, size: 723247669, font size: 4096
+2023-07-31 22:34:03.087 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'gJN|' which goes past the file size; offset: 2332652297, size: 21396015, font size: 4096
+2023-07-31 22:34:03.087 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ÔYä' which goes past the file size; offset: 2434302079, size: 4181765715, font size: 4096
+2023-07-31 22:34:03.088 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'd(7' which goes past the file size; offset: 1349437807, size: 343080246, font size: 4096
+2023-07-31 22:34:03.088 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '%Ð' which goes past the file size; offset: 3044671821, size: 3040460558, font size: 4096
+2023-07-31 22:34:03.088 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'a,¯r' which goes past the file size; offset: 1947504741, size: 607492713, font size: 4096
+2023-07-31 22:34:03.088 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Ó^Ä' which goes past the file size; offset: 2203521864, size: 202444344, font size: 4096
+2023-07-31 22:34:03.088 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'sw-' which goes past the file size; offset: 2618546807, size: 4268485156, font size: 4096
+2023-07-31 22:34:03.088 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'L 9' which goes past the file size; offset: 3209324657, size: 3964195901, font size: 4096
+2023-07-31 22:34:03.088 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ðE' which goes past the file size; offset: 2923427454, size: 2937177707, font size: 4096
+2023-07-31 22:34:03.088 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'òZ8' which goes past the file size; offset: 1880420700, size: 2166983483, font size: 4096
+2023-07-31 22:34:03.088 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'l :Z' which goes past the file size; offset: 3480778542, size: 2198816374, font size: 4096
+2023-07-31 22:34:03.089 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'z4Ö1' which goes past the file size; offset: 3664305729, size: 940698377, font size: 4096
+2023-07-31 22:34:03.089 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '½I÷1' which goes past the file size; offset: 1685794085, size: 135119937, font size: 4096
+2023-07-31 22:34:03.089 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ÙJ15' which goes past the file size; offset: 2202050570, size: 3192188238, font size: 4096
+2023-07-31 22:34:03.089 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '÷@J' which goes past the file size; offset: 288369021, size: 188799008, font size: 4096
+2023-07-31 22:34:03.089 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'DJøQ' which goes past the file size; offset: 774433380, size: 20957709, font size: 4096
+2023-07-31 22:34:03.089 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'o îh' which goes past the file size; offset: 3162225499, size: 2570869835, font size: 4096
+2023-07-31 22:34:03.089 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '//Í&' which goes past the file size; offset: 3775965777, size: 755104822, font size: 4096
+2023-07-31 22:34:03.089 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '»:j)' which goes past the file size; offset: 2299491841, size: 4265896302, font size: 4096
+2023-07-31 22:34:03.089 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Pq' which goes past the file size; offset: 3793687605, size: 2942450232, font size: 4096
+2023-07-31 22:34:03.090 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '¯j}' which goes past the file size; offset: 3728222810, size: 3357104188, font size: 4096
+2023-07-31 22:34:03.090 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'c' which goes past the file size; offset: 3044972390, size: 895581964, font size: 4096
+2023-07-31 22:34:03.090 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'acç' which goes past the file size; offset: 1613883660, size: 3293167996, font size: 4096
+2023-07-31 22:34:03.090 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'I_¥\' which goes past the file size; offset: 522970176, size: 2859467596, font size: 4096
+2023-07-31 22:34:03.090 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '% «>' which goes past the file size; offset: 4084072972, size: 4278288156, font size: 4096
+2023-07-31 22:34:03.090 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Êkù$' which goes past the file size; offset: 625470769, size: 1028341820, font size: 4096
+2023-07-31 22:34:03.090 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '#' which goes past the file size; offset: 3178432293, size: 3311249469, font size: 4096
+2023-07-31 22:34:03.090 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Õo@S' which goes past the file size; offset: 208266058, size: 1531047263, font size: 4096
+2023-07-31 22:34:03.090 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'x<' which goes past the file size; offset: 589220112, size: 2771818567, font size: 4096
+2023-07-31 22:34:03.090 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '_Y1' which goes past the file size; offset: 1500198480, size: 2936603911, font size: 4096
+2023-07-31 22:34:03.091 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ñ+ÔW' which goes past the file size; offset: 3380107779, size: 1786046070, font size: 4096
+2023-07-31 22:34:03.091 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'h	' which goes past the file size; offset: 3527186505, size: 672251998, font size: 4096
+2023-07-31 22:34:03.091 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Q_' which goes past the file size; offset: 2500462908, size: 559770733, font size: 4096
+2023-07-31 22:34:03.091 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'fK3' which goes past the file size; offset: 2050029841, size: 4064974593, font size: 4096
+2023-07-31 22:34:03.091 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table ',S/' which goes past the file size; offset: 2888198421, size: 426066498, font size: 4096
+2023-07-31 22:34:03.091 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'G&%'' which goes past the file size; offset: 2555218791, size: 2046837511, font size: 4096
+2023-07-31 22:34:03.091 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'W,@F' which goes past the file size; offset: 1916553493, size: 3716072209, font size: 4096
+2023-07-31 22:34:03.092 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '_&' which goes past the file size; offset: 2954870651, size: 1847705108, font size: 4096
+2023-07-31 22:34:03.092 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'è' which goes past the file size; offset: 2368191612, size: 996902413, font size: 4096
+2023-07-31 22:34:03.092 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '~uH' which goes past the file size; offset: 2265335043, size: 3121823596, font size: 4096
+2023-07-31 22:34:03.092 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '3+;"' which goes past the file size; offset: 3783201368, size: 1074357260, font size: 4096
+2023-07-31 22:34:03.092 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '3' which goes past the file size; offset: 570822470, size: 2332246397, font size: 4096
+2023-07-31 22:34:03.092 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Í;v' which goes past the file size; offset: 2489965582, size: 958822426, font size: 4096
+2023-07-31 22:34:03.092 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'è^}' which goes past the file size; offset: 3340127535, size: 1311997300, font size: 4096
+2023-07-31 22:34:03.092 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'gýO' which goes past the file size; offset: 191228787, size: 2991397129, font size: 4096
+2023-07-31 22:34:03.092 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Ý(' which goes past the file size; offset: 4185157981, size: 2974542411, font size: 4096
+2023-07-31 22:34:03.093 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'dT ' which goes past the file size; offset: 3944632405, size: 2031739262, font size: 4096
+2023-07-31 22:34:03.093 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '.A,J' which goes past the file size; offset: 2138123058, size: 2687222362, font size: 4096
+2023-07-31 22:34:03.093 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Q ' which goes past the file size; offset: 406871052, size: 2600577031, font size: 4096
+2023-07-31 22:34:03.093 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'P(^A' which goes past the file size; offset: 1547791714, size: 1211662181, font size: 4096
+2023-07-31 22:34:03.094 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'µð`' which goes past the file size; offset: 3074269197, size: 1697417252, font size: 4096
+2023-07-31 22:34:03.094 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ø~&' which goes past the file size; offset: 3612174342, size: 372103469, font size: 4096
+2023-07-31 22:34:03.094 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'X[øX' which goes past the file size; offset: 791276920, size: 1681840731, font size: 4096
+2023-07-31 22:34:03.094 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'VÞZ' which goes past the file size; offset: 1946455081, size: 3094071554, font size: 4096
+2023-07-31 22:34:03.094 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'hw' which goes past the file size; offset: 587224361, size: 1680488265, font size: 4096
+2023-07-31 22:34:03.094 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'í~®~' which goes past the file size; offset: 4163275610, size: 441223504, font size: 4096
+2023-07-31 22:34:03.095 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '~@2' which goes past the file size; offset: 2021402437, size: 1929475885, font size: 4096
+2023-07-31 22:34:03.095 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'äZ ' which goes past the file size; offset: 1763398971, size: 1768722480, font size: 4096
+2023-07-31 22:34:03.095 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '# Ã' which goes past the file size; offset: 1415902797, size: 3712136318, font size: 4096
+2023-07-31 22:34:03.095 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'µ+2' which goes past the file size; offset: 171711505, size: 318871929, font size: 4096
+2023-07-31 22:34:03.095 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ù4pY' which goes past the file size; offset: 475697456, size: 824985464, font size: 4096
+2023-07-31 22:34:03.095 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'UcªO' which goes past the file size; offset: 1646743892, size: 3290733647, font size: 4096
+2023-07-31 22:34:03.095 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '±T	f' which goes past the file size; offset: 1965820757, size: 973719594, font size: 4096
+2023-07-31 22:34:03.095 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ùsF' which goes past the file size; offset: 873505856, size: 1764282931, font size: 4096
+2023-07-31 22:34:03.095 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'o' which goes past the file size; offset: 1126609966, size: 100929804, font size: 4096
+2023-07-31 22:34:03.095 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table ' S' which goes past the file size; offset: 2265777765, size: 795063316, font size: 4096
+2023-07-31 22:34:03.095 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'XB ' which goes past the file size; offset: 2891848780, size: 3799268103, font size: 4096
+2023-07-31 22:34:03.097 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'aJÍq' which goes past the file size; offset: 2674567731, size: 2198010973, font size: 4096
+2023-07-31 22:34:03.097 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '±a¥	' which goes past the file size; offset: 336139879, size: 1530044172, font size: 4096
+2023-07-31 22:34:03.097 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ÎE¼' which goes past the file size; offset: 24641041, size: 324706824, font size: 4096
+2023-07-31 22:34:03.097 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'À2wt' which goes past the file size; offset: 558215796, size: 1029821729, font size: 4096
+2023-07-31 22:34:03.098 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '%2' which goes past the file size; offset: 1935062632, size: 3409174314, font size: 4096
+2023-07-31 22:34:03.098 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Úb»0' which goes past the file size; offset: 3094233397, size: 2521085809, font size: 4096
+2023-07-31 22:34:03.098 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '&Òu' which goes past the file size; offset: 4166041907, size: 3642698760, font size: 4096
+2023-07-31 22:34:03.098 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'K°E' which goes past the file size; offset: 4268577860, size: 3003997788, font size: 4096
+2023-07-31 22:34:03.098 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '; }t' which goes past the file size; offset: 3609350162, size: 2823045665, font size: 4096
+2023-07-31 22:34:03.099 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'À×a' which goes past the file size; offset: 1460124968, size: 556540423, font size: 4096
+2023-07-31 22:34:03.099 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Æ2Ru' which goes past the file size; offset: 2471286102, size: 3878558532, font size: 4096
+2023-07-31 22:34:03.099 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'vfój' which goes past the file size; offset: 1747684196, size: 2887621996, font size: 4096
+2023-07-31 22:34:03.099 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ýX´o' which goes past the file size; offset: 4083286295, size: 2183261723, font size: 4096
+2023-07-31 22:34:03.100 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'u' which goes past the file size; offset: 390533125, size: 1648273516, font size: 4096
+2023-07-31 22:34:03.100 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'UwCj' which goes past the file size; offset: 4217291835, size: 2808428097, font size: 4096
+2023-07-31 22:34:03.100 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'JO' which goes past the file size; offset: 2299780658, size: 2417515356, font size: 4096
+2023-07-31 22:34:03.100 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '2á
+' which goes past the file size; offset: 4033695761, size: 3256527945, font size: 4096
+2023-07-31 22:34:03.100 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'd)G' which goes past the file size; offset: 593937473, size: 3274969110, font size: 4096
+2023-07-31 22:34:03.102 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '|®&' which goes past the file size; offset: 1480660567, size: 2131117912, font size: 4096
+2023-07-31 22:34:03.102 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'm¼Q' which goes past the file size; offset: 2298533184, size: 3345571849, font size: 4096
+2023-07-31 22:34:03.102 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'tR' which goes past the file size; offset: 4133406287, size: 3462677037, font size: 4096
+2023-07-31 22:34:03.102 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'sCª_' which goes past the file size; offset: 2707448074, size: 2855019595, font size: 4096
+2023-07-31 22:34:03.102 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'âsp' which goes past the file size; offset: 3513798993, size: 3644265526, font size: 4096
+2023-07-31 22:34:03.103 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'QE' which goes past the file size; offset: 2417031251, size: 3110106149, font size: 4096
+2023-07-31 22:34:03.103 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'y;E' which goes past the file size; offset: 739633492, size: 253261853, font size: 4096
+2023-07-31 22:34:03.103 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ß^4+' which goes past the file size; offset: 3128323390, size: 2166860327, font size: 4096
+2023-07-31 22:34:03.103 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '0A' which goes past the file size; offset: 2385444614, size: 470050651, font size: 4096
+2023-07-31 22:34:03.103 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Ôq' which goes past the file size; offset: 3307589733, size: 3476053814, font size: 4096
+2023-07-31 22:34:03.103 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table ':xX' which goes past the file size; offset: 3140699223, size: 3979352133, font size: 4096
+2023-07-31 22:34:03.103 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Pí=' which goes past the file size; offset: 2502718065, size: 2936695579, font size: 4096
+2023-07-31 22:34:03.103 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'X	' which goes past the file size; offset: 3095373576, size: 2958624285, font size: 4096
+2023-07-31 22:34:03.103 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'è' which goes past the file size; offset: 1348920355, size: 1869735957, font size: 4096
+2023-07-31 22:34:03.103 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '^aÊs' which goes past the file size; offset: 3407961153, size: 3507480610, font size: 4096
+2023-07-31 22:34:03.103 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'pÞL' which goes past the file size; offset: 3985612100, size: 2332829019, font size: 4096
+2023-07-31 22:34:03.103 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Y©;' which goes past the file size; offset: 1999491610, size: 4245338403, font size: 4096
+2023-07-31 22:34:03.104 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ý'6Q' which goes past the file size; offset: 1513929839, size: 35576177, font size: 4096
+2023-07-31 22:34:03.104 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'r9s' which goes past the file size; offset: 2198518577, size: 561623561, font size: 4096
+2023-07-31 22:34:03.104 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ä	' which goes past the file size; offset: 861701414, size: 2954083883, font size: 4096
+2023-07-31 22:34:03.104 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '9ös' which goes past the file size; offset: 4064544566, size: 1800292972, font size: 4096
+2023-07-31 22:34:03.104 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '»¨W' which goes past the file size; offset: 190243166, size: 4044748875, font size: 4096
+2023-07-31 22:34:03.104 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'qhÎ&' which goes past the file size; offset: 190703738, size: 1192573984, font size: 4096
+2023-07-31 22:34:03.104 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Ww' which goes past the file size; offset: 1177723731, size: 1400430411, font size: 4096
+2023-07-31 22:34:03.104 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '8áw' which goes past the file size; offset: 1377291782, size: 1648262983, font size: 4096
+2023-07-31 22:34:03.104 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Ìf:' which goes past the file size; offset: 2317736506, size: 2736524922, font size: 4096
+2023-07-31 22:34:03.104 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '°aR' which goes past the file size; offset: 2353818403, size: 2842709857, font size: 4096
+2023-07-31 22:34:03.106 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'o\LA' which goes past the file size; offset: 3143686485, size: 3980549130, font size: 4096
+2023-07-31 22:34:03.106 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '>l}1' which goes past the file size; offset: 3191451501, size: 1247355482, font size: 4096
+2023-07-31 22:34:03.106 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Õ>x' which goes past the file size; offset: 6369025, size: 2136597029, font size: 4096
+2023-07-31 22:34:03.106 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ò .' which goes past the file size; offset: 777047397, size: 2977673755, font size: 4096
+2023-07-31 22:34:03.106 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Ô$jc' which goes past the file size; offset: 3141513028, size: 3863804794, font size: 4096
+2023-07-31 22:34:03.106 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Á8Ò' which goes past the file size; offset: 1594176383, size: 2332162332, font size: 4096
+2023-07-31 22:34:03.106 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Mä4' which goes past the file size; offset: 2483186019, size: 4015472205, font size: 4096
+2023-07-31 22:34:03.106 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'àl¼f' which goes past the file size; offset: 404985136, size: 3305779058, font size: 4096
+2023-07-31 22:34:03.107 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '/ çV' which goes past the file size; offset: 1852550763, size: 2790491397, font size: 4096
+2023-07-31 22:34:03.107 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Äè' which goes past the file size; offset: 1561846019, size: 2373832028, font size: 4096
+2023-07-31 22:34:03.107 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'u|´>' which goes past the file size; offset: 1866993479, size: 1493690433, font size: 4096
+2023-07-31 22:34:03.107 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '!P6' which goes past the file size; offset: 1933855526, size: 1331072091, font size: 4096
+2023-07-31 22:34:03.107 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '(
+Ì' which goes past the file size; offset: 4215496010, size: 2507719013, font size: 4096
+2023-07-31 22:34:03.107 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'îBÈX' which goes past the file size; offset: 3746579064, size: 3094832442, font size: 4096
+2023-07-31 22:34:03.107 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '\	ð' which goes past the file size; offset: 3090458949, size: 658221353, font size: 4096
+2023-07-31 22:34:03.107 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '^Yþ_' which goes past the file size; offset: 1719105309, size: 3061486114, font size: 4096
+2023-07-31 22:34:03.107 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'f" Z' which goes past the file size; offset: 2339193876, size: 474052907, font size: 4096
+2023-07-31 22:34:03.107 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'è]ye' which goes past the file size; offset: 223861772, size: 1971227434, font size: 4096
+2023-07-31 22:34:03.107 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Ü5n' which goes past the file size; offset: 2551037996, size: 3223996798, font size: 4096
+2023-07-31 22:34:03.108 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '?;=' which goes past the file size; offset: 440640032, size: 1652033894, font size: 4096
+2023-07-31 22:34:03.108 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table ',ë' which goes past the file size; offset: 1162931248, size: 2702603066, font size: 4096
+2023-07-31 22:34:03.108 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'YLj' which goes past the file size; offset: 269695526, size: 704906614, font size: 4096
+2023-07-31 22:34:03.108 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'GÈ>' which goes past the file size; offset: 928897917, size: 2356252685, font size: 4096
+2023-07-31 22:34:03.108 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'k,.' which goes past the file size; offset: 3060945774, size: 3140729112, font size: 4096
+2023-07-31 22:34:03.109 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Sp6#' which goes past the file size; offset: 1377360955, size: 2386982986, font size: 4096
+2023-07-31 22:34:03.109 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'êo' which goes past the file size; offset: 271769948, size: 1096784953, font size: 4096
+2023-07-31 22:34:03.109 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Hu<' which goes past the file size; offset: 3161555566, size: 4077799033, font size: 4096
+2023-07-31 22:34:03.109 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'gt$' which goes past the file size; offset: 1662325625, size: 695560449, font size: 4096
+2023-07-31 22:34:03.109 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'R9!' which goes past the file size; offset: 3644169220, size: 1224888423, font size: 4096
+2023-07-31 22:34:03.109 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'C
+Ä&' which goes past the file size; offset: 874863485, size: 541726822, font size: 4096
+2023-07-31 22:34:03.109 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'E®' which goes past the file size; offset: 1331510632, size: 1566978615, font size: 4096
+2023-07-31 22:34:03.109 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'F+À' which goes past the file size; offset: 1233021287, size: 342483770, font size: 4096
+2023-07-31 22:34:03.109 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '7WiJ' which goes past the file size; offset: 56472846, size: 1012908912, font size: 4096
+2023-07-31 22:34:03.110 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'W
+'' which goes past the file size; offset: 2770415112, size: 828588352, font size: 4096
+2023-07-31 22:34:03.110 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ûPz' which goes past the file size; offset: 443979016, size: 842997009, font size: 4096
+2023-07-31 22:34:03.110 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'E:!' which goes past the file size; offset: 2403654931, size: 3827297587, font size: 4096
+2023-07-31 22:34:03.110 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '©aD' which goes past the file size; offset: 4161121809, size: 3445004570, font size: 4096
+2023-07-31 22:34:03.110 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'êqI/' which goes past the file size; offset: 2334188849, size: 3660373856, font size: 4096
+2023-07-31 22:34:03.110 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'S á0' which goes past the file size; offset: 1112936737, size: 3661942564, font size: 4096
+2023-07-31 22:34:03.110 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '0[ÁL' which goes past the file size; offset: 1581512460, size: 17715247, font size: 4096
+2023-07-31 22:34:03.110 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Pdù'' which goes past the file size; offset: 3748401017, size: 1715902828, font size: 4096
+2023-07-31 22:34:03.110 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'cE' which goes past the file size; offset: 224331107, size: 2232269108, font size: 4096
+2023-07-31 22:34:03.110 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '5-ë' which goes past the file size; offset: 4066064951, size: 3188068452, font size: 4096
+2023-07-31 22:34:03.110 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '®XD' which goes past the file size; offset: 3709419541, size: 3540767811, font size: 4096
+2023-07-31 22:34:03.111 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Õ8' which goes past the file size; offset: 3759235428, size: 1852804418, font size: 4096
+2023-07-31 22:34:03.111 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '8Ôc' which goes past the file size; offset: 1398675512, size: 2572130428, font size: 4096
+2023-07-31 22:34:03.111 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'G5¡=' which goes past the file size; offset: 1344902660, size: 1148758036, font size: 4096
+2023-07-31 22:34:03.111 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'gØ<' which goes past the file size; offset: 892026659, size: 3277144156, font size: 4096
+2023-07-31 22:34:03.111 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'àd'T' which goes past the file size; offset: 624503591, size: 1299659596, font size: 4096
+2023-07-31 22:34:03.111 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '§0x' which goes past the file size; offset: 2254677505, size: 2116109389, font size: 4096
+2023-07-31 22:34:03.111 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '4z
+,' which goes past the file size; offset: 2216996726, size: 3580911184, font size: 4096
+2023-07-31 22:34:03.111 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '(¿]' which goes past the file size; offset: 2367585377, size: 923557431, font size: 4096
+2023-07-31 22:34:03.111 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'bÌ' which goes past the file size; offset: 3547002184, size: 1785162509, font size: 4096
+2023-07-31 22:34:03.111 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'uS¥d' which goes past the file size; offset: 3463918916, size: 2601878799, font size: 4096
+2023-07-31 22:34:03.111 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '¢a.M' which goes past the file size; offset: 3078032687, size: 3660315396, font size: 4096
+2023-07-31 22:34:03.111 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '-#CC' which goes past the file size; offset: 241139758, size: 2553541735, font size: 4096
+2023-07-31 22:34:03.111 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '&f1'' which goes past the file size; offset: 359876613, size: 791537501, font size: 4096
+2023-07-31 22:34:03.111 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '¢F;' which goes past the file size; offset: 1382567736, size: 1512186624, font size: 4096
+2023-07-31 22:34:03.111 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table ':U' which goes past the file size; offset: 286340611, size: 3108522100, font size: 4096
+2023-07-31 22:34:03.111 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Mm}' which goes past the file size; offset: 3743142428, size: 1328859988, font size: 4096
+2023-07-31 22:34:03.112 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '±\^n' which goes past the file size; offset: 291678795, size: 52065897, font size: 4096
+2023-07-31 22:34:03.112 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '×wú' which goes past the file size; offset: 994474826, size: 572712239, font size: 4096
+2023-07-31 22:34:03.112 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '£BÉ'' which goes past the file size; offset: 3106059388, size: 3695839796, font size: 4096
+2023-07-31 22:34:03.112 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ÁD' which goes past the file size; offset: 709426034, size: 3260721976, font size: 4096
+2023-07-31 22:34:03.112 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'b5Y9' which goes past the file size; offset: 4010518079, size: 1315168047, font size: 4096
+2023-07-31 22:34:03.112 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '¼ëZ' which goes past the file size; offset: 2959491611, size: 1548981251, font size: 4096
+2023-07-31 22:34:03.113 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'O' which goes past the file size; offset: 3626110809, size: 2836991022, font size: 4096
+2023-07-31 22:34:03.113 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '|.Ðs' which goes past the file size; offset: 337346859, size: 1532451618, font size: 4096
+2023-07-31 22:34:03.113 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ác,M' which goes past the file size; offset: 3624452408, size: 2032331524, font size: 4096
+2023-07-31 22:34:03.113 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ø' which goes past the file size; offset: 3663866495, size: 1851324467, font size: 4096
+2023-07-31 22:34:03.113 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'U±U' which goes past the file size; offset: 2504772873, size: 2315261216, font size: 4096
+2023-07-31 22:34:03.113 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'c.' which goes past the file size; offset: 3339710068, size: 2168366452, font size: 4096
+2023-07-31 22:34:03.113 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Õ_ßb' which goes past the file size; offset: 4097082690, size: 3931398672, font size: 4096
+2023-07-31 22:34:03.113 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '4ZK' which goes past the file size; offset: 3776429438, size: 3241662797, font size: 4096
+2023-07-31 22:34:03.114 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'XjöQ' which goes past the file size; offset: 421230644, size: 3861834779, font size: 4096
+2023-07-31 22:34:03.114 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'p)Q' which goes past the file size; offset: 1801832753, size: 2601013094, font size: 4096
+2023-07-31 22:34:03.114 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ç$x'' which goes past the file size; offset: 1781561628, size: 173804622, font size: 4096
+2023-07-31 22:34:03.114 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'r53' which goes past the file size; offset: 3961946966, size: 3176922929, font size: 4096
+2023-07-31 22:34:03.114 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'W&' which goes past the file size; offset: 2337511218, size: 607672839, font size: 4096
+2023-07-31 22:34:03.114 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Tb' which goes past the file size; offset: 656382840, size: 319955458, font size: 4096
+2023-07-31 22:34:03.114 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '¾2<' which goes past the file size; offset: 1667179834, size: 1098756109, font size: 4096
+2023-07-31 22:34:03.114 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'J;Q' which goes past the file size; offset: 594871159, size: 3390190101, font size: 4096
+2023-07-31 22:34:03.114 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ðJX' which goes past the file size; offset: 343651089, size: 2920490780, font size: 4096
+2023-07-31 22:34:03.114 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '­w·e' which goes past the file size; offset: 604302099, size: 1344005670, font size: 4096
+2023-07-31 22:34:03.114 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '5' which goes past the file size; offset: 107614787, size: 4167112819, font size: 4096
+2023-07-31 22:34:03.115 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'tr'' which goes past the file size; offset: 2938881284, size: 1359952128, font size: 4096
+2023-07-31 22:34:03.115 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '
+Fi' which goes past the file size; offset: 3696972563, size: 3944487784, font size: 4096
+2023-07-31 22:34:03.115 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Ó&FA' which goes past the file size; offset: 2317304066, size: 3125306119, font size: 4096
+2023-07-31 22:34:03.115 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '];' which goes past the file size; offset: 2084357906, size: 2501315190, font size: 4096
+2023-07-31 22:34:03.115 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '>H[,' which goes past the file size; offset: 3090633048, size: 3093814607, font size: 4096
+2023-07-31 22:34:03.115 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'V>' which goes past the file size; offset: 168099628, size: 1125383500, font size: 4096
+2023-07-31 22:34:03.115 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'kjºA' which goes past the file size; offset: 2151687542, size: 3106037802, font size: 4096
+2023-07-31 22:34:03.116 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'uIo' which goes past the file size; offset: 3959868472, size: 2182041442, font size: 4096
+2023-07-31 22:34:03.116 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'OQI' which goes past the file size; offset: 1699360894, size: 1763108404, font size: 4096
+2023-07-31 22:34:03.116 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '$^¸e' which goes past the file size; offset: 3343204360, size: 505059072, font size: 4096
+2023-07-31 22:34:03.116 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table ' A' which goes past the file size; offset: 779755606, size: 3038095210, font size: 4096
+2023-07-31 22:34:03.116 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'òF' which goes past the file size; offset: 2134747768, size: 622833495, font size: 4096
+2023-07-31 22:34:03.116 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'QN ]' which goes past the file size; offset: 3747146038, size: 3396934708, font size: 4096
+2023-07-31 22:34:03.116 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'snùl' which goes past the file size; offset: 976722946, size: 3828920076, font size: 4096
+2023-07-31 22:34:03.117 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '-s5' which goes past the file size; offset: 3173235004, size: 376634998, font size: 4096
+2023-07-31 22:34:03.117 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '}GË' which goes past the file size; offset: 1545136201, size: 3900698953, font size: 4096
+2023-07-31 22:34:03.117 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'é59' which goes past the file size; offset: 1310458999, size: 1163150886, font size: 4096
+2023-07-31 22:34:03.117 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '$U3' which goes past the file size; offset: 2352127277, size: 4250537551, font size: 4096
+2023-07-31 22:34:03.117 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '{6ÇL' which goes past the file size; offset: 1431861624, size: 1147940434, font size: 4096
+2023-07-31 22:34:03.117 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '¾b' which goes past the file size; offset: 2903707224, size: 844095232, font size: 4096
+2023-07-31 22:34:03.117 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Á:Ë#' which goes past the file size; offset: 3641772391, size: 1095511608, font size: 4096
+2023-07-31 22:34:03.117 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'ßÕ' which goes past the file size; offset: 3830827854, size: 3528424569, font size: 4096
+2023-07-31 22:34:03.117 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'rf!Q' which goes past the file size; offset: 494397195, size: 2820472658, font size: 4096
+2023-07-31 22:34:03.117 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '\4' which goes past the file size; offset: 2540676354, size: 1779318552, font size: 4096
+2023-07-31 22:34:03.118 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '?êV' which goes past the file size; offset: 2826600803, size: 644651626, font size: 4096
+2023-07-31 22:34:03.118 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'K@=' which goes past the file size; offset: 1795403103, size: 3377119505, font size: 4096
+2023-07-31 22:34:03.118 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table '$L6' which goes past the file size; offset: 1042516781, size: 2826909732, font size: 4096
+2023-07-31 22:34:03.118 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table ' \°!' which goes past the file size; offset: 1144009821, size: 4196588159, font size: 4096
+2023-07-31 22:34:03.118 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 'Ñb ' which goes past the file size; offset: 3831231612, size: 1528976146, font size: 4096
+2023-07-31 22:34:03.118 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table 't^' which goes past the file size; offset: 1214368525, size: 1264821361, font size: 4096
+2023-07-31 22:34:03.118 [http-nio-8080-exec-4] WARN  org.apache.fontbox.ttf.TTFParser - Skip table ';ze' which goes past the file size; offset: 3762548039, size: 2910167876, font size: 4096
+2023-07-31 22:34:03.119 [http-nio-8080-exec-4] WARN  o.a.p.p.font.FileSystemFontProvider - Could not load font file: C:\WINDOWS\FONTS\mstmc.ttf
+java.io.EOFException: null
+	at org.apache.fontbox.ttf.TTFDataStream.readUnsignedInt(TTFDataStream.java:150)
+	at org.apache.fontbox.ttf.TTFParser.readTableDirectory(TTFParser.java:333)
+	at org.apache.fontbox.ttf.TTFParser.parse(TTFParser.java:143)
+	at org.apache.fontbox.ttf.TTFParser.parse(TTFParser.java:91)
+	at org.apache.pdfbox.pdmodel.font.FileSystemFontProvider.addTrueTypeFont(FileSystemFontProvider.java:666)
+	at org.apache.pdfbox.pdmodel.font.FileSystemFontProvider.scanFonts(FileSystemFontProvider.java:383)
+	at org.apache.pdfbox.pdmodel.font.FileSystemFontProvider.<init>(FileSystemFontProvider.java:361)
+	at org.apache.pdfbox.pdmodel.font.FontMapperImpl$DefaultFontProvider.<clinit>(FontMapperImpl.java:141)
+	at org.apache.pdfbox.pdmodel.font.FontMapperImpl.getProvider(FontMapperImpl.java:160)
+	at org.apache.pdfbox.pdmodel.font.FontMapperImpl.findFont(FontMapperImpl.java:430)
+	at org.apache.pdfbox.pdmodel.font.FontMapperImpl.findFontBoxFont(FontMapperImpl.java:393)
+	at org.apache.pdfbox.pdmodel.font.FontMapperImpl.getFontBoxFont(FontMapperImpl.java:367)
+	at org.apache.pdfbox.pdmodel.font.PDType1Font.<init>(PDType1Font.java:146)
+	at org.apache.pdfbox.pdmodel.font.PDType1Font.<clinit>(PDType1Font.java:79)
+	at com.example.chuwaproject.utils.PDFUtil.generatePdf(PDFUtil.java:24)
+	at com.example.chuwaproject.controller.OrderController.generatePDF(OrderController.java:69)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:756)
+	at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:141)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:756)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708)
+	at com.example.chuwaproject.controller.OrderController$$SpringCGLIB$$0.generatePDF(<generated>)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-07-31 22:34:03.359 [http-nio-8080-exec-4] WARN  o.a.p.p.font.FileSystemFontProvider - Finished building on-disk font cache, found 359 fonts
