@@ -1,20 +1,15 @@
 package com.example.demo.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
-import java.time.LocalDateTime;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
-@Table(name = "transactions")
+@Table(name = "rewards")
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class Transaction {
+public class Rewards {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,10 +17,10 @@ public class Transaction {
     @Column(name = "amount", nullable = false)
     private Double amount;
 
-    @CreationTimestamp
-    private LocalDateTime creationDateTime;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
+
+    @CreationTimestamp
+    private LocalDate creationDateTime;
 }
