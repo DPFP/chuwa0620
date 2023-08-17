@@ -15,7 +15,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class AuthorController {
 
-    private AuthorService authorService;
+    private final AuthorService authorService;
 
     @PostMapping
     public ResponseEntity<AuthorDto> createPost(@RequestBody AuthorDto authorDto){

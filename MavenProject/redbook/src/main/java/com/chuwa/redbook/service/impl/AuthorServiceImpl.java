@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 @Service
 public class AuthorServiceImpl implements AuthorService {
 
-    private AuthorRepository authorRepository;
+    private final AuthorRepository authorRepository;
     @Override
     public AuthorDto createAuthor(AuthorDto authorDto) {
         Author newAuthor = new Author();

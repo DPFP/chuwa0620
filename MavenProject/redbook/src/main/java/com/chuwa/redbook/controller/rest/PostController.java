@@ -16,7 +16,7 @@ import java.util.List;
 @RequestMapping("/api/v1/posts")
 @RequiredArgsConstructor
 public class PostController {
-    private PostService postService;
+    private final PostService postService;
 
     @PostMapping
     public ResponseEntity<PostDto> createPost(@RequestBody PostDto postDto){
