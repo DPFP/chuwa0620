@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 public class PostServiceImpl implements PostService {
-    private PostRepository postRepository;
+    private final PostRepository postRepository;
 
     public List<PostDto> getAllPost() {
         List<Post> posts = postRepository.findAll();
